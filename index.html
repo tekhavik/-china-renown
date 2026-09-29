@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CHINA RENOWN — Hospitality Solutions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+:root {
+  --gold:#d8ad4a;
+  --gold2:#f0d58a;
+  --white:#f7f4ed;
+  --muted:#aaa39a;
+  --black:#050505;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#050505}
+body{margin:0;background:#050505;color:var(--white);font-family:Montserrat,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.hero{
+  min-height:510px;height:100vh;max-height:760px;position:relative;overflow:hidden;background:#050505;
+}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.42) 48%,rgba(0,0,0,.16) 100%)}
+.hero:after{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.34),transparent 35%,rgba(0,0,0,.40));pointer-events:none}
+.nav{position:absolute;z-index:5;top:0;left:0;right:0;height:82px;display:flex;align-items:center;padding:0 38px;gap:30px}
+.brand{display:flex;align-items:center;gap:14px;min-width:275px}
+.monogram{font-family:"Cormorant Garamond",serif;font-size:62px;line-height:.75;color:var(--gold2);font-weight:500}
+.brand-copy{display:flex;flex-direction:column;gap:3px}
+.brand-name{font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:2px;color:#f1d48a}
+.brand-sub{font-size:9px;letter-spacing:4px;color:#e3c97e;font-weight:600}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:27px;font-size:11px;color:#f2efe8}
+.navlinks a{opacity:.95}
+.nav-right{display:flex;align-items:center;gap:18px;margin-left:5px;font-size:11px}
+.quote{border:1px solid #caa24a;padding:12px 19px;letter-spacing:1px;color:#efd27e}
+.hero-content{position:absolute;z-index:3;left:40px;top:36%;max-width:620px}
+.eyebrow{font-size:11px;letter-spacing:5px;color:#d8b85e;margin-bottom:18px}
+h1{font-family:"Cormorant Garamond",serif;font-size:62px;line-height:.86;font-weight:500;margin:0 0 28px;letter-spacing:-1px}
+h1 span{color:#d7aa45}
+.rule{width:64px;height:2px;background:#d6aa48;margin-bottom:20px}
+.lead{font-size:13px;line-height:1.7;letter-spacing:.4px;max-width:590px;color:#e7e3da}
+.meta{margin-top:18px;font-size:10px;letter-spacing:4px;color:#eee}
+.story{display:inline-flex;align-items:center;gap:12px;margin-top:25px;font-size:10px;letter-spacing:3px}
+.play{width:38px;height:38px;border:1px solid #e0b94f;border-radius:50%;display:grid;place-items:center;color:#e0b94f}
+.scroll{position:absolute;z-index:4;right:22px;bottom:22px;writing-mode:vertical-rl;letter-spacing:5px;color:#d8ad4a;font-size:9px}
+section{padding:54px 45px}
+.expertise-head{display:grid;grid-template-columns:1.55fr 1fr;gap:60px;align-items:end;margin-bottom:28px}
+.kicker{font-size:10px;letter-spacing:5px;color:#d5ae54;margin-bottom:12px}
+h2{font-family:"Cormorant Garamond",serif;font-size:37px;line-height:1;margin:0;font-weight:500}
+.description{font-size:11px;line-height:1.7;color:#aaa39a;max-width:310px}
+.goldline{height:1px;background:#8d6a2b;margin-top:16px}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.card{position:relative;height:245px;min-height:245px;overflow:hidden;background:#111}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s ease}
+.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 18%,rgba(0,0,0,.30) 48%,rgba(0,0,0,.96) 74%,rgba(0,0,0,1) 100%);z-index:1}
+.card:hover img{transform:scale(1.04)}
+.card-content{position:absolute;z-index:3;left:25px;right:20px;bottom:22px;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.card h3{font-family:"Cormorant Garamond",serif;font-size:26px;margin:0;font-weight:500;line-height:1.15;overflow-wrap:normal}
+.card-link{font-size:10px;color:#eee;display:flex;align-items:center;gap:12px;white-space:nowrap;line-height:1.5}
+.arrow{width:28px;height:28px;border:1px solid #d8ad4a;border-radius:50%;display:grid;place-items:center;color:#d8ad4a}
+.projects{padding-top:45px}
+.project-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}
+.viewall{font-size:9px;letter-spacing:2px;color:#d6ad50;display:flex;align-items:center;gap:10px}
+.projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.project{position:relative;overflow:hidden}.project img{width:100%;aspect-ratio:1.34;object-fit:cover;display:block}.project:after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(transparent,#050505);pointer-events:none}
+.project-title{position:relative;z-index:2;font-family:"Cormorant Garamond",serif;font-size:16px;margin-top:12px}
+.project-place{position:relative;z-index:2;font-size:10px;color:#9e9991;margin-top:4px}
+footer{padding:50px 45px;border-top:1px solid #201e1b;color:#777;font-size:9px;letter-spacing:2px;display:flex;justify-content:space-between}
+@media(max-width:800px){
+ .hero{height:760px;min-height:760px;background-position:58% center}
+ .nav{padding:18px 20px;height:78px;align-items:flex-start;background:linear-gradient(180deg,rgba(0,0,0,.38),transparent)}
+ .brand{min-width:0;gap:8px}
+ .monogram{font-size:48px}
+ .brand-name{font-size:18px;letter-spacing:1.4px}
+ .brand-sub{font-size:7px;letter-spacing:2.7px}
+ .navlinks{display:none !important}
+ .nav-right{margin-left:auto;position:relative;z-index:6}
+ .quote{display:none}
+ .hero-content{left:24px;right:24px;top:33%;max-width:calc(100% - 48px)}
+ h1{font-size:50px}
+ .lead{font-size:12px}
+ section{padding:45px 20px}
+ .expertise-head{grid-template-columns:1fr;gap:18px}
+ .grid6{grid-template-columns:1fr 1fr}
+ .card{height:205px;min-height:205px}
+ .card h3{font-size:22px}
+ .projects-grid{grid-template-columns:1fr 1fr;gap:12px}
+ footer{padding:35px 20px}
+}
+@media(max-width:520px){
+ .grid6,.projects-grid{grid-template-columns:1fr}
+ .card{height:260px;min-height:260px}
+ h1{font-size:46px}
+ .project img{aspect-ratio:1.45}
+}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+<video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="">
+  <source src="7F47A770-8576-43ED-99C1-5859A793EBED.MP4" type="video/mp4">
+  <source src="hero-video.mp4" type="video/mp4">
+</video>
+<nav class="nav">
+  <a class="brand" href="#home">
+    <div class="monogram">R</div>
+    <div class="brand-copy"><div class="brand-name">CHINA RENOWN</div><div class="brand-sub">HOSPITALITY SOLUTIONS</div></div>
+  </a>
+  <div class="navlinks">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#fffe">FF&amp;E</a><a href="#services">Services</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right"><span>◎ EN⌄</span><a class="quote" href="#contact">GET A QUOTE</a></div>
+</nav>
+<div class="hero-content">
+  <div class="eyebrow">GLOBAL HOSPITALITY SOLUTIONS</div>
+  <h1>FROM VISION<br><span>TO REALITY</span></h1>
+  <div class="rule"></div>
+  <div class="meta">FF&amp;E &nbsp;·&nbsp; FURNITURE &nbsp;·&nbsp; LIGHTING &nbsp;·&nbsp; DÉCOR</div>
+  <div class="meta" style="margin-top:8px;letter-spacing:1.5px">TURNKEY PROCUREMENT</div>
+  <a class="story" href="#projects"><span class="play">▶</span> WATCH OUR STORY</a>
+</div>
+<div class="scroll">SCROLL</div>
+</header>
+
+<section id="about">
+  <div class="expertise-head">
+    <div><div class="kicker">OUR EXPERTISE</div><h2>Complete Hospitality Solutions</h2><div class="goldline"></div></div>
+    <div class="description">We source, customize and deliver premium FF&amp;E for hotels, resorts, restaurants, cafés and leisure projects worldwide from China.</div>
+  </div>
+  <div class="grid6">
+    <article class="card"><img src="https://images.pexels.com/photos/5328927/pexels-photo-5328927.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="card-content"><h3>HOTELS</h3><div class="card-link">View Collection <span class="arrow">→</span></div></div></article>
+    <article class="card"><img src="https://images.pexels.com/photos/31372786/pexels-photo-31372786.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="card-content"><h3>RESTAURANTS</h3><div class="card-link">View Collection <span class="arrow">→</span></div></div></article>
+    <article class="card"><img src="https://images.pexels.com/photos/12216228/pexels-photo-12216228.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="card-content"><h3>CAFÉS</h3><div class="card-link">View Collection <span class="arrow">→</span></div></div></article>
+    <article class="card"><img src="https://images.pexels.com/photos/8085317/pexels-photo-8085317.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="card-content"><h3>RESORTS</h3><div class="card-link">View Collection <span class="arrow">→</span></div></div></article>
+    <article class="card"><img src="https://images.pexels.com/photos/14746040/pexels-photo-14746040.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="card-content"><h3>GUEST ROOMS</h3><div class="card-link">View Collection <span class="arrow">→</span></div></div></article>
+    <article class="card"><img src="https://images.pexels.com/photos/35022074/pexels-photo-35022074.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="card-content"><h3>LOBBY &amp; PUBLIC AREAS</h3><div class="card-link">View Collection <span class="arrow">→</span></div></div></article>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="project-head"><div><div class="kicker">FEATURED PROJECTS</div><h2>Real Projects. Global Standards.</h2></div><a class="viewall" href="#contact">VIEW ALL PROJECTS <span class="arrow">→</span></a></div>
+  <div class="projects-grid">
+    <article class="project"><img src="https://images.pexels.com/photos/35465045/pexels-photo-35465045.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="project-title">Luxury Hotel</div></article>
+    <article class="project"><img src="https://images.pexels.com/photos/13914268/pexels-photo-13914268.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="project-title">Resort &amp; Villas</div></article>
+    <article class="project"><img src="https://images.pexels.com/photos/9143471/pexels-photo-9143471.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="project-title">Fine Dining Restaurant</div></article>
+    <article class="project"><img src="https://images.pexels.com/photos/31817153/pexels-photo-31817153.jpeg?auto=compress&cs=tinysrgb&w=2200" loading="lazy" decoding="async"><div class="project-title">Boutique Hotel</div></article>
+  </div>
+</section>
+
+<div id="fffe" style="height:1px"></div><div id="services" style="height:1px"></div><div id="why" style="height:1px"></div>
+<footer id="contact"><span>© 2026 CHINA RENOWN</span><span>HOSPITALITY SOLUTIONS · CHINA</span></footer>
+</body>
+</html>

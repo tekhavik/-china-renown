@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>CHINA RENOWN — Hospitality Solutions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root{
+  --black:#050505;
+  --panel:#0b0b0b;
+  --gold:#d6ae55;
+  --gold2:#f0d58a;
+  --white:#f5f1e8;
+  --muted:#aaa39a;
+  --line:rgba(214,174,85,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--black);color:var(--white);
+  font-family:Montserrat,Arial,sans-serif;font-weight:300;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{font:inherit}
+
+.nav{
+  position:absolute;z-index:20;top:0;left:0;right:0;
+  height:104px;padding:25px 5vw;display:flex;align-items:center;
+  gap:35px;
+}
+.brand{display:flex;align-items:center;gap:13px;min-width:265px}
+.monogram{
+  font-family:"Cormorant Garamond",serif;font-size:67px;line-height:.72;
+  color:var(--gold);font-weight:500;
+}
+.brand-copy{display:flex;flex-direction:column;gap:3px}
+.brand-name{font-size:18px;letter-spacing:4px;font-weight:500}
+.brand-sub{font-size:8px;letter-spacing:4px;color:var(--gold);white-space:nowrap}
+.navlinks{display:flex;align-items:center;gap:27px;margin-left:auto}
+.navlinks a{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:#e8e2d7}
+.navlinks a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:17px;margin-left:5px}
+.lang{font-size:10px;letter-spacing:2px}
+.quote{
+  border:1px solid var(--gold);padding:12px 17px;
+  font-size:9px;letter-spacing:2px;color:var(--gold);white-space:nowrap
+}
+
+.hero{
+  position:relative;height:100vh;min-height:650px;max-height:860px;
+  overflow:hidden;background:#080808;
+}
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;z-index:0;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.18) 60%,rgba(0,0,0,.42));
+}
+.hero:after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(0deg,rgba(5,5,5,.92),transparent 30%,rgba(0,0,0,.2));
+}
+.hero-content{
+  position:absolute;z-index:3;left:8vw;top:50%;transform:translateY(-39%);
+  max-width:850px;
+}
+.kicker{font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:18px}
+h1{
+  font-family:"Cormorant Garamond",serif;font-weight:400;
+  font-size:clamp(58px,8vw,112px);line-height:.83;
+  margin:0 0 25px;letter-spacing:-1px;
+}
+h1 span{display:block}
+.hero-meta{
+  font-size:10px;letter-spacing:2.4px;color:#e5dfd5;
+  margin-bottom:28px;
+}
+.hero-actions{display:flex;align-items:center;gap:28px}
+.story{
+  display:flex;align-items:center;gap:12px;color:var(--gold2);
+  border:0;background:none;padding:0;cursor:pointer;
+  font-size:9px;letter-spacing:2.5px;
+}
+.story-dot{
+  width:34px;height:34px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;font-size:10px;
+}
+.scroll{
+  position:absolute;z-index:3;right:5vw;bottom:37px;
+  writing-mode:vertical-rl;display:flex;align-items:center;gap:10px;
+  color:#d7d0c4;font-size:8px;letter-spacing:3px;
+}
+.scroll:after{content:"";height:65px;width:1px;background:var(--gold)}
+
+.section{padding:105px 5vw;background:var(--black)}
+.section-head{max-width:820px;margin-bottom:45px}
+.eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:13px}
+.section h2{
+  font-family:"Cormorant Garamond",serif;font-weight:400;
+  font-size:clamp(42px,5vw,70px);line-height:.95;margin:0 0 17px;
+}
+.lead{font-size:13px;line-height:1.9;color:var(--muted);max-width:720px}
+
+.category{margin-top:70px}
+.category:first-of-type{margin-top:0}
+.category-head{
+  display:flex;justify-content:space-between;align-items:end;
+  border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:30px;
+}
+.category-title{
+  font-family:"Cormorant Garamond",serif;font-size:48px;font-weight:400;
+}
+.category-count{font-size:10px;letter-spacing:4px;color:var(--gold)}
+
+.collection-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+}
+.collection-card{
+  position:relative;aspect-ratio:1.32/1;overflow:hidden;background:#101010;
+}
+.collection-card img{transition:transform .8s ease}
+.collection-card:hover img{transform:scale(1.045)}
+.collection-card:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(0,0,0,.75),transparent 55%);
+}
+.card-info{position:absolute;z-index:2;left:25px;right:20px;bottom:23px}
+.card-number{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--gold2)}
+.card-title{
+  font-family:"Cormorant Garamond",serif;font-size:28px;
+  margin:3px 0 14px;
+}
+.card-link{
+  display:flex;align-items:center;gap:10px;font-size:8px;
+  letter-spacing:2.2px;color:#e6dfd4;text-transform:uppercase;
+}
+.arrow{
+  width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold);font-size:15px;
+}
+
+.projects{
+  padding:100px 5vw;background:#080808;border-top:1px solid rgba(255,255,255,.04)
+}
+.project-head{
+  display:flex;justify-content:space-between;align-items:end;
+  border-bottom:1px solid var(--line);padding-bottom:25px;margin-bottom:28px;
+}
+.project-head h2{margin:0}
+.view-all{font-size:9px;letter-spacing:2.4px;color:var(--gold)}
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.project-card{aspect-ratio:1/1.28;overflow:hidden}
+.project-card img{transition:transform .8s ease}
+.project-card:hover img{transform:scale(1.04)}
+
+.cta{
+  padding:110px 5vw;text-align:center;
+  border-top:1px solid rgba(214,174,85,.15)
+}
+.cta h2{margin-bottom:22px}
+.cta p{color:var(--muted);font-size:12px;max-width:620px;margin:0 auto 30px;line-height:1.8}
+.cta a{
+  display:inline-block;border:1px solid var(--gold);color:var(--gold);
+  padding:15px 28px;font-size:9px;letter-spacing:2.5px;
+}
+
+footer{
+  padding:28px 5vw;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;gap:20px;
+  color:#777;font-size:8px;letter-spacing:1.7px;text-transform:uppercase;
+}
+
+@media(max-width:1100px){
+  .navlinks{gap:16px}.navlinks a{font-size:8px}.brand{min-width:235px}
+}
+@media(max-width:800px){
+  .nav{height:86px;padding:18px 20px;gap:10px}
+  .brand{min-width:0;gap:9px}
+  .monogram{font-size:53px}
+  .brand-name{font-size:14px;letter-spacing:2.8px}
+  .brand-sub{font-size:6px;letter-spacing:2.5px}
+  .navlinks{display:none}
+  .nav-right{margin-left:auto}
+  .quote{display:none}
+  .hero{height:760px;min-height:760px}
+  .hero-content{left:24px;right:24px;top:42%;transform:translateY(-30%)}
+  h1{font-size:58px}
+  .hero-meta{font-size:8px;line-height:1.7}
+  .scroll{right:18px;bottom:25px}
+  .section{padding:65px 20px}
+  .section-head{margin-bottom:38px}
+  .category{margin-top:55px}
+  .category-title{font-size:42px}
+  .collection-grid{grid-template-columns:1fr;gap:8px}
+  .collection-card{aspect-ratio:1.18/1}
+  .card-info{left:20px;bottom:19px}
+  .card-title{font-size:27px}
+  .projects{padding:65px 20px}
+  .project-grid{grid-template-columns:1fr 1fr}
+  .project-card{aspect-ratio:1/1.15}
+  .cta{padding:75px 20px}
+  footer{flex-direction:column}
+}
+@media(max-width:520px){
+  h1{font-size:48px}
+  .kicker{font-size:8px;letter-spacing:3px}
+  .collection-card{aspect-ratio:1.12/1}
+  .project-grid{grid-template-columns:1fr}
+  .project-card{aspect-ratio:1.25/1}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#home">
+    <div class="monogram">R</div>
+    <div class="brand-copy">
+      <div class="brand-name">CHINA RENOWN</div>
+      <div class="brand-sub">HOSPITALITY SOLUTIONS</div>
+    </div>
+  </a>
+
+  <nav class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#ffe">FF&amp;E</a>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-right">
+    <span class="lang">EN</span>
+    <a class="quote" href="#contact">GET A QUOTE</a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata">
+    <source src="7F47A770-8576-43ED-99C1-5859A793EBED.MP4" type="video/mp4">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <div class="kicker">GLOBAL HOSPITALITY SOLUTIONS</div>
+    <h1><span>FROM VISION</span><span>TO REALITY</span></h1>
+    <div class="hero-meta">FF&amp;E · FURNITURE · LIGHTING · DÉCOR &nbsp;&nbsp; / &nbsp;&nbsp; TURNKEY PROCUREMENT</div>
+    <div class="hero-actions">
+      <button class="story" id="storyBtn" type="button">
+        <span class="story-dot">▶</span> WATCH OUR STORY
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll">SCROLL</div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-head">
+    <div class="eyebrow">OUR EXPERTISE</div>
+    <h2>Complete Hospitality Solutions</h2>
+    <div class="lead">
+      We source, customize and deliver premium FF&amp;E for hotels, resorts,
+      restaurants, cafés and leisure projects worldwide from China.
+    </div>
+  </div>
+
+  <div id="ffe">
+
+    <article class="category">
+      <div class="category-head">
+        <div class="category-title">Hotels</div>
+        <div class="category-count">03 COLLECTIONS</div>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card" href="#contact">
+          <img src="images/01-hotels-01.jpg" alt="Luxury hotel interior" loading="lazy">
+          <div class="card-info"><div class="card-number">01</div><div class="card-title">Hotel Interiors</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/01-hotels-02.jpg" alt="Luxury hotel guest room" loading="lazy">
+          <div class="card-info"><div class="card-number">02</div><div class="card-title">Guest Rooms</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/01-hotels-03.jpg" alt="Luxury hotel resort view" loading="lazy">
+          <div class="card-info"><div class="card-number">03</div><div class="card-title">Hotel Exteriors</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+      </div>
+    </article>
+
+    <article class="category" id="services">
+      <div class="category-head">
+        <div class="category-title">Restaurants</div>
+        <div class="category-count">03 COLLECTIONS</div>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card" href="#contact">
+          <img src="images/02-restaurants-01.jpg" alt="Luxury restaurant interior" loading="lazy">
+          <div class="card-info"><div class="card-number">01</div><div class="card-title">Dining Interiors</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/02-restaurants-02.jpg" alt="Fine dining restaurant" loading="lazy">
+          <div class="card-info"><div class="card-number">02</div><div class="card-title">Fine Dining</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/02-restaurants-03.jpg" alt="Luxury restaurant with city view" loading="lazy">
+          <div class="card-info"><div class="card-number">03</div><div class="card-title">Signature Dining</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+      </div>
+    </article>
+
+    <article class="category">
+      <div class="category-head">
+        <div class="category-title">Cafés</div>
+        <div class="category-count">03 COLLECTIONS</div>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card" href="#contact">
+          <img src="images/03-cafes-01.jpg" alt="Luxury café interior" loading="lazy">
+          <div class="card-info"><div class="card-number">01</div><div class="card-title">Café Interiors</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/03-cafes-02.jpg" alt="Modern premium café" loading="lazy">
+          <div class="card-info"><div class="card-number">02</div><div class="card-title">Modern Cafés</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/03-cafes-03.jpg" alt="Luxury outdoor café" loading="lazy">
+          <div class="card-info"><div class="card-number">03</div><div class="card-title">Outdoor Cafés</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+      </div>
+    </article>
+
+    <article class="category">
+      <div class="category-head">
+        <div class="category-title">Resorts</div>
+        <div class="category-count">03 COLLECTIONS</div>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card" href="#contact">
+          <img src="images/04-resorts-01.jpg" alt="Luxury resort pool" loading="lazy">
+          <div class="card-info"><div class="card-number">01</div><div class="card-title">Resort Living</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/04-resorts-02.jpg" alt="Luxury resort architecture" loading="lazy">
+          <div class="card-info"><div class="card-number">02</div><div class="card-title">Resort Interiors</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+        <a class="collection-card" href="#contact">
+          <img src="images/04-resorts-03.jpg" alt="Luxury beachfront resort" loading="lazy">
+          <div class="card-info"><div class="card-number">03</div><div class="card-title">Beach Resorts</div><div class="card-link">View Collection <span class="arrow">→</span></div></div>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="project-head">
+    <div>
+      <div class="eyebrow">FEATURED PROJECTS</div>
+      <h2>Signature Hospitality Projects.</h2>
+    </div>
+    <a class="view-all" href="#contact">VIEW ALL PROJECTS →</a>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card"><img src="images/01-hotels-01.jpg" alt="Hospitality project" loading="lazy"></div>
+    <div class="project-card"><img src="images/04-resorts-02.jpg" alt="Hospitality project" loading="lazy"></div>
+    <div class="project-card"><img src="images/02-restaurants-02.jpg" alt="Hospitality project" loading="lazy"></div>
+    <div class="project-card"><img src="images/03-cafes-03.jpg" alt="Hospitality project" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="cta" id="why-us">
+  <div class="eyebrow">FROM CHINA TO THE WORLD</div>
+  <h2>Built Around Your Vision.</h2>
+  <p>
+    Product sourcing, factory coordination, customization, quality control,
+    consolidation and delivery — managed through one hospitality sourcing partner.
+  </p>
+  <a href="#contact">START YOUR PROJECT</a>
+</section>
+
+<section class="cta" id="contact">
+  <div class="eyebrow">CONTACT</div>
+  <h2>Let's Build Something Exceptional.</h2>
+  <p>Tell us about your hotel, resort, restaurant or café project and our team will coordinate the next step.</p>
+  <a href="mailto:info@chinarenown.com">CONTACT CHINA RENOWN</a>
+</section>
+
+<footer>
+  <div>© 2026 CHINA RENOWN</div>
+  <div>HOSPITALITY SOLUTIONS · CHINA</div>
+</footer>
+
+<script>
+const video = document.getElementById('heroVideo');
+const storyBtn = document.getElementById('storyBtn');
+
+storyBtn.addEventListener('click', async () => {
+  try {
+    video.muted = false;
+    video.volume = 1;
+    await video.play();
+    storyBtn.querySelector('.story-dot').textContent = '❚❚';
+  } catch (e) {
+    video.muted = true;
+    await video.play();
+  }
+});
+
+video.addEventListener('click', async () => {
+  if(video.paused){
+    await video.play();
+  }
+});
+</script>
+</body>
+</html>

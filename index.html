@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CHINA RENOWN — Hospitality Solutions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+:root{--gold:#d8ad4a;--gold2:#f0d58a;--white:#f7f4ed;--muted:#aaa39a;--black:#050505}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--black)}body{margin:0;background:var(--black);color:var(--white);font-family:Montserrat,Arial,sans-serif}a{color:inherit;text-decoration:none}
+.hero{min-height:510px;height:100vh;max-height:760px;position:relative;overflow:hidden;background:#050505}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.42) 48%,rgba(0,0,0,.15))}.hero:after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.36),transparent 35%,rgba(0,0,0,.45));pointer-events:none}
+.nav{position:absolute;z-index:5;top:0;left:0;right:0;height:82px;display:flex;align-items:center;padding:0 38px;gap:30px}.brand{display:flex;align-items:center;gap:14px;min-width:275px}.monogram{font-family:"Cormorant Garamond",serif;font-size:62px;line-height:.75;color:var(--gold2);font-weight:500}.brand-copy{display:flex;flex-direction:column;gap:3px}.brand-name{font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:2px;color:#f1d48a}.brand-sub{font-size:9px;letter-spacing:4px;color:#e3c97e;font-weight:600}.navlinks{margin-left:auto;display:flex;align-items:center;gap:25px;font-size:10px;color:#f2efe8}.navlinks a{opacity:.95}.nav-right{display:flex;align-items:center;gap:18px;margin-left:5px;font-size:10px}.quote{border:1px solid #caa24a;padding:12px 19px;letter-spacing:1px;color:#efd27e}
+.hero-content{position:absolute;z-index:3;left:40px;top:36%;max-width:620px}.eyebrow{font-size:11px;letter-spacing:5px;color:#d8b85e;margin-bottom:18px}h1{font-family:"Cormorant Garamond",serif;font-size:62px;line-height:.86;font-weight:500;margin:0 0 28px;letter-spacing:-1px}h1 span{color:#d7aa45}.rule{width:64px;height:2px;background:#d6aa48;margin-bottom:20px}.meta{font-size:10px;letter-spacing:3px;color:#eee}.story{display:inline-flex;align-items:center;gap:12px;margin-top:25px;font-size:10px;letter-spacing:3px;cursor:pointer}.play{width:38px;height:38px;border:1px solid #e0b94f;border-radius:50%;display:grid;place-items:center;color:#e0b94f}.scroll{position:absolute;z-index:4;right:22px;bottom:22px;writing-mode:vertical-rl;letter-spacing:5px;color:#d8ad4a;font-size:9px}
+section{padding:62px 45px}.expertise-head{display:grid;grid-template-columns:1.55fr 1fr;gap:60px;align-items:end;margin-bottom:30px}.kicker{font-size:10px;letter-spacing:5px;color:#d5ae54;margin-bottom:12px}h2{font-family:"Cormorant Garamond",serif;font-size:40px;line-height:1;margin:0;font-weight:500}.description{font-size:11px;line-height:1.7;color:#aaa39a;max-width:340px}.goldline{height:1px;background:#8d6a2b;margin-top:16px}
+.category{margin-top:48px}.category:first-child{margin-top:0}.category-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:16px;border-bottom:1px solid #29251e;padding-bottom:12px}.category-name{font-family:"Cormorant Garamond",serif;font-size:31px;font-weight:500}.category-count{font-size:9px;letter-spacing:3px;color:#9d8a61}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}.gallery-card{position:relative;overflow:hidden;background:#111;aspect-ratio:1.45}.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s ease}.gallery-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.78));pointer-events:none}.gallery-card:hover img{transform:scale(1.045)}.gallery-label{position:absolute;left:20px;bottom:17px;z-index:2;font-size:9px;letter-spacing:2px;color:#f4ead2}.gallery-number{position:absolute;right:18px;top:15px;z-index:2;font-family:"Cormorant Garamond",serif;font-size:22px;color:#f0d58a}
+.projects{padding-top:55px}.project-band{border-top:1px solid #8d6a2b;padding-top:20px}.project-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.viewall{font-size:9px;letter-spacing:2px;color:#d6ad50;display:flex;align-items:center;gap:10px}.arrow{width:28px;height:28px;border:1px solid #d8ad4a;border-radius:50%;display:grid;place-items:center;color:#d8ad4a}.projects-copy{max-width:580px;color:#aaa39a;font-size:11px;line-height:1.8}.services-strip{margin-top:35px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #211e19;border-bottom:1px solid #211e19}.service{padding:24px 18px;border-right:1px solid #211e19}.service:last-child{border-right:0}.service b{display:block;font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:500;color:#eee4ce;margin-bottom:7px}.service span{font-size:9px;line-height:1.6;color:#8e8a83}
+footer{padding:45px;border-top:1px solid #201e1b;color:#777;font-size:9px;letter-spacing:2px;display:flex;justify-content:space-between}
+@media(max-width:900px){.nav{padding:18px 22px}.brand{min-width:0}.navlinks{display:none}.nav-right{margin-left:auto}.hero-content{left:28px}.gallery{grid-template-columns:repeat(2,1fr)}.services-strip{grid-template-columns:repeat(2,1fr)}.service:nth-child(2){border-right:0}.service:nth-child(-n+2){border-bottom:1px solid #211e19}}
+@media(max-width:600px){.hero{height:720px;min-height:720px}.nav{height:78px;align-items:flex-start}.monogram{font-size:49px}.brand-name{font-size:18px;letter-spacing:1.3px}.brand-sub{font-size:7px;letter-spacing:2.6px}.nav-right{font-size:9px}.hero-content{left:22px;right:22px;top:32%;max-width:none}.eyebrow{font-size:9px;letter-spacing:3.5px}h1{font-size:47px}.meta{font-size:9px;letter-spacing:2px}.scroll{right:12px}.expertise-head{grid-template-columns:1fr;gap:18px}.gallery{grid-template-columns:1fr}.gallery-card{aspect-ratio:1.35}.category-head{align-items:center}.category-name{font-size:28px}.services-strip{grid-template-columns:1fr}.service,.service:nth-child(2){border-right:0;border-bottom:1px solid #211e19}.service:last-child{border-bottom:0}.project-head{display:block}.viewall{margin-top:18px}section{padding:48px 20px}footer{padding:32px 20px;display:block;line-height:2.2}}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+<video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="metadata">
+  <source src="7F47A770-8576-43ED-99C1-5859A793EBED.MP4" type="video/mp4">
+  <source src="hero-video.mp4" type="video/mp4">
+</video>
+<nav class="nav">
+  <a class="brand" href="#home"><div class="monogram">R</div><div class="brand-copy"><div class="brand-name">CHINA RENOWN</div><div class="brand-sub">HOSPITALITY SOLUTIONS</div></div></a>
+  <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#fffe">FF&amp;E</a><a href="#services">Services</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+  <div class="nav-right"><span>◎ EN⌄</span><a class="quote" href="#contact">GET A QUOTE</a></div>
+</nav>
+<div class="hero-content">
+  <div class="eyebrow">GLOBAL HOSPITALITY SOLUTIONS</div>
+  <h1>FROM VISION<br><span>TO REALITY</span></h1>
+  <div class="rule"></div>
+  <div class="meta">FF&amp;E &nbsp;·&nbsp; FURNITURE &nbsp;·&nbsp; LIGHTING &nbsp;·&nbsp; DÉCOR</div>
+  <div class="meta" style="margin-top:9px;letter-spacing:1.5px">TURNKEY PROCUREMENT</div>
+  <button id="storyBtn" class="story" type="button" style="background:none;border:0;color:inherit;padding:0"><span class="play">▶</span> WATCH OUR STORY</button>
+</div><div class="scroll">SCROLL</div>
+</header>
+
+<section id="about">
+  <div class="expertise-head">
+    <div><div class="kicker">OUR EXPERTISE</div><h2>Complete Hospitality Solutions</h2><div class="goldline"></div></div>
+    <div class="description">We source, customize and deliver premium FF&amp;E for hotels, resorts, restaurants and cafés worldwide from China.</div>
+  </div>
+
+  <div class="category" id="hotels">
+    <div class="category-head"><div class="category-name">HOTELS</div><div class="category-count">03 COLLECTIONS</div></div>
+    <div class="gallery">
+      <a class="gallery-card" href="#contact"><img src="images/01-hotels-01.jpg" alt="Luxury hotel interior"><span class="gallery-number">01</span><span class="gallery-label">HOTEL INTERIORS</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/01-hotels-02.jpg" alt="Luxury hotel guest room"><span class="gallery-number">02</span><span class="gallery-label">GUEST ROOMS</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/01-hotels-03.jpg" alt="Luxury hotel resort view"><span class="gallery-number">03</span><span class="gallery-label">HOTEL &amp; LEISURE</span></a>
+    </div>
+  </div>
+
+  <div class="category" id="restaurants">
+    <div class="category-head"><div class="category-name">RESTAURANTS</div><div class="category-count">03 COLLECTIONS</div></div>
+    <div class="gallery">
+      <a class="gallery-card" href="#contact"><img src="images/02-restaurants-01.jpg" alt="Luxury restaurant interior"><span class="gallery-number">01</span><span class="gallery-label">DINING INTERIORS</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/02-restaurants-02.jpg" alt="Fine dining restaurant"><span class="gallery-number">02</span><span class="gallery-label">FINE DINING</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/02-restaurants-03.jpg" alt="Restaurant with view"><span class="gallery-number">03</span><span class="gallery-label">SIGNATURE DINING</span></a>
+    </div>
+  </div>
+
+  <div class="category" id="cafes">
+    <div class="category-head"><div class="category-name">CAFÉS</div><div class="category-count">03 COLLECTIONS</div></div>
+    <div class="gallery">
+      <a class="gallery-card" href="#contact"><img src="images/03-cafes-01.jpg" alt="Luxury cafe interior"><span class="gallery-number">01</span><span class="gallery-label">CAFÉ INTERIORS</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/03-cafes-02.jpg" alt="Modern cafe seating"><span class="gallery-number">02</span><span class="gallery-label">COFFEE &amp; LOUNGE</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/03-cafes-03.jpg" alt="Outdoor cafe terrace"><span class="gallery-number">03</span><span class="gallery-label">TERRACE CONCEPTS</span></a>
+    </div>
+  </div>
+
+  <div class="category" id="resorts">
+    <div class="category-head"><div class="category-name">RESORTS</div><div class="category-count">03 COLLECTIONS</div></div>
+    <div class="gallery">
+      <a class="gallery-card" href="#contact"><img src="images/04-resorts-01.jpg" alt="Luxury resort pool"><span class="gallery-number">01</span><span class="gallery-label">RESORT INTERIORS</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/04-resorts-02.jpg" alt="Luxury resort architecture"><span class="gallery-number">02</span><span class="gallery-label">VILLA &amp; POOL</span></a>
+      <a class="gallery-card" href="#contact"><img src="images/04-resorts-03.jpg" alt="Luxury beach resort"><span class="gallery-number">03</span><span class="gallery-label">LEISURE SPACES</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="project-band">
+    <div class="project-head"><div><div class="kicker">FEATURED PROJECTS</div><h2>Signature Hospitality Projects.</h2></div><a class="viewall" href="#contact">VIEW ALL PROJECTS <span class="arrow">→</span></a></div>
+    <div class="projects-copy">From concept and product sourcing to customization, quality control and delivery, China Renown connects hospitality projects with reliable manufacturing capabilities in China.</div>
+    <div class="services-strip" id="services">
+      <div class="service"><b>FF&amp;E Sourcing</b><span>Furniture, lighting, décor and complete hospitality packages.</span></div>
+      <div class="service"><b>Customization</b><span>Tailored specifications, materials, finishes and production.</span></div>
+      <div class="service"><b>Quality Control</b><span>Factory coordination, inspection and pre-shipment checks.</span></div>
+      <div class="service"><b>Global Delivery</b><span>Procurement support and coordinated international shipment.</span></div>
+    </div>
+  </div>
+</section>
+
+<div id="fffe" style="height:1px"></div><div id="why" style="height:1px"></div>
+<footer id="contact"><span>© 2026 CHINA RENOWN</span><span>HOSPITALITY SOLUTIONS · CHINA</span></footer>
+<script>
+const video=document.getElementById('heroVideo');
+const btn=document.getElementById('storyBtn');
+btn.addEventListener('click',()=>{
+  video.muted=false;
+  video.currentTime=0;
+  video.play().catch(()=>{});
+  btn.querySelector('.play').textContent='❚❚';
+});
+video.addEventListener('pause',()=>{btn.querySelector('.play').textContent='▶'});
+</script>
+</body>
+</html>

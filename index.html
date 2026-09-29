@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHINA RENOWN — Hospitality Sourcing & Procurement</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{--bg:#070707;--panel:#0d0d0d;--gold:#c9a45b;--cream:#f3eee5;--muted:#a59f96;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;font-weight:300}a{color:inherit;text-decoration:none}
+.nav{height:92px;padding:20px 5vw;display:flex;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(7,7,7,.94);backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px}.r{font:500 60px/0.7 "Cormorant Garamond";color:var(--gold)}.bn{font-size:16px;letter-spacing:3px}.bs{font-size:7px;letter-spacing:3px;color:var(--gold);margin-top:4px}.links{margin-left:auto;display:flex;gap:25px}.links a{font-size:9px;letter-spacing:1.6px;text-transform:uppercase}.links a:hover{color:var(--gold)}.cta{margin-left:25px;border:1px solid var(--gold);padding:11px 16px;color:var(--gold);font-size:8px;letter-spacing:1.8px}
+.hero{position:relative;z-index:2;padding:115px 5vw 100px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 80% 20%,rgba(201,164,91,.1),transparent 35%)}.eyebrow{font-size:9px;letter-spacing:3.5px;color:var(--gold);text-transform:uppercase;margin-bottom:18px}.hero h1,.section h2{font:400 clamp(52px,7vw,94px)/.9 "Cormorant Garamond";margin:0;max-width:850px}.hero p{max-width:650px;color:var(--muted);line-height:1.9;font-size:13px;margin:28px 0}.actions{display:flex;gap:12px}.button{display:inline-block;padding:14px 20px;border:1px solid var(--gold);font-size:8px;letter-spacing:2px;text-transform:uppercase}.button.secondary{border-color:var(--line);color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.stat{padding:30px 5vw;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font:500 31px "Cormorant Garamond";color:var(--gold)}.stat span{font-size:8px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+section.block{position:relative;z-index:2;padding:100px 5vw;border-bottom:1px solid var(--line)}.intro{max-width:800px;margin-bottom:50px}.intro p{color:var(--muted);line-height:1.9;font-size:13px}
+.start{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.start article{background:var(--panel);padding:42px}.start h3,.service h3,.industry h3,.reason h3,.process h3{font:500 34px "Cormorant Garamond";margin:10px 0}.start p,.service p,.industry p,.reason p,.process p{color:var(--muted);line-height:1.8;font-size:12px}.smalllink{color:var(--gold);font-size:8px;letter-spacing:2px;text-transform:uppercase}
+.services{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line)}.service{padding:28px;border-right:1px solid var(--line);min-height:220px}.service:last-child{border-right:0}.service h3{font-size:25px}.service p{font-size:10px}
+.industry{padding:55px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:110px 1fr 1fr;gap:35px}.industry:first-child{border-top:0}.num{font:500 34px "Cormorant Garamond";color:var(--gold)}.industry h3{font-size:43px;margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px;align-content:start}.tag{border:1px solid var(--line);padding:9px 11px;font-size:8px;letter-spacing:1px;color:#c9c2b8}
+.projectgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.project{min-height:300px;background:linear-gradient(145deg,#14120f,#0b0b0b);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:end}.project .label{font-size:8px;color:var(--gold);letter-spacing:2px}.project h3{font:500 38px "Cormorant Garamond";margin:7px 0}.project p{color:var(--muted);font-size:11px;line-height:1.7}
+.reasons{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}.reason{background:var(--panel);padding:30px}.reason .big{font-size:8px;letter-spacing:2px;color:var(--gold)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}.process>div{background:var(--panel);padding:30px}.process h3{font-size:28px}.process .step{font-size:8px;color:var(--gold);letter-spacing:2px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.quoteBox{border:1px solid var(--line);padding:30px}.quoteBox p{font:400 20px/1.45 "Cormorant Garamond";color:#ddd}.quoteBox small{color:var(--gold);font-size:8px;letter-spacing:1.5px}
+.risk{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.risk>div{background:var(--panel);padding:40px}.money{display:flex;gap:40px}.money b{font:500 55px "Cormorant Garamond";color:var(--gold);display:block}.money span{font-size:8px;letter-spacing:1.5px;color:var(--muted)}
+.form{max-width:850px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{background:#0c0c0c;border:1px solid var(--line);padding:15px;color:#777;font-size:9px;letter-spacing:1px}.field.full{grid-column:1/-1;height:100px}.submit{margin-top:15px;background:var(--gold);border:0;padding:15px 22px;font-size:8px;letter-spacing:2px;color:#090909}
+footer{padding:45px 5vw;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;border-top:1px solid var(--line)}footer strong{font:500 28px "Cormorant Garamond"}footer p,footer a{display:block;color:var(--muted);font-size:9px;line-height:2}
+@media(max-width:900px){.links{display:none}.stats{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr 1fr}.service{border-bottom:1px solid var(--line)}.industry{grid-template-columns:60px 1fr}.industry p,.tags{grid-column:2}.projectgrid,.quotes,.reasons,.process,.risk{grid-template-columns:1fr}.start{grid-template-columns:1fr}footer{grid-template-columns:1fr}.hero{padding-top:80px}}
+@media(max-width:560px){.nav{height:78px;padding:15px 20px}.r{font-size:52px}.bn{font-size:13px}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}section.block{padding:70px 20px}.hero{padding-left:20px;padding-right:20px}.hero h1{font-size:55px}.services{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.industry{grid-template-columns:45px 1fr}.industry p,.tags{grid-column:2}}
+.heroVideoWrap{position:absolute;top:92px;left:0;right:0;height:720px;z-index:0;overflow:hidden}.heroVideo{width:100%;height:100%;object-fit:cover;display:block}.heroShade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.88),rgba(7,7,7,.38) 55%,rgba(7,7,7,.65)),linear-gradient(0deg,#070707 0%,transparent 28%)}
+@media(max-width:560px){.heroVideoWrap{top:78px;height:620px}}
+</style>
+</head>
+<body>
+<header class="nav">
+<a class="brand" href="#home"><div class="r">R</div><div><div class="bn">CHINA RENOWN</div><div class="bs">HOSPITALITY SOLUTIONS</div></div></a>
+<nav class="links"><a href="#sourcing">Sourcing</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
+<a class="cta" href="#contact">START A PROJECT</a>
+</header>
+
+<main id="home">
+<section class="heroVideoWrap"><video class="heroVideo" autoplay muted loop playsinline preload="metadata"><source src="7F47A770-8576-43ED-99C1-5859A793EBED.MP4" type="video/mp4"></video><div class="heroShade"></div></section>
+
+<section class="hero">
+<div class="eyebrow">China · Global Hospitality Procurement</div>
+<h1>Source your project from China.</h1>
+<p>Furniture, lighting, kitchens, bathrooms, finishes, equipment and hospitality supplies — coordinated through one China-based procurement team.</p>
+<div class="actions"><a class="button" href="#contact">Send Your Project</a><a class="button secondary" href="#services">Browse Capabilities</a></div>
+</section>
+
+<div class="stats"><div class="stat"><b>China</b><span>Direct sourcing</span></div><div class="stat"><b>FF&amp;E</b><span>Project procurement</span></div><div class="stat"><b>QC</b><span>Quality control</span></div><div class="stat"><b>Global</b><span>Delivery coordination</span></div></div>
+
+<section class="block" id="sourcing">
+<div class="intro"><div class="eyebrow">Where to start</div><h2>Start with what you need.</h2><p>Whether you need a complete procurement partner or already know the products required, CHINA RENOWN connects your project with the appropriate manufacturers and manages the workflow in China.</p></div>
+<div class="start"><article><div class="eyebrow">01</div><h3>Need a sourcing partner?</h3><p>We review your requirements, identify suitable manufacturers, compare quotations, coordinate samples, follow production and arrange inspection and shipment.</p><a class="smalllink" href="#contact">China Sourcing →</a></article><article><div class="eyebrow">02</div><h3>Already know what you need?</h3><p>Send your BOQ, drawings, specifications or product references. We organize the relevant categories and coordinate the suppliers required for the project.</p><a class="smalllink" href="#contact">Submit Your Requirements →</a></article></div>
+</section>
+
+<section class="block" id="services">
+<div class="intro"><div class="eyebrow">What we do</div><h2>Services. One project team.</h2></div>
+<div class="services">
+<div class="service"><div class="eyebrow">01</div><h3>FF&amp;E Procurement</h3><p>Furniture, fixtures and equipment for hospitality projects.</p></div>
+<div class="service"><div class="eyebrow">02</div><h3>OS&amp;E Supply</h3><p>Operating supplies, tableware, amenities and project essentials.</p></div>
+<div class="service"><div class="eyebrow">03</div><h3>Quality Control</h3><p>Factory follow-up, inspection and conformity checks before shipment.</p></div>
+<div class="service"><div class="eyebrow">04</div><h3>Logistics</h3><p>Consolidation, loading, export documentation and shipping coordination.</p></div>
+<div class="service"><div class="eyebrow">05</div><h3>Factory Visits</h3><p>Supplier and showroom visits arranged around your project scope.</p></div>
+</div>
+</section>
+
+<section class="block" id="industries">
+<div class="intro"><div class="eyebrow">Industries</div><h2>Hospitality, from concept to supply.</h2></div>
+<div class="industry"><div class="num">01</div><div><h3>Hotels &amp; Resorts</h3><p>Guest rooms, lobby and public areas, restaurants, spa, outdoor and pool packages.</p></div><div class="tags"><span class="tag">Guest Rooms</span><span class="tag">Lobby</span><span class="tag">Restaurant</span><span class="tag">Spa</span><span class="tag">Outdoor</span></div></div>
+<div class="industry"><div class="num">02</div><div><h3>Restaurants &amp; F&amp;B</h3><p>Furniture, seating, bar elements, custom millwork and commercial finishes for dining concepts.</p></div><div class="tags"><span class="tag">Fine Dining</span><span class="tag">Casual Dining</span><span class="tag">Bar &amp; Lounge</span><span class="tag">Patio</span><span class="tag">Custom Millwork</span></div></div>
+<div class="industry"><div class="num">03</div><div><h3>Cafés</h3><p>Tables, chairs, counters, lighting, décor and custom pieces for cafés and coffee concepts.</p></div><div class="tags"><span class="tag">Coffee Shops</span><span class="tag">Bakery Cafés</span><span class="tag">Lounge Cafés</span><span class="tag">Outdoor</span></div></div>
+<div class="industry"><div class="num">04</div><div><h3>Commercial &amp; Private</h3><p>Additional sourcing support for offices, residences, villas and mixed-use projects.</p></div><div class="tags"><span class="tag">Offices</span><span class="tag">Villas</span><span class="tag">Residences</span><span class="tag">Mixed Use</span></div></div>
+</section>
+
+<section class="block" id="projects">
+<div class="intro"><div class="eyebrow">Project work</div><h2>Selected project directions.</h2></div>
+<div class="projectgrid"><article class="project"><span class="label">HOSPITALITY</span><h3>Hotel Procurement</h3><p>Room packages, public areas, furniture, lighting and project materials coordinated from China.</p></article><article class="project"><span class="label">FOOD &amp; BEVERAGE</span><h3>Restaurant Supply</h3><p>Seating, tables, bar components, custom pieces and operational requirements.</p></article><article class="project"><span class="label">COFFEE &amp; LEISURE</span><h3>Café Concepts</h3><p>Furniture, lighting, counters, finishes and branded elements for café environments.</p></article></div>
+</section>
+
+<section class="block">
+<div class="intro"><div class="eyebrow">Why CHINA RENOWN</div><h2>One workflow across China.</h2></div>
+<div class="reasons"><div class="reason"><div class="big">01 · ONE TEAM</div><h3>Central coordination</h3><p>One project contact coordinates multiple specialist manufacturers.</p></div><div class="reason"><div class="big">02 · FACTORY MATCHING</div><h3>Right supplier</h3><p>Manufacturers are selected according to product, specification and project requirements.</p></div><div class="reason"><div class="big">03 · CONTROL</div><h3>Before shipment</h3><p>Samples, production progress and final quality are checked before goods leave China.</p></div><div class="reason"><div class="big">04 · CONSOLIDATION</div><h3>One shipment plan</h3><p>Orders from different suppliers can be organized into a coordinated export workflow.</p></div></div>
+</section>
+
+<section class="block" id="process">
+<div class="intro"><div class="eyebrow">Process</div><h2>From specification to delivery.</h2></div>
+<div class="process"><div><div class="step">01</div><h3>Brief</h3><p>Review BOQ, drawings, references, quantities and target requirements.</p></div><div><div class="step">02</div><h3>Source</h3><p>Match categories with suitable factories and compare commercial offers.</p></div><div><div class="step">03</div><h3>Control</h3><p>Approve samples, follow production and inspect the finished goods.</p></div><div><div class="step">04</div><h3>Deliver</h3><p>Consolidate, prepare export documents and coordinate international shipping.</p></div></div>
+</section>
+
+<section class="block">
+<div class="intro"><div class="eyebrow">Client perspective</div><h2>Built around the project.</h2></div>
+<div class="quotes"><div class="quoteBox"><p>“A single procurement workflow makes it easier to manage several product categories at the same time.”</p><small>PROJECT PROCUREMENT</small></div><div class="quoteBox"><p>“Samples and specifications stay at the center of the production process.”</p><small>QUALITY CONTROL</small></div><div class="quoteBox"><p>“Multiple suppliers can be coordinated under one delivery plan.”</p><small>LOGISTICS</small></div></div>
+</section>
+
+<section class="block">
+<div class="intro"><div class="eyebrow">Controlled procurement</div><h2>You define the requirement. We manage the China side.</h2></div>
+<div class="risk"><div><div class="money"><div><b>01</b><span>SPECIFICATION</span></div><div><b>02</b><span>SAMPLE APPROVAL</span></div></div><p>Commercial and technical details are confirmed before production begins.</p></div><div><div class="money"><div><b>03</b><span>QC</span></div><div><b>04</b><span>DELIVERY</span></div></div><p>Production checks, final inspection, consolidation and shipping coordination are handled through the project workflow.</p></div></div>
+</section>
+
+<section class="block" id="contact">
+<div class="intro"><div class="eyebrow">Start your project</div><h2>Send your requirements.</h2><p>BOQ, FF&amp;E schedule, drawings or product references — start with what you have.</p></div>
+<div class="form"><div class="formgrid"><div class="field">YOUR NAME</div><div class="field">EMAIL</div><div class="field">PROJECT TYPE</div><div class="field">COMPANY</div><div class="field full">PROJECT DETAILS / REQUIREMENTS</div></div><button class="submit">SEND PROJECT REQUEST</button></div>
+</section>
+</main>
+
+<footer><div><strong>CHINA RENOWN</strong><p>Hospitality sourcing &amp; procurement from China for hotels, resorts, restaurants and cafés.</p></div><div><div class="eyebrow">Services</div><a href="#services">FF&amp;E Procurement</a><a href="#services">OS&amp;E Supply</a><a href="#services">Quality Control</a><a href="#services">Logistics</a></div><div><div class="eyebrow">Industries</div><a href="#industries">Hotels &amp; Resorts</a><a href="#industries">Restaurants &amp; F&amp;B</a><a href="#industries">Cafés</a><a href="#contact">Start a Project</a></div></footer>
+</body>
+</html>

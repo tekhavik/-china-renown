@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHINA RENOWN | Hospitality Procurement & Manufacturing</title>
+<meta name="description" content="Complete hospitality procurement and manufacturing from China for hotels, resorts, restaurants and cafés.">
+<style>
+:root{--black:#050505;--black2:#0b0b0b;--gold:#B88A2A;--gold2:#D8B45A;--white:#f7f5ef;--muted:#a8a8a3;--line:rgba(216,180,90,.22)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.header{position:absolute;top:0;left:0;width:100%;z-index:10;padding:26px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(0,0,0,.75),transparent)}
+.brand{display:flex;align-items:center;gap:14px}.logo{width:50px;height:50px;border:1px solid var(--gold);display:grid;place-items:center;font:34px Georgia;color:var(--gold2)}.brand b{letter-spacing:4px;font-size:16px}.brand small{display:block;color:#aaa;font-size:9px;letter-spacing:3px;margin-top:3px}
+.nav{display:flex;gap:24px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase}.nav a:hover{color:var(--gold2)}
+.hero{min-height:100vh;display:flex;align-items:end;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.22)),linear-gradient(0deg,rgba(0,0,0,.86),transparent 60%),url("https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=2400") center/cover}
+.heroIn{width:90%;max-width:1320px;margin:auto;padding:160px 0 90px}.eyebrow{font-size:10px;letter-spacing:5px;color:var(--gold2);margin-bottom:18px}.hero h1{font:400 clamp(52px,7vw,104px)/.93 Georgia;max-width:1000px}.hero p{max-width:650px;color:#ddd;margin:26px 0 32px;font-size:16px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:15px 23px;border:1px solid var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase}.btn.gold{color:#080808;background:linear-gradient(135deg,#8f681c,#d8b45a,#9c731f)}
+section{padding:105px 5%}.intro{max-width:800px;margin-bottom:50px}.kicker{font-size:10px;letter-spacing:4px;color:var(--gold2);text-transform:uppercase;margin-bottom:13px}h2{font:400 clamp(38px,5vw,66px)/1.02 Georgia}.intro p{color:var(--muted);max-width:700px;margin-top:17px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{height:560px;position:relative;overflow:hidden;border:1px solid rgba(216,180,90,.13)}.service:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.05) 68%)}.serviceImg{position:absolute;inset:0;background:center/cover;transition:.7s}.service:hover .serviceImg{transform:scale(1.06)}.serviceText{position:absolute;z-index:2;left:25px;right:20px;bottom:27px}.serviceText span{font-size:9px;letter-spacing:3px;color:var(--gold2)}.serviceText h3{font:400 34px Georgia;margin-top:8px}.serviceText p{color:#d0d0cb;font-size:12px;margin-top:8px}
+.black2{background:var(--black2)}.scope{display:grid;grid-template-columns:1fr 2fr;gap:70px}.scopeGrid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.scopeItem{padding:22px 0;border-bottom:1px solid var(--line);font-size:13px;color:#d8d8d2}.scopeItem strong{display:block;color:#fff;font:20px Georgia;margin-bottom:5px}.scopeItem em{color:var(--muted);font-style:normal;font-size:11px}
+.fullImg{height:540px;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.05)),url("https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=2400") center/cover;display:flex;align-items:center}.fullImg div{width:90%;max-width:1320px;margin:auto}.fullImg h2{max-width:720px}
+.categoryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.cat{height:360px;position:relative;overflow:hidden}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.86),transparent 65%)}.catImg{position:absolute;inset:0;background:center/cover;transition:.6s}.cat:hover .catImg{transform:scale(1.05)}.cat div:last-child{position:absolute;z-index:2;bottom:22px;left:22px}.cat h3{font:400 26px Georgia}.cat p{font-size:10px;color:#ccc;margin-top:5px}
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);margin-top:40px}.step{background:var(--black);padding:25px 18px;min-height:155px}.step span{color:var(--gold2);font-size:10px;letter-spacing:2px}.step h3{font:400 20px Georgia;margin-top:28px}
+.projects{background:#090909}.projectGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}.project{height:470px;position:relative;overflow:hidden}.project.small{height:225px}.projectImg{position:absolute;inset:0;background:center/cover}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.86),transparent 62%)}.projectText{position:absolute;z-index:2;left:22px;bottom:20px}.projectText small{color:var(--gold2);letter-spacing:2px;font-size:9px}.projectText h3{font:400 27px Georgia;margin-top:6px}
+.cta{text-align:center;background:#f2eee4;color:#0a0a0a}.cta p{max-width:650px;margin:16px auto 28px;color:#5f5c55}.cta .btn{color:#0a0a0a}
+footer{padding:34px 5%;display:flex;justify-content:space-between;color:#85857f;border-top:1px solid var(--line);font-size:10px;letter-spacing:1px}
+@media(max-width:950px){.nav{display:none}.services{grid-template-columns:repeat(2,1fr)}.scope{grid-template-columns:1fr;gap:35px}.categoryGrid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){section{padding:75px 5%}.services,.categoryGrid,.projectGrid{grid-template-columns:1fr}.service{height:440px}.steps{grid-template-columns:1fr 1fr}.project,.project.small{height:330px}footer{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+<header class="header">
+<a class="brand" href="#top"><div class="logo">R</div><div><b>CHINA RENOWN</b><small>HOSPITALITY PROCUREMENT & MANUFACTURING</small></div></a>
+<nav class="nav"><a href="#hotels">Hotels</a><a href="#restaurants">Restaurants</a><a href="#cafes">Cafés</a><a href="#resorts">Resorts</a><a href="#scope">What We Supply</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section class="hero" id="top"><div class="heroIn"><div class="eyebrow">CHINA • GLOBAL HOSPITALITY PROJECTS</div><h1>One partner for your entire hospitality project.</h1><p>From finishes and furniture to kitchens, lighting, bathrooms, technology, operating supplies and bespoke manufacturing — sourced, produced and controlled in China.</p><div class="buttons"><a class="btn gold" href="#scope">Explore Our Scope</a><a class="btn" href="#contact">Start Your Project</a></div></div></section>
+
+<section id="hotels">
+<div class="intro"><div class="kicker">01 / Hospitality</div><h2>Built around the way your project actually works.</h2><p>We cover the complete supply chain for hotels, resorts, restaurants and cafés — not individual products.</p></div>
+<div class="services">
+<a class="service" id="restaurants" href="#scope"><div class="serviceImg" style="background-image:url('https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div><div class="serviceText"><span>01</span><h3>Hotels</h3><p>Guestrooms, lobby, bathrooms, F&B, FF&E, OS&E, lighting, equipment and technology.</p></div></a>
+<a class="service" href="#scope"><div class="serviceImg" style="background-image:url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div><div class="serviceText"><span>02</span><h3>Restaurants</h3><p>Front of house, commercial kitchens, furniture, tableware, bar equipment and lighting.</p></div></a>
+<a class="service" id="cafes" href="#scope"><div class="serviceImg" style="background-image:url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div><div class="serviceText"><span>03</span><h3>Cafés</h3><p>Coffee equipment, counters, furniture, bakery, refrigeration, packaging and custom products.</p></div></a>
+<a class="service" id="resorts" href="#scope"><div class="serviceImg" style="background-image:url('https://images.pexels.com/photos/261156/pexels-photo-261156.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div><div class="serviceText"><span>04</span><h3>Resorts</h3><p>Villas, guestrooms, pools, spas, outdoor spaces, restaurants and leisure facilities.</p></div></a>
+</div>
+</section>
+
+<section class="black2" id="scope">
+<div class="scope"><div class="intro"><div class="kicker">02 / Complete Scope</div><h2>From the structure to the smallest guest detail.</h2><p>Our scope follows the whole property, from architectural finishes and fixed furniture to opening supplies and operating equipment.</p></div>
+<div class="scopeGrid">
+<div class="scopeItem"><strong>Architecture & Finishes</strong><em>Stone · tiles · flooring · wall panels · doors · glass</em></div>
+<div class="scopeItem"><strong>Furniture & FF&E</strong><em>Beds · casegoods · sofas · chairs · outdoor · custom</em></div>
+<div class="scopeItem"><strong>Lighting & Decor</strong><em>Decorative · technical · mirrors · rugs · accessories</em></div>
+<div class="scopeItem"><strong>Kitchen & F&B</strong><em>Cooking · refrigeration · bakery · dishwashing · bar</em></div>
+<div class="scopeItem"><strong>Bathrooms & Wellness</strong><em>Sanitaryware · faucets · bathtubs · spa · sauna</em></div>
+<div class="scopeItem"><strong>Tableware & OS&E</strong><em>Porcelain · cutlery · glassware · textiles · amenities</em></div>
+<div class="scopeItem"><strong>Technology & Safety</strong><em>Locks · CCTV · Wi-Fi · IPTV · POS · fire systems</em></div>
+<div class="scopeItem"><strong>Custom Manufacturing</strong><em>Joinery · millwork · furniture · lighting · metal · stone</em></div>
+</div></div>
+</section>
+
+<section class="fullImg"><div><div class="kicker">03 / Made in China</div><h2>From your drawings and specifications to a finished product.</h2></div></section>
+
+<section>
+<div class="intro"><div class="kicker">04 / Product World</div><h2>Every layer of the property. One supply chain.</h2></div>
+<div class="categoryGrid">
+<div class="cat"><div class="catImg" style="background-image:url('https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div><div><h3>Guestrooms</h3><p>Furniture · beds · mattresses · lighting · textiles</p></div></div>
+<div class="cat"><div class="catImg" style="background-image:url('https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div><div><h3>Bathrooms</h3><p>Sanitaryware · stone · glass · fixtures</p></div></div>
+<div class="cat"><div class="catImg" style="background-image:url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div><div><h3>F&B</h3><p>Restaurants · bars · tableware · kitchens</p></div></div>
+<div class="cat"><div class="catImg" style="background-image:url('https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div><div><h3>Lighting</h3><p>Decorative · architectural · bespoke fixtures</p></div></div>
+<div class="cat"><div class="catImg" style="background-image:url('https://images.pexels.com/photos/1579739/pexels-photo-1579739.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div><div><h3>Outdoor & Pool</h3><p>Resort furniture · pool · landscape · spa</p></div></div>
+<div class="cat"><div class="catImg" style="background-image:url('https://images.pexels.com/photos/3755761/pexels-photo-3755761.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div><div><h3>Custom Manufacturing</h3><p>Joinery · furniture · metal · glass · stone</p></div></div>
+</div>
+</section>
+
+<section class="black2" id="process">
+<div class="intro"><div class="kicker">05 / Project Control</div><h2>From BOQ to delivery.</h2><p>A controlled process across factories, production, quality and logistics.</p></div>
+<div class="steps">
+<div class="step"><span>01</span><h3>BOQ & Brief</h3></div><div class="step"><span>02</span><h3>Source & Compare</h3></div><div class="step"><span>03</span><h3>Samples & Prototype</h3></div><div class="step"><span>04</span><h3>Manufacture</h3></div><div class="step"><span>05</span><h3>QC & Consolidate</h3></div><div class="step"><span>06</span><h3>Ship & Deliver</h3></div>
+</div>
+</section>
+
+<section class="projects">
+<div class="intro"><div class="kicker">06 / Project Scenarios</div><h2>Designed for real hospitality environments.</h2></div>
+<div class="projectGrid">
+<div class="project"><div class="projectImg" style="background-image:url('https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1800')"></div><div class="projectText"><small>HOTEL / RESORT</small><h3>Luxury Guest Experience</h3></div></div>
+<div><div class="project small"><div class="projectImg" style="background-image:url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div><div class="projectText"><small>F&B</small><h3>Restaurants</h3></div></div><br><div class="project small"><div class="projectImg" style="background-image:url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div><div class="projectText"><small>CAFÉ</small><h3>Coffee & Bakery</h3></div></div></div>
+<div><div class="project small"><div class="projectImg" style="background-image:url('https://images.pexels.com/photos/3755761/pexels-photo-3755761.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div><div class="projectText"><small>MANUFACTURING</small><h3>Made to Spec</h3></div></div><br><div class="project small"><div class="projectImg" style="background-image:url('https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div><div class="projectText"><small>LOGISTICS</small><h3>China to Site</h3></div></div></div>
+</div>
+</section>
+
+<section class="cta" id="contact"><div class="kicker">07 / Start a Project</div><h2>Tell us what you're building.</h2><p>Send your BOQ, drawings, specifications or even a concept. We will build the China-side procurement route around your project.</p><a class="btn gold" href="mailto:info@chinarenown.com">START A PROJECT</a></section>
+<footer><div>© 2026 CHINA RENOWN</div><div>HOTELS · RESORTS · RESTAURANTS · CAFÉS</div></footer>
+</body></html>

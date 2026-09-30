@@ -9,15 +9,17 @@
 <meta name="description"
 content="CHINA RENOWN provides hospitality procurement, sourcing, manufacturing and project supply for hotels, resorts, restaurants and cafés worldwide.">
 
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-size='65' font-family='serif' font-weight='bold' fill='%23d8b76a'%3ER%3C/text%3E%3C/svg%3E">
+
 <style>
 :root{
   --black:#050505;
-  --black2:#0b0b0b;
-  --gold:#c8a45d;
-  --gold2:#e0c27a;
+  --black2:#090909;
+  --gold:#c9a65d;
+  --gold-light:#e1c47b;
   --white:#f5f2eb;
-  --muted:#aaa49a;
-  --line:rgba(200,164,93,.25);
+  --muted:#aaa59c;
+  --line:rgba(201,166,93,.25);
 }
 
 *{
@@ -48,12 +50,55 @@ a{
   text-decoration:none;
 }
 
+/* =========================
+   LOGO
+========================= */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  height:52px;
+}
+
+.brand-mark{
+  position:relative;
+  width:54px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.brand-mark svg{
+  width:54px;
+  height:54px;
+  display:block;
+}
+
+.brand-name{
+  font-size:21px;
+  letter-spacing:3px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.brand-name span{
+  color:var(--gold-light);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container{
   width:min(1240px,92%);
   margin:auto;
 }
 
-/* NAVIGATION */
+/* =========================
+   HEADER
+========================= */
 
 header{
   position:fixed;
@@ -61,10 +106,11 @@ header{
   left:0;
   width:100%;
   z-index:1000;
-  padding:24px 0;
+  padding:20px 0;
   background:linear-gradient(
     to bottom,
-    rgba(0,0,0,.8),
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.25),
     transparent
   );
 }
@@ -75,33 +121,38 @@ header{
   align-items:center;
 }
 
-.logo{
-  font-size:25px;
-  font-weight:800;
-  letter-spacing:4px;
-}
-
-.logo span{
-  color:var(--gold);
-}
-
 nav{
   display:flex;
+  align-items:center;
   gap:30px;
 }
 
 nav a{
-  font-size:12px;
-  letter-spacing:1.5px;
+  font-size:11px;
+  letter-spacing:1.8px;
   text-transform:uppercase;
   color:#ddd;
+  transition:.3s;
 }
 
 nav a:hover{
-  color:var(--gold2);
+  color:var(--gold-light);
 }
 
-/* HERO */
+.nav-cta{
+  border:1px solid var(--gold);
+  padding:12px 18px;
+  color:var(--gold-light);
+}
+
+.nav-cta:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   position:relative;
@@ -124,9 +175,9 @@ nav a:hover{
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.86),
-      rgba(0,0,0,.35),
-      rgba(0,0,0,.65)
+      rgba(0,0,0,.9) 0%,
+      rgba(0,0,0,.52) 45%,
+      rgba(0,0,0,.25) 100%
     );
 }
 
@@ -140,32 +191,34 @@ nav a:hover{
 
 .hero-inner{
   max-width:900px;
+  padding-top:70px;
 }
 
 .eyebrow{
-  color:var(--gold2);
-  font-size:12px;
+  color:var(--gold-light);
+  font-size:11px;
   letter-spacing:4px;
   text-transform:uppercase;
   margin-bottom:22px;
 }
 
 .hero h1{
-  font-size:clamp(52px,8vw,105px);
-  line-height:.95;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(52px,8vw,100px);
+  line-height:.94;
   letter-spacing:-4px;
-  max-width:1000px;
+  max-width:950px;
 }
 
 .hero h1 span{
-  color:var(--gold2);
+  color:var(--gold-light);
 }
 
 .hero p{
   max-width:650px;
   margin-top:30px;
   color:#ddd;
-  font-size:18px;
+  font-size:17px;
 }
 
 .btn{
@@ -173,10 +226,10 @@ nav a:hover{
   margin-top:35px;
   padding:15px 27px;
   border:1px solid var(--gold);
-  color:var(--gold2);
+  color:var(--gold-light);
   text-transform:uppercase;
   letter-spacing:2px;
-  font-size:11px;
+  font-size:10px;
   transition:.3s;
 }
 
@@ -185,7 +238,9 @@ nav a:hover{
   color:#000;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
   padding:120px 0;
@@ -201,10 +256,12 @@ section{
 .section-number{
   color:var(--gold);
   letter-spacing:3px;
-  font-size:12px;
+  font-size:11px;
+  margin-bottom:15px;
 }
 
 h2{
+  font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(40px,5vw,70px);
   line-height:1;
   letter-spacing:-2px;
@@ -216,7 +273,9 @@ h2{
   max-width:600px;
 }
 
-/* INTRO */
+/* =========================
+   ABOUT
+========================= */
 
 .intro{
   background:#080808;
@@ -230,15 +289,18 @@ h2{
 }
 
 .intro-text{
+  font-family:Georgia,"Times New Roman",serif;
   font-size:30px;
   line-height:1.25;
 }
 
 .gold{
-  color:var(--gold2);
+  color:var(--gold-light);
 }
 
-/* CLIENT TYPES */
+/* =========================
+   PROJECT TYPES
+========================= */
 
 .client-grid{
   display:grid;
@@ -267,8 +329,8 @@ h2{
   inset:0;
   background:linear-gradient(
     to top,
-    rgba(0,0,0,.9),
-    transparent 55%
+    rgba(0,0,0,.92),
+    transparent 60%
   );
 }
 
@@ -280,17 +342,20 @@ h2{
 }
 
 .client-content h3{
-  font-size:30px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:31px;
 }
 
 .client-content span{
-  color:var(--gold2);
-  font-size:11px;
+  color:var(--gold-light);
+  font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
-/* SCOPE */
+/* =========================
+   SCOPE
+========================= */
 
 .scope{
   background:#090909;
@@ -305,7 +370,7 @@ h2{
 
 .scope-item{
   background:#090909;
-  min-height:300px;
+  min-height:310px;
   padding:42px;
   transition:.3s;
 }
@@ -316,13 +381,14 @@ h2{
 
 .scope-item .num{
   color:var(--gold);
-  font-size:12px;
+  font-size:11px;
   letter-spacing:2px;
 }
 
 .scope-item h3{
   margin-top:25px;
-  font-size:28px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:29px;
 }
 
 .scope-item p{
@@ -346,17 +412,19 @@ h2{
   color:var(--gold);
 }
 
-/* IMAGE BREAK */
+/* =========================
+   MANUFACTURING IMAGE
+========================= */
 
 .image-break{
   height:620px;
   position:relative;
   background-image:
     linear-gradient(
-      rgba(0,0,0,.35),
-      rgba(0,0,0,.75)
+      rgba(0,0,0,.25),
+      rgba(0,0,0,.78)
     ),
-    url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=2200&q=85");
+    url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2200&q=85");
   background-size:cover;
   background-position:center;
   display:flex;
@@ -371,7 +439,9 @@ h2{
   max-width:800px;
 }
 
-/* PROCESS */
+/* =========================
+   PROCESS
+========================= */
 
 .process{
   background:#050505;
@@ -393,13 +463,14 @@ h2{
 }
 
 .process-item strong{
-  color:var(--gold2);
-  font-size:14px;
+  color:var(--gold-light);
+  font-size:13px;
 }
 
 .process-item h3{
   margin-top:20px;
-  font-size:20px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
 }
 
 .process-item p{
@@ -408,7 +479,9 @@ h2{
   font-size:14px;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects{
   background:#090909;
@@ -445,7 +518,7 @@ h2{
   inset:0;
   background:linear-gradient(
     to top,
-    rgba(0,0,0,.85),
+    rgba(0,0,0,.88),
     transparent 60%
   );
 }
@@ -458,13 +531,14 @@ h2{
 }
 
 .project-label span{
-  color:var(--gold2);
+  color:var(--gold-light);
   font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
 .project-label h3{
+  font-family:Georgia,"Times New Roman",serif;
   font-size:25px;
 }
 
@@ -473,7 +547,9 @@ h2{
   gap:20px;
 }
 
-/* CUSTOM */
+/* =========================
+   CUSTOM MANUFACTURING
+========================= */
 
 .custom{
   background:#050505;
@@ -515,7 +591,9 @@ h2{
   color:#ccc;
 }
 
-/* GLOBAL */
+/* =========================
+   GLOBAL SUPPLY
+========================= */
 
 .global{
   position:relative;
@@ -532,7 +610,7 @@ h2{
     linear-gradient(
       90deg,
       rgba(0,0,0,.9),
-      rgba(0,0,0,.45)
+      rgba(0,0,0,.4)
     ),
     url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=85");
   background-size:cover;
@@ -551,7 +629,9 @@ h2{
   font-size:18px;
 }
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta{
   min-height:600px;
@@ -566,10 +646,10 @@ h2{
   inset:0;
   background-image:
     linear-gradient(
-      rgba(0,0,0,.65),
+      rgba(0,0,0,.62),
       rgba(0,0,0,.9)
     ),
-    url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=85");
+    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85");
   background-size:cover;
   background-position:center;
 }
@@ -592,7 +672,9 @@ h2{
   max-width:650px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   padding:55px 0;
@@ -607,8 +689,8 @@ footer{
 }
 
 .footer-title{
-  color:var(--gold2);
-  font-size:13px;
+  color:var(--gold-light);
+  font-size:11px;
   letter-spacing:2px;
   text-transform:uppercase;
 }
@@ -627,9 +709,28 @@ footer p{
   font-size:12px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
+
+  header{
+    padding:15px 0;
+  }
+
+  .brand-name{
+    font-size:17px;
+    letter-spacing:2px;
+  }
+
+  .brand-mark{
+    width:45px;
+  }
+
+  .brand-mark svg{
+    width:45px;
+  }
 
   nav{
     display:none;
@@ -682,8 +783,13 @@ footer p{
 
 @media(max-width:600px){
 
+  .brand-name{
+    font-size:15px;
+  }
+
   .hero h1{
     font-size:54px;
+    letter-spacing:-2px;
   }
 
   .hero p{
@@ -711,30 +817,82 @@ footer p{
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
   <div class="container nav">
 
-    <a href="#" class="logo">
-      CHINA <span>RENOWN</span>
+    <a href="#top" class="brand">
+
+      <!-- R LOGO -->
+      <div class="brand-mark">
+        <svg viewBox="0 0 100 100"
+             xmlns="http://www.w3.org/2000/svg"
+             aria-label="R logo">
+
+          <defs>
+            <linearGradient id="goldR"
+              x1="0%" y1="0%"
+              x2="100%" y2="100%">
+
+              <stop offset="0%"
+                    stop-color="#f1d58c"/>
+
+              <stop offset="45%"
+                    stop-color="#c9a65d"/>
+
+              <stop offset="100%"
+                    stop-color="#8d6b2d"/>
+
+            </linearGradient>
+          </defs>
+
+          <text
+            x="50"
+            y="78"
+            text-anchor="middle"
+            font-family="Georgia, Times New Roman, serif"
+            font-size="82"
+            font-weight="bold"
+            fill="url(#goldR)">
+            R
+          </text>
+
+        </svg>
+      </div>
+
+      <div class="brand-name">
+        CHINA <span>RENOWN</span>
+      </div>
+
     </a>
 
+
     <nav>
+
       <a href="#about">About</a>
       <a href="#scope">Scope</a>
       <a href="#process">Process</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+
+      <a href="#contact" class="nav-cta">
+        Get a Quote
+      </a>
+
     </nav>
 
   </div>
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero">
+<section class="hero" id="top">
 
   <video
     class="hero-video"
@@ -773,7 +931,7 @@ footer p{
         </p>
 
         <a href="#contact" class="btn">
-          Start Your Project
+          Start Your Project →
         </a>
 
       </div>
@@ -785,7 +943,9 @@ footer p{
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="intro" id="about">
 
@@ -794,8 +954,16 @@ footer p{
     <div class="section-head">
 
       <div>
-        <div class="section-number">01 / ABOUT</div>
-        <h2>One partner.<br>Every supply.</h2>
+
+        <div class="section-number">
+          01 / ABOUT
+        </div>
+
+        <h2>
+          One partner.<br>
+          Every supply.
+        </h2>
+
       </div>
 
       <p>
@@ -807,18 +975,26 @@ footer p{
 
     </div>
 
+
     <div class="intro-grid">
 
       <div class="intro-text">
+
         From the first specification to the final
         container, we coordinate the complete supply
-        chain for <span class="gold">hospitality projects.</span>
+        chain for
+        <span class="gold">
+          hospitality projects.
+        </span>
+
       </div>
 
       <div>
+
         <p style="color:#888;">
           Hotels · Resorts · Restaurants · Cafés
         </p>
+
       </div>
 
     </div>
@@ -828,7 +1004,9 @@ footer p{
 </section>
 
 
-<!-- CLIENT TYPES -->
+<!-- =========================
+     PROJECT TYPES
+========================= -->
 
 <section>
 
@@ -837,8 +1015,16 @@ footer p{
     <div class="section-head">
 
       <div>
-        <div class="section-number">02 / PROJECT TYPES</div>
-        <h2>Built for<br>hospitality.</h2>
+
+        <div class="section-number">
+          02 / PROJECT TYPES
+        </div>
+
+        <h2>
+          Built for<br>
+          hospitality.
+        </h2>
+
       </div>
 
       <p>
@@ -849,7 +1035,11 @@ footer p{
 
     </div>
 
+
     <div class="client-grid">
+
+
+      <!-- HOTEL -->
 
       <div class="client-card">
 
@@ -858,12 +1048,17 @@ footer p{
           alt="Luxury hotel">
 
         <div class="client-content">
+
           <span>Hospitality</span>
+
           <h3>Hotels</h3>
+
         </div>
 
       </div>
 
+
+      <!-- RESORT -->
 
       <div class="client-card">
 
@@ -872,12 +1067,17 @@ footer p{
           alt="Luxury resort">
 
         <div class="client-content">
+
           <span>Destination</span>
+
           <h3>Resorts</h3>
+
         </div>
 
       </div>
 
+
+      <!-- RESTAURANT -->
 
       <div class="client-card">
 
@@ -886,12 +1086,17 @@ footer p{
           alt="Fine dining restaurant">
 
         <div class="client-content">
+
           <span>F&B</span>
+
           <h3>Restaurants</h3>
+
         </div>
 
       </div>
 
+
+      <!-- CAFE -->
 
       <div class="client-card">
 
@@ -900,8 +1105,11 @@ footer p{
           alt="Modern cafe">
 
         <div class="client-content">
+
           <span>F&B</span>
+
           <h3>Cafés</h3>
+
         </div>
 
       </div>
@@ -913,7 +1121,9 @@ footer p{
 </section>
 
 
-<!-- COMPLETE SCOPE -->
+<!-- =========================
+     COMPLETE SCOPE
+========================= -->
 
 <section class="scope" id="scope">
 
@@ -922,8 +1132,16 @@ footer p{
     <div class="section-head">
 
       <div>
-        <div class="section-number">03 / COMPLETE SCOPE</div>
-        <h2>A → Z<br>Project Supply.</h2>
+
+        <div class="section-number">
+          03 / COMPLETE SCOPE
+        </div>
+
+        <h2>
+          A → Z<br>
+          Project Supply.
+        </h2>
+
       </div>
 
       <p>
@@ -942,7 +1160,9 @@ footer p{
 
         <div class="num">01</div>
 
-        <h3>Architecture & Finishes</h3>
+        <h3>
+          Architecture & Finishes
+        </h3>
 
         <p>
           Materials and finishes that define
@@ -964,7 +1184,9 @@ footer p{
 
         <div class="num">02</div>
 
-        <h3>Furniture & FF&E</h3>
+        <h3>
+          Furniture & FF&E
+        </h3>
 
         <p>
           Furniture packages for guestrooms,
@@ -986,7 +1208,9 @@ footer p{
 
         <div class="num">03</div>
 
-        <h3>Lighting</h3>
+        <h3>
+          Lighting
+        </h3>
 
         <p>
           Decorative and architectural lighting
@@ -1008,7 +1232,9 @@ footer p{
 
         <div class="num">04</div>
 
-        <h3>Commercial Kitchens & F&B</h3>
+        <h3>
+          Commercial Kitchens & F&B
+        </h3>
 
         <p>
           Professional equipment for hotel,
@@ -1031,7 +1257,9 @@ footer p{
 
         <div class="num">05</div>
 
-        <h3>Tableware & OS&E</h3>
+        <h3>
+          Tableware & OS&E
+        </h3>
 
         <p>
           Operating supplies and guest-facing
@@ -1054,7 +1282,9 @@ footer p{
 
         <div class="num">06</div>
 
-        <h3>Technology & Safety</h3>
+        <h3>
+          Technology & Safety
+        </h3>
 
         <p>
           Technology and safety systems for
@@ -1077,7 +1307,9 @@ footer p{
 
         <div class="num">07</div>
 
-        <h3>Custom Manufacturing</h3>
+        <h3>
+          Custom Manufacturing
+        </h3>
 
         <p>
           Made-to-specification production for
@@ -1101,7 +1333,9 @@ footer p{
 
         <div class="num">08</div>
 
-        <h3>Logistics & Project Supply</h3>
+        <h3>
+          Logistics & Project Supply
+        </h3>
 
         <p>
           Consolidation, packing and international
@@ -1126,7 +1360,9 @@ footer p{
 </section>
 
 
-<!-- MANUFACTURING -->
+<!-- =========================
+     MANUFACTURING
+========================= -->
 
 <section class="image-break">
 
@@ -1150,7 +1386,9 @@ footer p{
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESS
+========================= -->
 
 <section class="process" id="process">
 
@@ -1159,8 +1397,16 @@ footer p{
     <div class="section-head">
 
       <div>
-        <div class="section-number">04 / OUR PROCESS</div>
-        <h2>One clear<br>process.</h2>
+
+        <div class="section-number">
+          04 / OUR PROCESS
+        </div>
+
+        <h2>
+          One clear<br>
+          process.
+        </h2>
+
       </div>
 
       <p>
@@ -1226,7 +1472,9 @@ footer p{
 </section>
 
 
-<!-- PROJECTS -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section class="projects" id="projects">
 
@@ -1235,8 +1483,16 @@ footer p{
     <div class="section-head">
 
       <div>
-        <div class="section-number">05 / PROJECTS</div>
-        <h2>Designed for<br>real projects.</h2>
+
+        <div class="section-number">
+          05 / PROJECTS
+        </div>
+
+        <h2>
+          Designed for<br>
+          real projects.
+        </h2>
+
       </div>
 
       <p>
@@ -1250,6 +1506,7 @@ footer p{
 
     <div class="project-grid">
 
+
       <div class="project">
 
         <img
@@ -1257,14 +1514,22 @@ footer p{
           alt="Luxury hotel interior">
 
         <div class="project-label">
-          <span>Hospitality Project</span>
-          <h3>Hotel Interiors</h3>
+
+          <span>
+            Hospitality Project
+          </span>
+
+          <h3>
+            Hotel Interiors
+          </h3>
+
         </div>
 
       </div>
 
 
       <div class="project-column">
+
 
         <div class="project small">
 
@@ -1273,8 +1538,15 @@ footer p{
             alt="Luxury resort">
 
           <div class="project-label">
-            <span>Destination</span>
-            <h3>Resort Supply</h3>
+
+            <span>
+              Destination
+            </span>
+
+            <h3>
+              Resort Supply
+            </h3>
+
           </div>
 
         </div>
@@ -1287,8 +1559,15 @@ footer p{
             alt="Restaurant interior">
 
           <div class="project-label">
-            <span>F&B</span>
-            <h3>Restaurant Projects</h3>
+
+            <span>
+              F&B
+            </span>
+
+            <h3>
+              Restaurant Projects
+            </h3>
+
           </div>
 
         </div>
@@ -1302,7 +1581,9 @@ footer p{
 </section>
 
 
-<!-- CUSTOM MANUFACTURING -->
+<!-- =========================
+     CUSTOM MANUFACTURING
+========================= -->
 
 <section class="custom">
 
@@ -1310,11 +1591,12 @@ footer p{
 
     <div class="custom-grid">
 
+
       <div class="custom-image">
 
         <img
-          src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?auto=format&fit=crop&w=1600&q=85"
-          alt="Custom furniture manufacturing">
+          src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1600&q=85"
+          alt="Custom manufacturing">
 
       </div>
 
@@ -1336,6 +1618,7 @@ footer p{
           to develop custom solutions around your
           drawings, dimensions, materials and finish.
         </p>
+
 
         <div class="custom-list">
 
@@ -1359,7 +1642,9 @@ footer p{
 </section>
 
 
-<!-- GLOBAL SUPPLY -->
+<!-- =========================
+     GLOBAL SUPPLY
+========================= -->
 
 <section class="global">
 
@@ -1391,7 +1676,9 @@ footer p{
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta" id="contact">
 
@@ -1415,7 +1702,9 @@ footer p{
         build the right sourcing strategy.
       </p>
 
-      <a href="mailto:info@chinarenown.com" class="btn">
+      <a
+        href="mailto:info@chinarenown.com"
+        class="btn">
         Contact CHINA RENOWN
       </a>
 
@@ -1426,7 +1715,9 @@ footer p{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1434,19 +1725,67 @@ footer p{
 
     <div class="footer-grid">
 
+
       <div>
-        <div class="logo">
-          CHINA <span>RENOWN</span>
-        </div>
+
+        <a href="#top" class="brand">
+
+          <div class="brand-mark">
+
+            <svg viewBox="0 0 100 100"
+                 xmlns="http://www.w3.org/2000/svg">
+
+              <defs>
+
+                <linearGradient id="goldFooter"
+                  x1="0%" y1="0%"
+                  x2="100%" y2="100%">
+
+                  <stop offset="0%"
+                        stop-color="#f1d58c"/>
+
+                  <stop offset="45%"
+                        stop-color="#c9a65d"/>
+
+                  <stop offset="100%"
+                        stop-color="#8d6b2d"/>
+
+                </linearGradient>
+
+              </defs>
+
+              <text
+                x="50"
+                y="78"
+                text-anchor="middle"
+                font-family="Georgia, Times New Roman, serif"
+                font-size="82"
+                font-weight="bold"
+                fill="url(#goldFooter)">
+                R
+              </text>
+
+            </svg>
+
+          </div>
+
+          <div class="brand-name">
+            CHINA <span>RENOWN</span>
+          </div>
+
+        </a>
+
 
         <p>
           Hospitality Procurement,
           Manufacturing & Project Supply.
         </p>
+
       </div>
 
 
       <div>
+
         <div class="footer-title">
           Sectors
         </div>
@@ -1455,10 +1794,12 @@ footer p{
           Hotels · Resorts<br>
           Restaurants · Cafés
         </p>
+
       </div>
 
 
       <div>
+
         <div class="footer-title">
           China
         </div>
@@ -1467,13 +1808,17 @@ footer p{
           Sourcing · Manufacturing<br>
           Quality Control · Logistics
         </p>
+
       </div>
 
     </div>
 
 
     <div class="copyright">
-      © 2026 CHINA RENOWN. All Rights Reserved.
+
+      © 2026 CHINA RENOWN.
+      All Rights Reserved.
+
     </div>
 
   </div>

@@ -19,11 +19,7 @@
   --line:#302715;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 html{
   scroll-behavior:smooth;
@@ -38,21 +34,11 @@ body{
   overflow-x:hidden;
 }
 
-body.rtl{
-  direction:rtl;
-}
+body.rtl{direction:rtl}
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+a{text-decoration:none;color:inherit}
 
-button,
-input,
-textarea,
-select{
-  font-family:inherit;
-}
+button,input,textarea,select{font-family:inherit}
 
 img{
   width:100%;
@@ -88,13 +74,9 @@ img{
   font-weight:600;
 }
 
-body.rtl .eyebrow{
-  letter-spacing:.08em;
-}
+body.rtl .eyebrow{letter-spacing:.08em}
 
-h1,
-h2,
-h3{
+h1,h2,h3{
   font-family:Manrope,Arial,sans-serif;
   font-weight:400;
   line-height:.98;
@@ -128,9 +110,7 @@ p{
   color:#050505;
 }
 
-.btn.dark{
-  border-color:#777;
-}
+.btn.dark{border-color:#777}
 
 .btn.dark:hover{
   background:#fff;
@@ -164,15 +144,24 @@ header.scrolled{
 }
 
 .logo{
-  font-family:Manrope;
+  font-family:Manrope,Arial,sans-serif;
   font-size:18px;
   font-weight:700;
   letter-spacing:.1em;
   white-space:nowrap;
 }
 
-.logo span{
+.logo span{color:var(--gold)}
+
+.logo-r{
+  display:inline-block;
   color:var(--gold);
+  font-size:1.8em;
+  font-weight:700;
+  line-height:.75;
+  vertical-align:middle;
+  margin-right:4px;
+  letter-spacing:0;
 }
 
 nav{
@@ -189,9 +178,7 @@ nav a{
   transition:.3s;
 }
 
-nav a:hover{
-  color:var(--gold);
-}
+nav a:hover{color:var(--gold)}
 
 .menu{
   display:none;
@@ -204,9 +191,7 @@ nav a:hover{
 
 /* LANGUAGE */
 
-.language-wrap{
-  position:relative;
-}
+.language-wrap{position:relative}
 
 .language-button{
   background:transparent;
@@ -238,9 +223,7 @@ nav a:hover{
   display:none;
 }
 
-.language-menu.open{
-  display:block;
-}
+.language-menu.open{display:block}
 
 .language-menu button{
   width:100%;
@@ -264,9 +247,7 @@ body.rtl .language-menu{
   left:0;
 }
 
-body.rtl .language-menu button{
-  text-align:right;
-}
+body.rtl .language-menu button{text-align:right}
 
 /* MOBILE MENU */
 
@@ -285,9 +266,7 @@ body.rtl .language-menu button{
   overflow-y:auto;
 }
 
-.mobile-menu.open{
-  display:block;
-}
+.mobile-menu.open{display:block}
 
 .mobile-close{
   position:absolute;
@@ -328,9 +307,7 @@ body.rtl .mobile-close{
   text-transform:uppercase;
 }
 
-.mobile-language{
-  margin-top:28px;
-}
+.mobile-language{margin-top:28px}
 
 .mobile-language-title{
   color:var(--gold);
@@ -427,9 +404,7 @@ body.rtl .hero-overlay{
   margin-top:22px;
 }
 
-body.rtl .hero h1{
-  letter-spacing:-.03em;
-}
+body.rtl .hero h1{letter-spacing:-.03em}
 
 .hero-copy{
   max-width:630px;
@@ -463,9 +438,7 @@ body.rtl .scroll{
 
 /* SECTIONS */
 
-section{
-  padding:130px 0;
-}
+section{padding:130px 0}
 
 .intro{
   display:grid;
@@ -494,13 +467,9 @@ section{
   background:#111;
 }
 
-.client img{
-  transition:.7s;
-}
+.client img{transition:.7s}
 
-.client:hover img{
-  transform:scale(1.06);
-}
+.client:hover img{transform:scale(1.06)}
 
 .client:after{
   content:"";
@@ -525,9 +494,7 @@ body.rtl .client-info{
   right:25px;
 }
 
-.client h3{
-  font-size:26px;
-}
+.client h3{font-size:26px}
 
 .client p{
   font-size:11px;
@@ -536,9 +503,7 @@ body.rtl .client-info{
 
 /* SCOPE */
 
-.scope{
-  background:var(--black2);
-}
+.scope{background:var(--black2)}
 
 .scope-head{
   display:flex;
@@ -548,9 +513,7 @@ body.rtl .client-info{
   margin-bottom:55px;
 }
 
-.scope-head p{
-  max-width:450px;
-}
+.scope-head p{max-width:450px}
 
 .scope-grid{
   display:grid;
@@ -565,18 +528,14 @@ body.rtl .client-info{
   border-right:1px solid var(--line);
 }
 
-.scope-item:nth-child(even){
-  border-right:0;
-}
+.scope-item:nth-child(even){border-right:0}
 
 body.rtl .scope-item{
   border-right:0;
   border-left:1px solid var(--line);
 }
 
-body.rtl .scope-item:nth-child(even){
-  border-left:0;
-}
+body.rtl .scope-item:nth-child(even){border-left:0}
 
 .num{
   font-size:11px;
@@ -589,9 +548,7 @@ body.rtl .scope-item:nth-child(even){
   margin:34px 0 13px;
 }
 
-.scope-item p{
-  font-size:13px;
-}
+.scope-item p{font-size:13px}
 
 .scope-item ul{
   list-style:none;
@@ -657,18 +614,14 @@ body.rtl .scope-item:nth-child(even){
   border-right:1px solid #9a742d;
 }
 
-.stat:last-child{
-  border-right:0;
-}
+.stat:last-child{border-right:0}
 
 body.rtl .stat{
   border-right:0;
   border-left:1px solid #9a742d;
 }
 
-body.rtl .stat:last-child{
-  border-left:0;
-}
+body.rtl .stat:last-child{border-left:0}
 
 .stat strong{
   font-size:11px;
@@ -691,9 +644,7 @@ body.rtl .stat:last-child{
   margin-bottom:55px;
 }
 
-.steps{
-  border-top:1px solid #303030;
-}
+.steps{border-top:1px solid #303030}
 
 .step{
   display:grid;
@@ -709,13 +660,9 @@ body.rtl .stat:last-child{
   font-size:11px;
 }
 
-.step h3{
-  font-size:24px;
-}
+.step h3{font-size:24px}
 
-.step p{
-  font-size:12px;
-}
+.step p{font-size:12px}
 
 /* GALLERY */
 
@@ -731,17 +678,11 @@ body.rtl .stat:last-child{
   overflow:hidden;
 }
 
-.gallery-item img{
-  transition:.8s;
-}
+.gallery-item img{transition:.8s}
 
-.gallery-item:hover img{
-  transform:scale(1.05);
-}
+.gallery-item:hover img{transform:scale(1.05)}
 
-.gallery-item.big{
-  grid-row:span 2;
-}
+.gallery-item.big{grid-row:span 2}
 
 .tag{
   position:absolute;
@@ -809,48 +750,11 @@ body.rtl .tag{
   background:#101010;
 }
 
-.custom-content h2{
-  margin:22px 0;
-}
+.custom-content h2{margin:22px 0}
 
 .custom-content p{
   max-width:520px;
   margin-bottom:30px;
-}
-
-/* CTA */
-
-.cta{
-  min-height:720px;
-  display:flex;
-  align-items:flex-end;
-  position:relative;
-  background:
-    linear-gradient(90deg,#020202df,#02020235),
-    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=88")
-    center/cover;
-}
-
-body.rtl .cta{
-  background:
-    linear-gradient(270deg,#020202df,#02020235),
-    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=88")
-    center/cover;
-}
-
-.cta-content{
-  padding:100px 0;
-}
-
-.cta h2{
-  font-size:clamp(55px,8vw,120px);
-  max-width:900px;
-}
-
-.cta p{
-  max-width:520px;
-  font-size:16px;
-  margin:25px 0 30px;
 }
 
 /* CONTACT */
@@ -894,9 +798,7 @@ body.rtl .cta{
   flex-direction:column;
 }
 
-.form-group.full{
-  grid-column:1/-1;
-}
+.form-group.full{grid-column:1/-1}
 
 .form-group label{
   color:var(--gold);
@@ -957,9 +859,7 @@ body.rtl .cta{
   padding:20px;
 }
 
-.wechat-modal.open{
-  display:flex;
-}
+.wechat-modal.open{display:flex}
 
 .wechat-box{
   width:min(440px,94vw);
@@ -1018,7 +918,7 @@ body.rtl .wechat-close{
   text-transform:uppercase;
 }
 
-/* FLOATING BUTTONS */
+/* FLOATING ICONS */
 
 .floating{
   position:fixed;
@@ -1046,12 +946,14 @@ body.rtl .floating{
   box-shadow:0 10px 30px rgba(0,0,0,.4);
   cursor:pointer;
   transition:.25s;
-  font-size:12px;
-  font-weight:700;
 }
 
-.float-btn:hover{
-  transform:translateY(-3px);
+.float-btn:hover{transform:translateY(-3px)}
+
+.float-btn svg{
+  width:28px;
+  height:28px;
+  display:block;
 }
 
 .whatsapp{
@@ -1060,7 +962,7 @@ body.rtl .floating{
 }
 
 .wechat-float{
-  background:#d5ad58;
+  background:var(--gold);
   color:#050505;
 }
 
@@ -1105,29 +1007,19 @@ footer p{
 
 @media(max-width:1050px){
 
-  nav > a{
-    display:none;
-  }
+  nav > a{display:none}
 
-  nav .language-wrap{
-    display:block;
-  }
+  nav .language-wrap{display:block}
 
-  .menu{
-    display:block;
-  }
+  .menu{display:block}
 
 }
 
 @media(max-width:900px){
 
-  .nav{
-    gap:12px;
-  }
+  .nav{gap:12px}
 
-  nav{
-    gap:10px;
-  }
+  nav{gap:10px}
 
   .intro,
   .process-head,
@@ -1136,127 +1028,73 @@ footer p{
     grid-template-columns:1fr;
   }
 
-  .clients{
-    grid-template-columns:1fr 1fr;
-  }
+  .clients{grid-template-columns:1fr 1fr}
 
-  .scope-grid{
-    grid-template-columns:1fr;
-  }
+  .scope-grid{grid-template-columns:1fr}
 
-  .scope-item{
-    border-right:0;
-  }
+  .scope-item{border-right:0}
 
-  body.rtl .scope-item{
-    border-left:0;
-  }
+  body.rtl .scope-item{border-left:0}
 
-  .stats{
-    grid-template-columns:1fr 1fr;
-  }
+  .stats{grid-template-columns:1fr 1fr}
 
-  .stat:nth-child(2){
-    border-right:0;
-  }
+  .stat:nth-child(2){border-right:0}
 
-  body.rtl .stat:nth-child(2){
-    border-left:0;
-  }
+  body.rtl .stat:nth-child(2){border-left:0}
 
   .gallery{
     grid-template-columns:1fr;
     grid-template-rows:300px 250px 250px;
   }
 
-  .gallery-item.big{
-    grid-row:auto;
-  }
+  .gallery-item.big{grid-row:auto}
 
-  .custom-image{
-    min-height:420px;
-  }
+  .custom-image{min-height:420px}
 
-  .custom-content{
-    padding:60px 7vw;
-  }
+  .custom-content{padding:60px 7vw}
 
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
+  .footer-grid{grid-template-columns:1fr 1fr}
 
-  .contact-details{
-    grid-template-columns:1fr;
-  }
+  .contact-details{grid-template-columns:1fr}
 
 }
 
 @media(max-width:600px){
 
-  section{
-    padding:90px 0;
-  }
+  section{padding:90px 0}
 
-  header{
-    padding:17px 0;
-  }
+  header{padding:17px 0}
 
-  .logo{
-    font-size:15px;
-  }
+  .logo{font-size:15px}
 
-  .hero-content{
-    padding-bottom:70px;
-  }
+  .logo-r{font-size:1.8em}
 
-  .hero h1{
-    font-size:56px;
-  }
+  .hero-content{padding-bottom:70px}
 
-  .hero-copy{
-    font-size:14px;
-  }
+  .hero h1{font-size:56px}
 
-  .clients{
-    grid-template-columns:1fr;
-  }
+  .hero-copy{font-size:14px}
 
-  .client{
-    height:235px;
-  }
+  .clients{grid-template-columns:1fr}
+
+  .client{height:235px}
 
   .step{
     grid-template-columns:50px 1fr;
     gap:12px;
   }
 
-  .step p{
-    grid-column:2;
-  }
+  .step p{grid-column:2}
 
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
+  .footer-grid{grid-template-columns:1fr}
 
-  .cta{
-    min-height:620px;
-  }
+  .contact-form{grid-template-columns:1fr}
 
-  .contact-form{
-    grid-template-columns:1fr;
-  }
+  .form-group.full{grid-column:auto}
 
-  .form-group.full{
-    grid-column:auto;
-  }
+  .form-submit{grid-column:auto}
 
-  .form-submit{
-    grid-column:auto;
-  }
-
-  .form-submit .btn{
-    width:100%;
-  }
+  .form-submit .btn{width:100%}
 
   .floating{
     right:15px;
@@ -1277,7 +1115,6 @@ body.rtl .scope-head,
 body.rtl .process-head,
 body.rtl .factory-content,
 body.rtl .custom-content,
-body.rtl .cta-content,
 body.rtl .contact-form,
 body.rtl .contact-details,
 body.rtl footer{
@@ -1310,7 +1147,7 @@ body.rtl .contact-form{
 <div class="container nav">
 
 <a class="logo" href="#top">
-CHINA <span>RENOWN</span>
+<span class="logo-r">R</span> CHINA <span>RENOWN</span>
 </a>
 
 <nav>
@@ -1353,8 +1190,6 @@ Start Your Project
 </div>
 </header>
 
-<!-- MOBILE MENU -->
-
 <div class="mobile-menu" id="mobileMenu">
 
 <button class="mobile-close" id="mobileClose">×</button>
@@ -1392,8 +1227,6 @@ Choose Language
 
 <main id="top">
 
-<!-- HERO -->
-
 <section class="hero">
 
 <video
@@ -1421,25 +1254,17 @@ Complete Hospitality<br>
 <span class="gold">Project Supply.</span>
 </h1>
 
-<p
-class="hero-copy"
-data-i18n="heroCopy">
+<p class="hero-copy" data-i18n="heroCopy">
 We source, manufacture and supply complete hospitality projects from China — for hotels, resorts, restaurants and cafés.
 </p>
 
 <div class="actions">
 
-<a
-class="btn"
-href="#contact"
-data-i18n="heroButton">
+<a class="btn" href="#contact" data-i18n="heroButton">
 Start Your Project →
 </a>
 
-<a
-class="btn dark"
-href="#solutions"
-data-i18n="heroExplore">
+<a class="btn dark" href="#solutions" data-i18n="heroExplore">
 Explore Solutions
 </a>
 
@@ -1447,15 +1272,11 @@ Explore Solutions
 
 </div>
 
-<div
-class="scroll"
-data-i18n="scrollText">
+<div class="scroll" data-i18n="scrollText">
 Scroll to explore
 </div>
 
 </section>
-
-<!-- ABOUT -->
 
 <section id="about">
 
@@ -1463,9 +1284,7 @@ Scroll to explore
 
 <div>
 
-<div
-class="eyebrow"
-data-i18n="aboutEyebrow">
+<div class="eyebrow" data-i18n="aboutEyebrow">
 China Renown
 </div>
 
@@ -1486,14 +1305,11 @@ From project specifications and factory sourcing to manufacturing, quality contr
 
 <article class="client">
 
-<img
-src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85">
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85">
 
 <div class="client-info">
 
-<h3 data-i18n="hotels">
-Hotels
-</h3>
+<h3 data-i18n="hotels">Hotels</h3>
 
 <p data-i18n="hotelsDesc">
 FF&E · OS&E · Lighting · Technology
@@ -1505,14 +1321,11 @@ FF&E · OS&E · Lighting · Technology
 
 <article class="client">
 
-<img
-src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=85">
+<img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=85">
 
 <div class="client-info">
 
-<h3 data-i18n="resorts">
-Resorts
-</h3>
+<h3 data-i18n="resorts">Resorts</h3>
 
 <p data-i18n="resortsDesc">
 Interiors · Outdoor · Custom Supply
@@ -1524,14 +1337,11 @@ Interiors · Outdoor · Custom Supply
 
 <article class="client">
 
-<img
-src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85">
+<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85">
 
 <div class="client-info">
 
-<h3 data-i18n="restaurants">
-Restaurants
-</h3>
+<h3 data-i18n="restaurants">Restaurants</h3>
 
 <p data-i18n="restaurantsDesc">
 Furniture · Kitchen · F&B
@@ -1543,14 +1353,11 @@ Furniture · Kitchen · F&B
 
 <article class="client">
 
-<img
-src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=85">
+<img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=85">
 
 <div class="client-info">
 
-<h3 data-i18n="cafes">
-Cafés
-</h3>
+<h3 data-i18n="cafes">Cafés</h3>
 
 <p data-i18n="cafesDesc">
 Furniture · Lighting · Tableware
@@ -1564,8 +1371,6 @@ Furniture · Lighting · Tableware
 
 </section>
 
-<!-- COMPLETE SCOPE -->
-
 <section class="scope" id="solutions">
 
 <div class="container">
@@ -1574,9 +1379,7 @@ Furniture · Lighting · Tableware
 
 <div>
 
-<div
-class="eyebrow"
-data-i18n="scopeEyebrow">
+<div class="eyebrow" data-i18n="scopeEyebrow">
 Complete Scope
 </div>
 
@@ -1596,17 +1399,9 @@ From finishes and furniture to kitchens, lighting, technology and logistics — 
 <div class="scope-grid">
 
 <article class="scope-item">
-
 <span class="num">01</span>
-
-<h3 data-i18n="scope1Title">
-Architecture & Finishes
-</h3>
-
-<p data-i18n="scope1Text">
-Materials and finishes selected around your design and specification.
-</p>
-
+<h3 data-i18n="scope1Title">Architecture & Finishes</h3>
+<p data-i18n="scope1Text">Materials and finishes selected around your design and specification.</p>
 <ul>
 <li data-i18n="flooring">Flooring</li>
 <li data-i18n="wallFinishes">Wall finishes</li>
@@ -1615,21 +1410,12 @@ Materials and finishes selected around your design and specification.
 <li data-i18n="doors">Doors</li>
 <li data-i18n="glass">Glass</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">02</span>
-
-<h3 data-i18n="scope2Title">
-Furniture & FF&E
-</h3>
-
-<p data-i18n="scope2Text">
-Complete guestroom, public-area and outdoor furniture supply.
-</p>
-
+<h3 data-i18n="scope2Title">Furniture & FF&E</h3>
+<p data-i18n="scope2Text">Complete guestroom, public-area and outdoor furniture supply.</p>
 <ul>
 <li data-i18n="guestrooms">Guestrooms</li>
 <li data-i18n="lobby">Lobby</li>
@@ -1638,21 +1424,12 @@ Complete guestroom, public-area and outdoor furniture supply.
 <li data-i18n="outdoor">Outdoor</li>
 <li data-i18n="joinery">Joinery</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">03</span>
-
-<h3 data-i18n="scope3Title">
-Lighting
-</h3>
-
-<p data-i18n="scope3Text">
-Decorative and architectural lighting for hospitality environments.
-</p>
-
+<h3 data-i18n="scope3Title">Lighting</h3>
+<p data-i18n="scope3Text">Decorative and architectural lighting for hospitality environments.</p>
 <ul>
 <li data-i18n="decorative">Decorative</li>
 <li data-i18n="architectural">Architectural</li>
@@ -1661,21 +1438,12 @@ Decorative and architectural lighting for hospitality environments.
 <li data-i18n="outdoor">Outdoor</li>
 <li data-i18n="custom">Custom</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">04</span>
-
-<h3 data-i18n="scope4Title">
-Commercial Kitchens & F&B
-</h3>
-
-<p data-i18n="scope4Text">
-Professional equipment packages for hotel and restaurant operations.
-</p>
-
+<h3 data-i18n="scope4Title">Commercial Kitchens & F&B</h3>
+<p data-i18n="scope4Text">Professional equipment packages for hotel and restaurant operations.</p>
 <ul>
 <li data-i18n="cooking">Cooking</li>
 <li data-i18n="refrigeration">Refrigeration</li>
@@ -1684,21 +1452,12 @@ Professional equipment packages for hotel and restaurant operations.
 <li data-i18n="stainless">Stainless Steel</li>
 <li data-i18n="bar">Bar</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">05</span>
-
-<h3 data-i18n="scope5Title">
-Tableware & OS&E
-</h3>
-
-<p data-i18n="scope5Text">
-Operating supplies and guest-facing products sourced to project requirements.
-</p>
-
+<h3 data-i18n="scope5Title">Tableware & OS&E</h3>
+<p data-i18n="scope5Text">Operating supplies and guest-facing products sourced to project requirements.</p>
 <ul>
 <li data-i18n="porcelain">Porcelain</li>
 <li data-i18n="cutlery">Cutlery</li>
@@ -1707,21 +1466,12 @@ Operating supplies and guest-facing products sourced to project requirements.
 <li data-i18n="amenities">Amenities</li>
 <li data-i18n="textiles">Textiles</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">06</span>
-
-<h3 data-i18n="scope6Title">
-Technology & Safety
-</h3>
-
-<p data-i18n="scope6Text">
-Integrated systems and safety equipment for modern hospitality operations.
-</p>
-
+<h3 data-i18n="scope6Title">Technology & Safety</h3>
+<p data-i18n="scope6Text">Integrated systems and safety equipment for modern hospitality operations.</p>
 <ul>
 <li data-i18n="smartRoom">Smart Room</li>
 <li data-i18n="locks">Locks</li>
@@ -1730,21 +1480,12 @@ Integrated systems and safety equipment for modern hospitality operations.
 <li data-i18n="iptv">IPTV</li>
 <li data-i18n="fireSystems">Fire Systems</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">07</span>
-
-<h3 data-i18n="scope7Title">
-Custom Manufacturing
-</h3>
-
-<p data-i18n="scope7Text">
-Private-label and specification-driven manufacturing through qualified factories.
-</p>
-
+<h3 data-i18n="scope7Title">Custom Manufacturing</h3>
+<p data-i18n="scope7Text">Private-label and specification-driven manufacturing through qualified factories.</p>
 <ul>
 <li data-i18n="furniture">Furniture</li>
 <li data-i18n="joinery">Joinery</li>
@@ -1753,21 +1494,12 @@ Private-label and specification-driven manufacturing through qualified factories
 <li data-i18n="stone">Stone</li>
 <li data-i18n="lighting">Lighting</li>
 </ul>
-
 </article>
 
 <article class="scope-item">
-
 <span class="num">08</span>
-
-<h3 data-i18n="scope8Title">
-Logistics & Project Supply
-</h3>
-
-<p data-i18n="scope8Text">
-Consolidation, packing, container loading and shipping coordination.
-</p>
-
+<h3 data-i18n="scope8Title">Logistics & Project Supply</h3>
+<p data-i18n="scope8Text">Consolidation, packing, container loading and shipping coordination.</p>
 <ul>
 <li data-i18n="consolidation">Consolidation</li>
 <li data-i18n="packing">Packing</li>
@@ -1776,7 +1508,6 @@ Consolidation, packing, container loading and shipping coordination.
 <li data-i18n="shipping">Shipping</li>
 <li data-i18n="delivery">Delivery</li>
 </ul>
-
 </article>
 
 </div>
@@ -1784,17 +1515,13 @@ Consolidation, packing, container loading and shipping coordination.
 
 </section>
 
-<!-- MANUFACTURING -->
-
 <section class="factory" id="manufacturing">
 
 <div class="container factory-content">
 
 <div>
 
-<div
-class="eyebrow"
-data-i18n="manufacturingEyebrow">
+<div class="eyebrow" data-i18n="manufacturingEyebrow">
 Manufacturing Network
 </div>
 
@@ -1811,10 +1538,7 @@ Direct access to China's
 We connect hospitality projects with qualified Chinese manufacturers and coordinate sourcing, pricing, production, quality control and logistics through one professional supply process.
 </p>
 
-<a
-class="btn"
-href="#contact"
-data-i18n="manufacturingButton">
+<a class="btn" href="#contact" data-i18n="manufacturingButton">
 Discuss Manufacturing →
 </a>
 
@@ -1848,8 +1572,6 @@ Discuss Manufacturing →
 
 </section>
 
-<!-- PROCESS -->
-
 <section id="process">
 
 <div class="container">
@@ -1858,9 +1580,7 @@ Discuss Manufacturing →
 
 <div>
 
-<div
-class="eyebrow"
-data-i18n="processEyebrow">
+<div class="eyebrow" data-i18n="processEyebrow">
 Our Process
 </div>
 
@@ -1945,8 +1665,6 @@ One coordinated workflow designed to reduce supplier complexity and keep project
 
 </section>
 
-<!-- PROJECTS -->
-
 <section id="projects">
 
 <div class="container">
@@ -1955,9 +1673,7 @@ One coordinated workflow designed to reduce supplier complexity and keep project
 
 <div>
 
-<div
-class="eyebrow"
-data-i18n="projectsEyebrow">
+<div class="eyebrow" data-i18n="projectsEyebrow">
 Project Environments
 </div>
 
@@ -1979,9 +1695,7 @@ Visual solutions across guest spaces, public areas, dining environments and outd
 
 <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=88">
 
-<span class="tag" data-i18n="hotels">
-Hotels
-</span>
+<span class="tag" data-i18n="hotels">Hotels</span>
 
 </div>
 
@@ -1989,9 +1703,7 @@ Hotels
 
 <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=88">
 
-<span class="tag" data-i18n="resorts">
-Resorts
-</span>
+<span class="tag" data-i18n="resorts">Resorts</span>
 
 </div>
 
@@ -1999,9 +1711,7 @@ Resorts
 
 <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=88">
 
-<span class="tag" data-i18n="restaurants">
-Restaurants
-</span>
+<span class="tag" data-i18n="restaurants">Restaurants</span>
 
 </div>
 
@@ -2011,15 +1721,11 @@ Restaurants
 
 </section>
 
-<!-- GLOBAL -->
-
 <section class="global">
 
 <div class="container">
 
-<div
-class="eyebrow"
-data-i18n="globalEyebrow">
+<div class="eyebrow" data-i18n="globalEyebrow">
 Global Supply
 </div>
 
@@ -2028,9 +1734,7 @@ From China<br>
 <span class="gold">to the world.</span>
 </h2>
 
-<p
-style="max-width:620px;margin:25px auto 0"
-data-i18n="globalText">
+<p style="max-width:620px;margin:25px auto 0" data-i18n="globalText">
 International hospitality projects supported through coordinated sourcing, manufacturing and logistics from China to destination.
 </p>
 
@@ -2048,17 +1752,13 @@ International hospitality projects supported through coordinated sourcing, manuf
 
 </section>
 
-<!-- CUSTOM -->
-
 <section class="custom">
 
 <div class="custom-image"></div>
 
 <div class="custom-content">
 
-<div
-class="eyebrow"
-data-i18n="customEyebrow">
+<div class="eyebrow" data-i18n="customEyebrow">
 Custom Manufacturing
 </div>
 
@@ -2071,18 +1771,13 @@ Your design.<br>
 From custom furniture and joinery to metal, glass, stone and lighting, we develop and manufacture products according to project specifications and brand requirements.
 </p>
 
-<a
-class="btn"
-href="#contact"
-data-i18n="customButton">
+<a class="btn" href="#contact" data-i18n="customButton">
 Discuss a Custom Project →
 </a>
 
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -2092,9 +1787,7 @@ Discuss a Custom Project →
 
 <div>
 
-<div
-class="eyebrow"
-data-i18n="contactEyebrow">
+<div class="eyebrow" data-i18n="contactEyebrow">
 Start a Conversation
 </div>
 
@@ -2115,9 +1808,7 @@ Tell us what you need. We will source it, manufacture it and coordinate the supp
 
 <div class="contact-card">
 
-<div
-class="contact-card-title"
-data-i18n="emailLabel">
+<div class="contact-card-title" data-i18n="emailLabel">
 EMAIL
 </div>
 
@@ -2129,16 +1820,11 @@ info@chinarenown.com
 
 <div class="contact-card">
 
-<div
-class="contact-card-title"
-data-i18n="whatsappLabel">
+<div class="contact-card-title" data-i18n="whatsappLabel">
 WHATSAPP
 </div>
 
-<a
-href="https://wa.me/8615805898484"
-target="_blank"
-rel="noopener">
+<a href="https://wa.me/8615805898484" target="_blank" rel="noopener">
 +86 158 0589 8484
 </a>
 
@@ -2146,16 +1832,12 @@ rel="noopener">
 
 <div class="contact-card">
 
-<div
-class="contact-card-title"
-data-i18n="wechatLabel">
+<div class="contact-card-title" data-i18n="wechatLabel">
 WECHAT
 </div>
 
 <a href="#" id="wechatContact">
-<span data-i18n="openWechat">
-Open WeChat QR
-</span>
+<span data-i18n="openWechat">Open WeChat QR</span>
 </a>
 
 </div>
@@ -2165,165 +1847,66 @@ Open WeChat QR
 <form class="contact-form" id="quoteForm">
 
 <div class="form-group">
-
-<label data-i18n="formName">
-Name
-</label>
-
-<input
-id="formName"
-required
-data-i18n-placeholder="formNamePlaceholder"
-placeholder="Your Name">
-
+<label data-i18n="formName">Name</label>
+<input id="formName" required data-i18n-placeholder="formNamePlaceholder" placeholder="Your Name">
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formCompany">
-Company
-</label>
-
-<input
-id="formCompany"
-data-i18n-placeholder="formCompanyPlaceholder"
-placeholder="Company">
-
+<label data-i18n="formCompany">Company</label>
+<input id="formCompany" data-i18n-placeholder="formCompanyPlaceholder" placeholder="Company">
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formEmail">
-Email
-</label>
-
-<input
-id="formEmail"
-type="email"
-required
-data-i18n-placeholder="formEmailPlaceholder"
-placeholder="Email Address">
-
+<label data-i18n="formEmail">Email</label>
+<input id="formEmail" type="email" required data-i18n-placeholder="formEmailPlaceholder" placeholder="Email Address">
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formPhone">
-Phone / WhatsApp
-</label>
-
-<input
-id="formPhone"
-required
-data-i18n-placeholder="formPhonePlaceholder"
-placeholder="Phone / WhatsApp">
-
+<label data-i18n="formPhone">Phone / WhatsApp</label>
+<input id="formPhone" required data-i18n-placeholder="formPhonePlaceholder" placeholder="Phone / WhatsApp">
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formCountry">
-Country
-</label>
-
-<input
-id="formCountry"
-data-i18n-placeholder="formCountryPlaceholder"
-placeholder="Country">
-
+<label data-i18n="formCountry">Country</label>
+<input id="formCountry" data-i18n-placeholder="formCountryPlaceholder" placeholder="Country">
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formProjectType">
-Project Type
-</label>
+<label data-i18n="formProjectType">Project Type</label>
 
 <select id="formProjectType">
-
-<option value="" data-i18n="selectProject">
-Select Project Type
-</option>
-
-<option value="Hotel" data-i18n="hotelOption">
-Hotel
-</option>
-
-<option value="Resort" data-i18n="resortOption">
-Resort
-</option>
-
-<option value="Restaurant" data-i18n="restaurantOption">
-Restaurant
-</option>
-
-<option value="Cafe" data-i18n="cafeOption">
-Café
-</option>
-
-<option value="Other" data-i18n="otherOption">
-Other
-</option>
-
+<option value="" data-i18n="selectProject">Select Project Type</option>
+<option value="Hotel" data-i18n="hotelOption">Hotel</option>
+<option value="Resort" data-i18n="resortOption">Resort</option>
+<option value="Restaurant" data-i18n="restaurantOption">Restaurant</option>
+<option value="Cafe" data-i18n="cafeOption">Café</option>
+<option value="Other" data-i18n="otherOption">Other</option>
 </select>
 
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formRequirements">
-Project Requirements
-</label>
-
-<input
-id="formRequirements"
-data-i18n-placeholder="formRequirementsPlaceholder"
-placeholder="Products / Specifications">
-
+<label data-i18n="formRequirements">Project Requirements</label>
+<input id="formRequirements" data-i18n-placeholder="formRequirementsPlaceholder" placeholder="Products / Specifications">
 </div>
 
 <div class="form-group">
-
-<label data-i18n="formQuantity">
-BOQ / Quantity
-</label>
-
-<input
-id="formQuantity"
-data-i18n-placeholder="formQuantityPlaceholder"
-placeholder="Quantity / BOQ">
-
+<label data-i18n="formQuantity">BOQ / Quantity</label>
+<input id="formQuantity" data-i18n-placeholder="formQuantityPlaceholder" placeholder="Quantity / BOQ">
 </div>
 
 <div class="form-group full">
-
-<label data-i18n="formMessage">
-Message
-</label>
-
-<textarea
-id="formMessage"
-required
-data-i18n-placeholder="formMessagePlaceholder"
-placeholder="Tell us about your project"></textarea>
-
+<label data-i18n="formMessage">Message</label>
+<textarea id="formMessage" required data-i18n-placeholder="formMessagePlaceholder" placeholder="Tell us about your project"></textarea>
 </div>
 
 <div class="form-submit">
 
-<button
-class="btn"
-type="submit"
-data-i18n="formSubmit">
+<button class="btn" type="submit" data-i18n="formSubmit">
 Send Project Inquiry →
 </button>
 
-<a
-class="btn dark"
-href="https://wa.me/8615805898484"
-target="_blank"
-rel="noopener"
-data-i18n="contactWhatsapp">
+<a class="btn dark" href="https://wa.me/8615805898484" target="_blank" rel="noopener" data-i18n="contactWhatsapp">
 Contact on WhatsApp
 </a>
 
@@ -2337,8 +1920,6 @@ Contact on WhatsApp
 
 </main>
 
-<!-- FOOTER -->
-
 <footer>
 
 <div class="container footer-grid">
@@ -2346,7 +1927,7 @@ Contact on WhatsApp
 <div>
 
 <div class="logo">
-CHINA <span>RENOWN</span>
+<span class="logo-r">R</span> CHINA <span>RENOWN</span>
 </div>
 
 <p data-i18n="footerDescription">
@@ -2357,66 +1938,35 @@ Hospitality procurement, sourcing, manufacturing and project supply from China.
 
 <div>
 
-<h4 data-i18n="footerSolutions">
-Solutions
-</h4>
+<h4 data-i18n="footerSolutions">Solutions</h4>
 
-<a href="#solutions" data-i18n="footerArchitecture">
-Architecture & Finishes
-</a>
-
-<a href="#solutions" data-i18n="footerFurniture">
-Furniture & FF&E
-</a>
-
-<a href="#solutions" data-i18n="footerLighting">
-Lighting
-</a>
-
-<a href="#solutions" data-i18n="footerKitchen">
-Commercial Kitchens
-</a>
+<a href="#solutions" data-i18n="footerArchitecture">Architecture & Finishes</a>
+<a href="#solutions" data-i18n="footerFurniture">Furniture & FF&E</a>
+<a href="#solutions" data-i18n="footerLighting">Lighting</a>
+<a href="#solutions" data-i18n="footerKitchen">Commercial Kitchens</a>
 
 </div>
 
 <div>
 
-<h4 data-i18n="footerCompany">
-Company
-</h4>
+<h4 data-i18n="footerCompany">Company</h4>
 
-<a href="#projects" data-i18n="navProjects">
-Projects
-</a>
-
-<a href="#manufacturing" data-i18n="navManufacturing">
-Manufacturing
-</a>
-
-<a href="#process" data-i18n="navProcess">
-Process
-</a>
-
-<a href="#about" data-i18n="navAbout">
-About
-</a>
+<a href="#projects" data-i18n="navProjects">Projects</a>
+<a href="#manufacturing" data-i18n="navManufacturing">Manufacturing</a>
+<a href="#process" data-i18n="navProcess">Process</a>
+<a href="#about" data-i18n="navAbout">About</a>
 
 </div>
 
 <div>
 
-<h4 data-i18n="footerContact">
-Contact
-</h4>
+<h4 data-i18n="footerContact">Contact</h4>
 
 <a href="mailto:info@chinarenown.com">
 info@chinarenown.com
 </a>
 
-<a
-href="https://wa.me/8615805898484"
-target="_blank"
-rel="noopener">
+<a href="https://wa.me/8615805898484" target="_blank" rel="noopener">
 WhatsApp
 </a>
 
@@ -2445,7 +1995,12 @@ target="_blank"
 rel="noopener"
 aria-label="WhatsApp"
 title="WhatsApp">
-WA
+
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<path fill="currentColor" d="M19.11 17.35c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.33-.79-.7-1.33-1.56-1.49-1.82-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+<path fill="currentColor" d="M16 3.2a12.77 12.77 0 0 0-10.9 19.45L3.2 28.8l6.3-1.85A12.8 12.8 0 1 0 16 3.2zm0 23.37c-2.01 0-3.88-.59-5.45-1.61l-.39-.25-3.74 1.1 1.12-3.64-.25-.4A10.54 10.54 0 1 1 16 26.57z"/>
+</svg>
+
 </a>
 
 <button
@@ -2453,28 +2008,27 @@ class="float-btn wechat-float"
 id="wechatFloat"
 aria-label="WeChat"
 title="WeChat">
-WC
+
+<svg viewBox="0 0 48 48" aria-hidden="true">
+<path fill="currentColor" d="M20.7 8C11.5 8 4 13.9 4 21.2c0 4.2 2.4 8 6.2 10.4L8.6 38l6.4-3.7c1.8.6 3.7.9 5.7.9.7 0 1.5-.1 2.2-.1-.4-1.1-.6-2.3-.6-3.5 0-6.9 6.7-12.5 15-12.5.7 0 1.4 0 2.1.1C37.5 12.7 30.9 8 20.7 8zm-5.1 10.7a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zm10.1 0a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2z"/>
+<path fill="currentColor" d="M47 31.6c0-6.2-6.4-11.2-14.3-11.2s-14.3 5-14.3 11.2 6.4 11.2 14.3 11.2c1.6 0 3.1-.2 4.5-.6l5.2 3-1.3-5.1c3.6-2 5.9-4.9 5.9-8.5zm-18.7-1.8a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm9 0a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6z"/>
+</svg>
+
 </button>
 
 </div>
 
 <!-- WECHAT MODAL -->
 
-<div
-class="wechat-modal"
-id="wechatModal">
+<div class="wechat-modal" id="wechatModal">
 
 <div class="wechat-box">
 
-<button
-class="wechat-close"
-id="wechatClose">
+<button class="wechat-close" id="wechatClose">
 ×
 </button>
 
-<div
-class="eyebrow"
-data-i18n="wechatEyebrow">
+<div class="eyebrow" data-i18n="wechatEyebrow">
 WECHAT
 </div>
 
@@ -2494,9 +2048,7 @@ alt="CHINA RENOWN WeChat QR Code">
 
 </div>
 
-<p
-class="wechat-note"
-data-i18n="wechatNote">
+<p class="wechat-note" data-i18n="wechatNote">
 SCAN TO CONTACT US ON WECHAT
 </p>
 
@@ -2505,11 +2057,6 @@ SCAN TO CONTACT US ON WECHAT
 </div>
 
 <script>
-
-/* =========================================================
-   CHINA RENOWN
-   MULTILINGUAL SYSTEM
-========================================================= */
 
 const translations = {
 
@@ -3550,60 +3097,38 @@ footerContact:"Контакты"
 
 };
 
-
-/* =========================================================
-   TRANSLATE
-========================================================= */
+/* TRANSLATE */
 
 function translatePage(lang){
 
-const t = translations[lang] || translations.en;
+const t=translations[lang]||translations.en;
 
-document.documentElement.lang = lang;
+document.documentElement.lang=lang;
 
-if(lang === "ar"){
-
-document.documentElement.dir = "rtl";
+if(lang==="ar"){
+document.documentElement.dir="rtl";
 document.body.classList.add("rtl");
-
 }else{
-
-document.documentElement.dir = "ltr";
+document.documentElement.dir="ltr";
 document.body.classList.remove("rtl");
-
 }
 
 document.querySelectorAll("[data-i18n]").forEach(el=>{
-
-const key = el.getAttribute("data-i18n");
-
-if(t[key] !== undefined){
-el.textContent = t[key];
-}
-
+const key=el.getAttribute("data-i18n");
+if(t[key]!==undefined) el.textContent=t[key];
 });
 
 document.querySelectorAll("[data-i18n-html]").forEach(el=>{
-
-const key = el.getAttribute("data-i18n-html");
-
-if(t[key] !== undefined){
-el.innerHTML = t[key];
-}
-
+const key=el.getAttribute("data-i18n-html");
+if(t[key]!==undefined) el.innerHTML=t[key];
 });
 
 document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
-
-const key = el.getAttribute("data-i18n-placeholder");
-
-if(t[key] !== undefined){
-el.placeholder = t[key];
-}
-
+const key=el.getAttribute("data-i18n-placeholder");
+if(t[key]!==undefined) el.placeholder=t[key];
 });
 
-const languageCodes = {
+const languageCodes={
 en:"EN",
 zh:"中文",
 ar:"AR",
@@ -3611,317 +3136,190 @@ tr:"TR",
 ru:"RU"
 };
 
-document.getElementById("currentLanguage").textContent =
-languageCodes[lang] || "EN";
+document.getElementById("currentLanguage").textContent=
+languageCodes[lang]||"EN";
 
 document.querySelectorAll("[data-lang]").forEach(btn=>{
-
 btn.classList.toggle(
 "active",
-btn.getAttribute("data-lang") === lang
+btn.getAttribute("data-lang")===lang
 );
-
 });
 
-localStorage.setItem(
-"chinaRenownLanguage",
-lang
-);
+localStorage.setItem("chinaRenownLanguage",lang);
 
-document.title = {
-
+document.title={
 en:"CHINA RENOWN | Hospitality Project Supply",
 zh:"CHINA RENOWN | 酒店及餐饮项目供应",
 ar:"CHINA RENOWN | تجهيز مشاريع الضيافة",
 tr:"CHINA RENOWN | Konaklama Proje Tedariki",
 ru:"CHINA RENOWN | Снабжение проектов гостеприимства"
-
 }[lang];
 
 }
 
+/* LANGUAGE MENU */
 
-/* =========================================================
-   LANGUAGE MENU
-========================================================= */
-
-const languageButton =
-document.getElementById("languageButton");
-
-const languageMenu =
-document.getElementById("languageMenu");
+const languageButton=document.getElementById("languageButton");
+const languageMenu=document.getElementById("languageMenu");
 
 languageButton.addEventListener("click",function(e){
-
 e.stopPropagation();
-
 languageMenu.classList.toggle("open");
-
 });
 
 document.addEventListener("click",function(){
-
 languageMenu.classList.remove("open");
-
 });
 
-
 document.querySelectorAll("[data-lang]").forEach(button=>{
-
 button.addEventListener("click",function(e){
 
 e.stopPropagation();
 
-const lang = this.getAttribute("data-lang");
+const lang=this.getAttribute("data-lang");
 
 translatePage(lang);
 
 languageMenu.classList.remove("open");
 
 });
-
 });
 
+/* MOBILE MENU */
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuButton =
-document.getElementById("menuButton");
-
-const mobileMenu =
-document.getElementById("mobileMenu");
-
-const mobileClose =
-document.getElementById("mobileClose");
+const menuButton=document.getElementById("menuButton");
+const mobileMenu=document.getElementById("mobileMenu");
+const mobileClose=document.getElementById("mobileClose");
 
 menuButton.addEventListener("click",function(){
-
 mobileMenu.classList.add("open");
-
 });
 
 mobileClose.addEventListener("click",function(){
-
 mobileMenu.classList.remove("open");
-
 });
 
 document.querySelectorAll("[data-mobile-link]").forEach(link=>{
-
 link.addEventListener("click",function(){
-
 mobileMenu.classList.remove("open");
-
+});
 });
 
-});
+/* HEADER SCROLL */
 
-
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
-
-const header =
-document.getElementById("header");
+const header=document.getElementById("header");
 
 window.addEventListener(
 "scroll",
 function(){
-
 header.classList.toggle(
 "scrolled",
-window.scrollY > 30
+window.scrollY>30
 );
-
 },
 {passive:true}
 );
 
+/* WECHAT MODAL */
 
-/* =========================================================
-   WECHAT MODAL
-========================================================= */
-
-const wechatModal =
-document.getElementById("wechatModal");
-
-const wechatFloat =
-document.getElementById("wechatFloat");
-
-const wechatClose =
-document.getElementById("wechatClose");
-
-const wechatContact =
-document.getElementById("wechatContact");
-
-const wechatFooter =
-document.getElementById("wechatFooter");
-
+const wechatModal=document.getElementById("wechatModal");
+const wechatFloat=document.getElementById("wechatFloat");
+const wechatClose=document.getElementById("wechatClose");
+const wechatContact=document.getElementById("wechatContact");
+const wechatFooter=document.getElementById("wechatFooter");
 
 function openWechat(){
-
 wechatModal.classList.add("open");
-
 document.body.style.overflow="hidden";
-
 }
 
 function closeWechat(){
-
 wechatModal.classList.remove("open");
-
 document.body.style.overflow="";
-
 }
 
+wechatFloat.addEventListener("click",openWechat);
 
-wechatFloat.addEventListener(
-"click",
-openWechat
-);
-
-wechatContact.addEventListener(
-"click",
-function(e){
+wechatContact.addEventListener("click",function(e){
 e.preventDefault();
 openWechat();
-}
-);
+});
 
-wechatFooter.addEventListener(
-"click",
-function(e){
+wechatFooter.addEventListener("click",function(e){
 e.preventDefault();
 openWechat();
-}
-);
+});
 
-wechatClose.addEventListener(
-"click",
-closeWechat
-);
+wechatClose.addEventListener("click",closeWechat);
 
-wechatModal.addEventListener(
-"click",
-function(e){
-
-if(e.target === wechatModal){
+wechatModal.addEventListener("click",function(e){
+if(e.target===wechatModal){
 closeWechat();
 }
+});
 
-}
-);
-
-document.addEventListener(
-"keydown",
-function(e){
-
-if(e.key === "Escape"){
+document.addEventListener("keydown",function(e){
+if(e.key==="Escape"){
 closeWechat();
 }
+});
 
-}
-);
+/* CONTACT FORM */
 
+const quoteForm=document.getElementById("quoteForm");
 
-/* =========================================================
-   CONTACT FORM
-========================================================= */
-
-const quoteForm =
-document.getElementById("quoteForm");
-
-quoteForm.addEventListener(
-"submit",
-function(e){
+quoteForm.addEventListener("submit",function(e){
 
 e.preventDefault();
 
-const name =
-document.getElementById("formName").value.trim();
+const name=document.getElementById("formName").value.trim();
+const company=document.getElementById("formCompany").value.trim();
+const email=document.getElementById("formEmail").value.trim();
+const phone=document.getElementById("formPhone").value.trim();
+const country=document.getElementById("formCountry").value.trim();
+const projectType=document.getElementById("formProjectType").value.trim();
+const requirements=document.getElementById("formRequirements").value.trim();
+const quantity=document.getElementById("formQuantity").value.trim();
+const message=document.getElementById("formMessage").value.trim();
 
-const company =
-document.getElementById("formCompany").value.trim();
+const subject=
+"CHINA RENOWN Project Inquiry - "+
+(name||"New Client");
 
-const email =
-document.getElementById("formEmail").value.trim();
+const body=
+"CHINA RENOWN PROJECT INQUIRY\n\n"+
+"Name: "+name+"\n"+
+"Company: "+company+"\n"+
+"Email: "+email+"\n"+
+"Phone / WhatsApp: "+phone+"\n"+
+"Country: "+country+"\n"+
+"Project Type: "+projectType+"\n"+
+"Project Requirements: "+requirements+"\n"+
+"BOQ / Quantity: "+quantity+"\n\n"+
+"Message:\n"+message;
 
-const phone =
-document.getElementById("formPhone").value.trim();
+const whatsappMessage=
+"Hello CHINA RENOWN,\n\n"+
+"I would like to discuss a hospitality project.\n\n"+
+"Name: "+name+"\n"+
+"Company: "+company+"\n"+
+"Email: "+email+"\n"+
+"Phone: "+phone+"\n"+
+"Country: "+country+"\n"+
+"Project Type: "+projectType+"\n"+
+"Requirements: "+requirements+"\n"+
+"BOQ / Quantity: "+quantity+"\n\n"+
+"Message:\n"+message;
 
-const country =
-document.getElementById("formCountry").value.trim();
-
-const projectType =
-document.getElementById("formProjectType").value.trim();
-
-const requirements =
-document.getElementById("formRequirements").value.trim();
-
-const quantity =
-document.getElementById("formQuantity").value.trim();
-
-const message =
-document.getElementById("formMessage").value.trim();
-
-
-const subject =
-"CHINA RENOWN Project Inquiry - " +
-(name || "New Client");
-
-
-const body =
-"CHINA RENOWN PROJECT INQUIRY\n\n" +
-
-"Name: " + name + "\n" +
-"Company: " + company + "\n" +
-"Email: " + email + "\n" +
-"Phone / WhatsApp: " + phone + "\n" +
-"Country: " + country + "\n" +
-"Project Type: " + projectType + "\n" +
-"Project Requirements: " + requirements + "\n" +
-"BOQ / Quantity: " + quantity + "\n\n" +
-
-"Message:\n" +
-message;
-
-
-const whatsappMessage =
-"Hello CHINA RENOWN,\n\n" +
-
-"I would like to discuss a hospitality project.\n\n" +
-
-"Name: " + name + "\n" +
-"Company: " + company + "\n" +
-"Email: " + email + "\n" +
-"Phone: " + phone + "\n" +
-"Country: " + country + "\n" +
-"Project Type: " + projectType + "\n" +
-"Requirements: " + requirements + "\n" +
-"BOQ / Quantity: " + quantity + "\n\n" +
-"Message:\n" +
-message;
-
-
-const whatsappUrl =
-"https://wa.me/8615805898484?text=" +
+const whatsappUrl=
+"https://wa.me/8615805898484?text="+
 encodeURIComponent(whatsappMessage);
 
-
-const mailUrl =
-"mailto:info@chinarenown.com" +
-"?subject=" +
-encodeURIComponent(subject) +
-"&body=" +
-encodeURIComponent(body);
-
-
-/*
-Open WhatsApp first.
-The email link is also available as fallback.
-*/
+const mailUrl=
+"mailto:info@chinarenown.com"+
+"?subject="+encodeURIComponent(subject)+
+"&body="+encodeURIComponent(body);
 
 window.open(
 whatsappUrl,
@@ -3929,27 +3327,16 @@ whatsappUrl,
 "noopener"
 );
 
-
-/*
-Small delay before email client.
-*/
-
 setTimeout(function(){
-
-window.location.href = mailUrl;
-
+window.location.href=mailUrl;
 },700);
 
-}
-);
+});
 
+/* LOAD SAVED LANGUAGE */
 
-/* =========================================================
-   LOAD SAVED LANGUAGE
-========================================================= */
-
-const savedLanguage =
-localStorage.getItem("chinaRenownLanguage") || "en";
+const savedLanguage=
+localStorage.getItem("chinaRenownLanguage")||"en";
 
 translatePage(savedLanguage);
 

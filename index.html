@@ -3,362 +3,373 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CHINA RENOWN | Hospitality Procurement & Project Supply</title>
-
-<meta name="description"
-content="CHINA RENOWN provides hospitality procurement, sourcing, manufacturing and project supply for hotels, resorts, restaurants and cafés worldwide.">
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-size='65' font-family='serif' font-weight='bold' fill='%23d8b76a'%3ER%3C/text%3E%3C/svg%3E">
+<meta name="description" content="CHINA RENOWN — Complete hospitality project supply from China.">
+<title>CHINA RENOWN | Hospitality Project Supply</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap');
+
 :root{
-  --black:#050505;
+  --black:#020202;
   --black2:#090909;
-  --gold:#c9a65d;
-  --gold-light:#e1c47b;
-  --white:#f5f2eb;
-  --muted:#aaa59c;
-  --line:rgba(201,166,93,.25);
+  --gold:#d5ad58;
+  --gold2:#f0d18a;
+  --white:#fffdf7;
+  --gray:#bdb8ae;
+  --line:#302715;
 }
 
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
 }
 
 html{
   scroll-behavior:smooth;
+  background:var(--black);
 }
 
 body{
   background:var(--black);
   color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:Inter,Arial,sans-serif;
   line-height:1.6;
   overflow-x:hidden;
 }
 
-img{
-  width:100%;
-  display:block;
-  object-fit:cover;
+body.rtl{
+  direction:rtl;
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 button,
 input,
-select,
-textarea{
-  font:inherit;
+textarea,
+select{
+  font-family:inherit;
 }
 
-button{
-  cursor:pointer;
-}
-
-/* =========================
-   LOGO
-========================= */
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:13px;
-  height:52px;
-}
-
-.brand-mark{
-  position:relative;
-  width:54px;
-  height:52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-}
-
-.brand-mark svg{
-  width:54px;
-  height:54px;
+img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
   display:block;
 }
 
-.brand-name{
-  font-size:21px;
-  letter-spacing:3px;
-  font-weight:700;
-  white-space:nowrap;
-}
-
-.brand-name span{
-  color:var(--gold-light);
-}
-
-.brand-name sup{
-  color:var(--gold-light);
-  font-size:8px;
-  letter-spacing:0;
-  margin-left:2px;
-}
-
-/* =========================
-   CONTAINER
-========================= */
-
 .container{
-  width:min(1240px,92%);
+  width:min(1280px,90vw);
   margin:auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+.gold{
+  background:linear-gradient(
+    100deg,
+    #9c6a1f,
+    #d5ad58,
+    #f1d38d,
+    #c79538,
+    #8e5f18
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
+}
+
+body.rtl .eyebrow{
+  letter-spacing:.08em;
+}
+
+h1,
+h2,
+h3{
+  font-family:Manrope,Arial,sans-serif;
+  font-weight:400;
+  line-height:.98;
+}
+
+h2{
+  font-size:clamp(44px,6vw,88px);
+  letter-spacing:-.045em;
+}
+
+p{
+  color:var(--gray);
+  font-weight:300;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 23px;
+  border:1px solid var(--gold);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:var(--gold);
+  color:#050505;
+}
+
+.btn.dark{
+  border-color:#777;
+}
+
+.btn.dark:hover{
+  background:#fff;
+  border-color:#fff;
+}
+
+/* HEADER */
 
 header{
   position:fixed;
+  z-index:100;
   top:0;
   left:0;
-  width:100%;
-  z-index:1000;
-  padding:20px 0;
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,.92),
-    rgba(0,0,0,.28),
-    transparent
-  );
-  transition:.35s ease;
+  right:0;
+  padding:22px 0;
+  background:linear-gradient(#020202ed,transparent);
+  transition:.3s;
 }
 
 header.scrolled{
-  background:rgba(5,5,5,.94);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-  padding:13px 0;
+  background:#020202f5;
+  border-bottom:1px solid #252525;
+  backdrop-filter:blur(12px);
 }
 
 .nav{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-family:Manrope;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:.1em;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--gold);
 }
 
 nav{
   display:flex;
   align-items:center;
-  gap:27px;
+  gap:25px;
 }
 
 nav a{
-  font-size:11px;
-  letter-spacing:1.8px;
+  font-size:10px;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  color:#ddd;
+  color:#eee;
   transition:.3s;
 }
 
 nav a:hover{
-  color:var(--gold-light);
+  color:var(--gold);
 }
 
-.nav-cta{
-  border:1px solid var(--gold);
-  padding:11px 17px;
-  color:var(--gold-light)!important;
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:26px;
+  cursor:pointer;
 }
 
-.nav-cta:hover{
-  background:var(--gold);
-  color:#000!important;
-}
-
-/* =========================
-   LANGUAGE SELECTOR
-========================= */
+/* LANGUAGE */
 
 .language-wrap{
   position:relative;
 }
 
-.language-btn{
-  border:1px solid rgba(201,166,93,.55);
-  background:rgba(5,5,5,.6);
-  color:var(--gold-light);
-  min-width:55px;
-  padding:9px 11px;
+.language-button{
+  background:transparent;
+  border:1px solid rgba(213,173,88,.65);
+  color:#fff;
+  padding:9px 13px;
   font-size:10px;
-  letter-spacing:1.4px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
   display:flex;
   align-items:center;
-  justify-content:center;
-  gap:7px;
-  transition:.3s;
+  gap:8px;
 }
 
-.language-btn:hover{
-  background:var(--gold);
-  color:#000;
-}
-
-.language-arrow{
-  font-size:8px;
+.language-button:hover{
+  background:rgba(213,173,88,.12);
 }
 
 .language-menu{
   position:absolute;
-  top:calc(100% + 9px);
+  top:calc(100% + 10px);
   right:0;
-  min-width:145px;
+  min-width:170px;
   background:#090909;
   border:1px solid var(--line);
-  box-shadow:0 18px 50px rgba(0,0,0,.5);
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(-7px);
-  transition:.25s ease;
-  padding:6px;
+  box-shadow:0 15px 45px rgba(0,0,0,.5);
+  padding:7px;
+  display:none;
 }
 
-.language-wrap.open .language-menu{
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
+.language-menu.open{
+  display:block;
 }
 
-.language-option{
+.language-menu button{
   width:100%;
+  text-align:left;
   border:0;
   background:transparent;
-  color:#bbb;
+  color:#ddd;
   padding:11px 12px;
-  text-align:left;
-  font-size:12px;
-  transition:.2s;
+  cursor:pointer;
+  font-size:11px;
 }
 
-.language-option:hover,
-.language-option.active{
+.language-menu button:hover,
+.language-menu button.active{
+  color:var(--gold);
   background:#151515;
-  color:var(--gold-light);
 }
 
-[dir="rtl"] .language-menu{
+body.rtl .language-menu{
   right:auto;
   left:0;
 }
 
-[dir="rtl"] .language-option{
+body.rtl .language-menu button{
   text-align:right;
 }
 
-/* =========================
-   MOBILE MENU BUTTON
-========================= */
-
-.menu-toggle{
-  display:none;
-  width:43px;
-  height:43px;
-  border:1px solid var(--line);
-  background:rgba(5,5,5,.65);
-  color:var(--gold-light);
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  gap:5px;
-}
-
-.menu-toggle span{
-  display:block;
-  width:19px;
-  height:1px;
-  background:currentColor;
-  transition:.25s;
-}
-
-.menu-toggle.active span:first-child{
-  transform:translateY(3px) rotate(45deg);
-}
-
-.menu-toggle.active span:last-child{
-  transform:translateY(-3px) rotate(-45deg);
-}
+/* MOBILE MENU */
 
 .mobile-menu{
+  display:none;
   position:fixed;
-  inset:0;
-  z-index:990;
-  background:rgba(5,5,5,.98);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-  visibility:hidden;
-  transition:.3s;
+  z-index:99;
+  top:0;
+  right:0;
+  bottom:0;
+  width:min(390px,88vw);
+  background:#070707;
+  border-left:1px solid var(--line);
+  padding:95px 30px 35px;
+  box-shadow:-20px 0 70px rgba(0,0,0,.65);
+  overflow-y:auto;
 }
 
 .mobile-menu.open{
-  opacity:1;
-  visibility:visible;
-}
-
-.mobile-menu-inner{
-  width:min(500px,85%);
-  text-align:center;
-}
-
-.mobile-menu a{
   display:block;
-  padding:16px 0;
-  color:#ddd;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:30px;
-  border-bottom:1px solid rgba(201,166,93,.12);
 }
 
-.mobile-menu a:hover{
-  color:var(--gold-light);
+.mobile-close{
+  position:absolute;
+  top:25px;
+  right:25px;
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
+}
+
+body.rtl .mobile-menu{
+  right:auto;
+  left:0;
+  border-left:0;
+  border-right:1px solid var(--line);
+  box-shadow:20px 0 70px rgba(0,0,0,.65);
+}
+
+body.rtl .mobile-close{
+  right:auto;
+  left:25px;
+}
+
+.mobile-links{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.mobile-links a{
+  padding:15px 5px;
+  border-bottom:1px solid #1e1e1e;
+  color:#eee;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
 }
 
 .mobile-language{
-  margin-top:25px;
-  display:flex;
-  gap:8px;
-  justify-content:center;
-  flex-wrap:wrap;
+  margin-top:28px;
 }
 
-.mobile-language button{
-  background:transparent;
-  border:1px solid var(--line);
-  color:#aaa;
-  padding:9px 13px;
+.mobile-language-title{
+  color:var(--gold);
   font-size:10px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:10px;
 }
 
-.mobile-language button.active{
-  color:var(--gold-light);
+.mobile-language-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+
+.mobile-language-buttons button{
+  background:#111;
+  border:1px solid #292929;
+  color:#ccc;
+  padding:11px 8px;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.mobile-language-buttons button.active{
+  color:var(--gold);
   border-color:var(--gold);
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
+  height:100svh;
+  min-height:680px;
   position:relative;
-  height:100vh;
-  min-height:700px;
+  display:flex;
+  align-items:flex-end;
   overflow:hidden;
+  background:#020202;
 }
 
 .hero-video{
@@ -367,260 +378,229 @@ nav a:hover{
   width:100%;
   height:100%;
   object-fit:cover;
+  z-index:0;
 }
 
 .hero-overlay{
   position:absolute;
   inset:0;
+  z-index:1;
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.9) 0%,
-      rgba(0,0,0,.52) 45%,
-      rgba(0,0,0,.25) 100%
+      rgba(0,0,0,.84),
+      rgba(0,0,0,.30)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.92),
+      rgba(0,0,0,.08) 62%,
+      rgba(0,0,0,.35)
     );
 }
 
-[dir="rtl"] .hero-overlay{
+body.rtl .hero-overlay{
   background:
     linear-gradient(
       270deg,
-      rgba(0,0,0,.9) 0%,
-      rgba(0,0,0,.52) 45%,
-      rgba(0,0,0,.25) 100%
+      rgba(0,0,0,.84),
+      rgba(0,0,0,.30)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.92),
+      rgba(0,0,0,.08) 62%,
+      rgba(0,0,0,.35)
     );
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  height:100%;
-  display:flex;
-  align-items:center;
-}
-
-.hero-inner{
-  max-width:900px;
-  padding-top:70px;
-}
-
-.eyebrow{
-  color:var(--gold-light);
-  font-size:11px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  margin-bottom:22px;
+  padding:160px 0 82px;
 }
 
 .hero h1{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(52px,8vw,100px);
-  line-height:.94;
-  letter-spacing:-4px;
-  max-width:950px;
+  font-size:clamp(58px,9.5vw,145px);
+  letter-spacing:-.065em;
+  max-width:1100px;
+  margin-top:22px;
 }
 
-.hero h1 span{
-  color:var(--gold-light);
+body.rtl .hero h1{
+  letter-spacing:-.03em;
 }
 
-.hero p{
-  max-width:650px;
-  margin-top:30px;
-  color:#ddd;
-  font-size:17px;
+.hero-copy{
+  max-width:630px;
+  font-size:16px;
+  margin:30px 0 34px;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:35px;
-  padding:15px 27px;
-  border:1px solid var(--gold);
-  color:var(--gold-light);
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.scroll{
+  position:absolute;
+  z-index:3;
+  right:4vw;
+  bottom:38px;
+  writing-mode:vertical-rl;
+  color:#aaa;
+  font-size:9px;
+  letter-spacing:.22em;
   text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:10px;
-  transition:.3s;
-  background:transparent;
 }
 
-.btn:hover{
-  background:var(--gold);
-  color:#000;
+body.rtl .scroll{
+  right:auto;
+  left:4vw;
+  writing-mode:vertical-lr;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 section{
-  padding:120px 0;
+  padding:130px 0;
 }
-
-.section-head{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  margin-bottom:60px;
-}
-
-.section-number{
-  color:var(--gold);
-  letter-spacing:3px;
-  font-size:11px;
-  margin-bottom:15px;
-}
-
-h2{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(40px,5vw,70px);
-  line-height:1;
-  letter-spacing:-2px;
-}
-
-.section-head p{
-  color:var(--muted);
-  font-size:17px;
-  max-width:600px;
-}
-
-/* =========================
-   ABOUT
-========================= */
 
 .intro{
-  background:#080808;
-}
-
-.intro-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:80px;
+  grid-template-columns:1fr 1.1fr;
+  gap:70px;
   align-items:end;
 }
 
-.intro-text{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:30px;
-  line-height:1.25;
+.intro p{
+  font-size:17px;
+  max-width:620px;
 }
 
-.gold{
-  color:var(--gold-light);
-}
-
-/* =========================
-   PROJECT TYPES
-========================= */
-
-.client-grid{
+.clients{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:1px;
+  background:#242424;
+  margin-top:50px;
 }
 
-.client-card{
+.client{
+  height:300px;
   position:relative;
-  height:500px;
   overflow:hidden;
+  background:#111;
 }
 
-.client-card img{
-  height:100%;
-  transition:transform .7s;
+.client img{
+  transition:.7s;
 }
 
-.client-card:hover img{
+.client:hover img{
   transform:scale(1.06);
 }
 
-.client-card:after{
+.client:after{
   content:"";
   position:absolute;
   inset:0;
   background:linear-gradient(
-    to top,
-    rgba(0,0,0,.92),
-    transparent 60%
+    0deg,
+    #020202df,
+    transparent 65%
   );
 }
 
-.client-content{
+.client-info{
   position:absolute;
   z-index:2;
-  bottom:30px;
-  left:30px;
+  left:25px;
+  bottom:22px;
 }
 
-[dir="rtl"] .client-content{
+body.rtl .client-info{
   left:auto;
-  right:30px;
+  right:25px;
 }
 
-.client-content h3{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:31px;
+.client h3{
+  font-size:26px;
 }
 
-.client-content span{
-  color:var(--gold-light);
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
+.client p{
+  font-size:11px;
+  margin-top:4px;
 }
 
-/* =========================
-   SCOPE
-========================= */
+/* SCOPE */
 
 .scope{
-  background:#090909;
+  background:var(--black2);
+}
+
+.scope-head{
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+  align-items:end;
+  margin-bottom:55px;
+}
+
+.scope-head p{
+  max-width:450px;
 }
 
 .scope-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:1px;
-  background:var(--line);
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--line);
 }
 
 .scope-item{
-  background:#090909;
-  min-height:310px;
-  padding:42px;
-  transition:.3s;
+  min-height:270px;
+  padding:35px 28px;
+  border-bottom:1px solid var(--line);
+  border-right:1px solid var(--line);
 }
 
-.scope-item:hover{
-  background:#111;
+.scope-item:nth-child(even){
+  border-right:0;
 }
 
-.scope-item .num{
-  color:var(--gold);
+body.rtl .scope-item{
+  border-right:0;
+  border-left:1px solid var(--line);
+}
+
+body.rtl .scope-item:nth-child(even){
+  border-left:0;
+}
+
+.num{
   font-size:11px;
-  letter-spacing:2px;
+  color:var(--gold);
+  letter-spacing:.15em;
 }
 
 .scope-item h3{
-  margin-top:25px;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:29px;
+  font-size:27px;
+  margin:34px 0 13px;
 }
 
 .scope-item p{
-  color:var(--muted);
-  margin-top:14px;
+  font-size:13px;
 }
 
 .scope-item ul{
   list-style:none;
-  margin-top:20px;
-  color:#bbb;
-  font-size:14px;
-}
-
-.scope-item li{
-  margin:7px 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px 20px;
+  color:#aaa;
+  font-size:12px;
+  margin-top:12px;
 }
 
 .scope-item li:before{
@@ -628,370 +608,290 @@ h2{
   color:var(--gold);
 }
 
-[dir="rtl"] .scope-item li:before{
-  content:"— ";
-}
+/* FACTORY */
 
-/* =========================
-   IMAGE BREAK
-========================= */
-
-.image-break{
-  height:620px;
-  position:relative;
-  background-image:
-    linear-gradient(
-      rgba(0,0,0,.25),
-      rgba(0,0,0,.78)
-    ),
-    url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2200&q=85");
-  background-size:cover;
-  background-position:center;
+.factory{
+  min-height:760px;
   display:flex;
   align-items:flex-end;
-}
-
-.image-break-content{
-  padding-bottom:70px;
-}
-
-.image-break h2{
-  max-width:800px;
-}
-
-/* =========================
-   PROCESS
-========================= */
-
-.process{
-  background:#050505;
-}
-
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  border-top:1px solid var(--line);
-}
-
-.process-item{
-  padding:35px 25px;
-  border-right:1px solid var(--line);
-}
-
-.process-item:last-child{
-  border-right:0;
-}
-
-[dir="rtl"] .process-item{
-  border-right:0;
-  border-left:1px solid var(--line);
-}
-
-[dir="rtl"] .process-item:last-child{
-  border-left:0;
-}
-
-.process-item strong{
-  color:var(--gold-light);
-  font-size:13px;
-}
-
-.process-item h3{
-  margin-top:20px;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:21px;
-}
-
-.process-item p{
-  color:var(--muted);
-  margin-top:10px;
-  font-size:14px;
-}
-
-/* =========================
-   PROJECTS
-========================= */
-
-.projects{
-  background:#090909;
-}
-
-.project-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:20px;
-}
-
-.project{
   position:relative;
-  height:520px;
-  overflow:hidden;
+  background:
+    url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=2200&q=88")
+    center/cover;
 }
 
-.project.small{
-  height:250px;
-}
-
-.project img{
-  height:100%;
-  transition:.7s;
-}
-
-.project:hover img{
-  transform:scale(1.05);
-}
-
-.project:after{
+.factory:after{
   content:"";
   position:absolute;
   inset:0;
   background:linear-gradient(
-    to top,
-    rgba(0,0,0,.88),
-    transparent 60%
+    0deg,
+    #020202,
+    transparent 70%
   );
 }
 
-.project-label{
-  position:absolute;
-  bottom:25px;
-  left:25px;
+.factory-content{
+  position:relative;
   z-index:2;
-}
-
-[dir="rtl"] .project-label{
-  left:auto;
-  right:25px;
-}
-
-.project-label span{
-  color:var(--gold-light);
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.project-label h3{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:25px;
-}
-
-.project-column{
+  padding-bottom:80px;
   display:grid;
-  gap:20px;
+  grid-template-columns:1.2fr 1fr;
+  gap:70px;
 }
 
-/* =========================
-   CUSTOM MANUFACTURING
-========================= */
-
-.custom{
-  background:#050505;
+.factory-copy p{
+  font-size:16px;
+  margin-bottom:28px;
 }
 
-.custom-grid{
+.stats{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid #9a742d;
+}
+
+.stat{
+  padding:20px 14px;
+  border-right:1px solid #9a742d;
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+body.rtl .stat{
+  border-right:0;
+  border-left:1px solid #9a742d;
+}
+
+body.rtl .stat:last-child{
+  border-left:0;
+}
+
+.stat strong{
+  font-size:11px;
+  letter-spacing:.1em;
+}
+
+.stat span{
+  display:block;
+  color:#777;
+  font-size:10px;
+  margin-top:5px;
+}
+
+/* PROCESS */
+
+.process-head{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:70px;
+  gap:60px;
+  margin-bottom:55px;
+}
+
+.steps{
+  border-top:1px solid #303030;
+}
+
+.step{
+  display:grid;
+  grid-template-columns:80px 1fr 1fr;
+  gap:30px;
+  padding:28px 0;
+  border-bottom:1px solid #303030;
   align-items:center;
 }
 
-.custom-image{
-  height:600px;
+.step .no{
+  color:var(--gold);
+  font-size:11px;
+}
+
+.step h3{
+  font-size:24px;
+}
+
+.step p{
+  font-size:12px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  grid-template-rows:360px 360px;
+  gap:12px;
+}
+
+.gallery-item{
+  position:relative;
   overflow:hidden;
 }
 
-.custom-image img{
-  height:100%;
+.gallery-item img{
+  transition:.8s;
 }
 
-.custom-copy p{
-  color:var(--muted);
-  margin-top:25px;
-  font-size:17px;
+.gallery-item:hover img{
+  transform:scale(1.05);
 }
 
-.custom-list{
+.gallery-item.big{
+  grid-row:span 2;
+}
+
+.tag{
+  position:absolute;
+  left:20px;
+  bottom:18px;
+  z-index:2;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+body.rtl .tag{
+  left:auto;
+  right:20px;
+}
+
+.gallery-item:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    0deg,
+    #020202b5,
+    transparent 55%
+  );
+}
+
+/* GLOBAL */
+
+.global{
+  background:var(--black2);
+  text-align:center;
+}
+
+.regions{
+  display:flex;
+  justify-content:center;
+  gap:42px;
+  flex-wrap:wrap;
+  margin-top:42px;
+  color:#aaa;
+  font-size:10px;
+  letter-spacing:.2em;
+}
+
+/* CUSTOM */
+
+.custom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:650px;
+}
+
+.custom-image{
+  background:
+    url("https://images.unsplash.com/photo-1581539250439-c96689b516dd?auto=format&fit=crop&w=1800&q=88")
+    center/cover;
+}
+
+.custom-content{
+  padding:80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#101010;
+}
+
+.custom-content h2{
+  margin:22px 0;
+}
+
+.custom-content p{
+  max-width:520px;
+  margin-bottom:30px;
+}
+
+/* CTA */
+
+.cta{
+  min-height:720px;
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+  background:
+    linear-gradient(90deg,#020202df,#02020235),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=88")
+    center/cover;
+}
+
+body.rtl .cta{
+  background:
+    linear-gradient(270deg,#020202df,#02020235),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=88")
+    center/cover;
+}
+
+.cta-content{
+  padding:100px 0;
+}
+
+.cta h2{
+  font-size:clamp(55px,8vw,120px);
+  max-width:900px;
+}
+
+.cta p{
+  max-width:520px;
+  font-size:16px;
+  margin:25px 0 30px;
+}
+
+/* CONTACT */
+
+.contact-details{
   margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:#292929;
+}
+
+.contact-card{
+  background:#0c0c0c;
+  padding:28px;
+}
+
+.contact-card-title{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.contact-card a,
+.contact-card div{
+  color:#ddd;
+  font-size:14px;
+}
+
+.contact-form{
+  margin-top:45px;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
 }
 
-.custom-list div{
-  padding:15px;
-  border-left:1px solid var(--gold);
-  background:#0c0c0c;
-  color:#ccc;
-}
-
-[dir="rtl"] .custom-list div{
-  border-left:0;
-  border-right:1px solid var(--gold);
-}
-
-/* =========================
-   GLOBAL SUPPLY
-========================= */
-
-.global{
-  position:relative;
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-}
-
-.global-bg{
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.9),
-      rgba(0,0,0,.4)
-    ),
-    url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=85");
-  background-size:cover;
-  background-position:center;
-}
-
-[dir="rtl"] .global-bg{
-  background-image:
-    linear-gradient(
-      270deg,
-      rgba(0,0,0,.9),
-      rgba(0,0,0,.4)
-    ),
-    url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=85");
-}
-
-.global-content{
-  position:relative;
-  z-index:2;
-  max-width:700px;
-}
-
-.global-content p{
-  color:#ccc;
-  margin-top:25px;
-  font-size:18px;
-}
-
-/* =========================
-   CONTACT / CTA
-========================= */
-
-.cta{
-  min-height:700px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-}
-
-.cta-bg{
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(
-      rgba(0,0,0,.62),
-      rgba(0,0,0,.9)
-    ),
-    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85");
-  background-size:cover;
-  background-position:center;
-}
-
-.cta-content{
-  position:relative;
-  z-index:2;
-  width:100%;
-}
-
-.cta-content h2{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-.cta-content > .eyebrow{
-  text-align:center;
-}
-
-.cta-content > p{
-  margin:25px auto 0;
-  color:#ccc;
-  max-width:650px;
-  text-align:center;
-}
-
-.contact-grid{
-  margin-top:55px;
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:50px;
-  align-items:start;
-}
-
-.contact-info{
-  background:rgba(5,5,5,.72);
-  border:1px solid var(--line);
-  padding:35px;
-  backdrop-filter:blur(10px);
-}
-
-.contact-info h3{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:30px;
-  margin-bottom:25px;
-}
-
-.contact-line{
-  padding:18px 0;
-  border-bottom:1px solid rgba(201,166,93,.15);
-}
-
-.contact-line:last-child{
-  border-bottom:0;
-}
-
-.contact-label{
-  color:var(--gold-light);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:10px;
-  display:block;
-  margin-bottom:7px;
-}
-
-.contact-line a{
-  color:#ddd;
-  font-size:15px;
-  transition:.2s;
-}
-
-.contact-line a:hover{
-  color:var(--gold-light);
-}
-
-.contact-form{
-  background:rgba(5,5,5,.72);
-  border:1px solid var(--line);
-  padding:35px;
-  backdrop-filter:blur(10px);
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
 .form-group{
   display:flex;
   flex-direction:column;
-  gap:7px;
 }
 
 .form-group.full{
@@ -999,344 +899,293 @@ h2{
 }
 
 .form-group label{
-  color:#aaa;
+  color:var(--gold);
   font-size:10px;
-  letter-spacing:1.5px;
+  letter-spacing:.14em;
   text-transform:uppercase;
+  margin-bottom:7px;
 }
 
 .form-group input,
-.form-group select,
-.form-group textarea{
+.form-group textarea,
+.form-group select{
   width:100%;
-  border:1px solid rgba(201,166,93,.25);
-  background:#080808;
-  color:#eee;
-  padding:13px 14px;
+  background:#0d0d0d;
+  border:1px solid #292929;
+  color:#fff;
+  padding:15px;
   outline:none;
   transition:.25s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-  border-color:var(--gold);
-}
-
-.form-group textarea{
-  min-height:120px;
-  resize:vertical;
-}
-
-.form-group select{
-  appearance:auto;
-}
-
-.form-submit{
-  width:100%;
-  margin-top:20px;
-}
-
-.form-status{
-  display:none;
-  margin-top:15px;
-  color:var(--gold-light);
   font-size:13px;
 }
 
-.form-status.show{
-  display:block;
+.form-group textarea{
+  min-height:150px;
+  resize:vertical;
 }
 
-/* =========================
-   WECHAT MODAL
-========================= */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-color:var(--gold);
+}
+
+.form-submit{
+  grid-column:1/-1;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+
+.form-submit button{
+  background:transparent;
+  color:#fff;
+}
+
+/* WECHAT MODAL */
 
 .wechat-modal{
   position:fixed;
   inset:0;
-  z-index:3000;
-  display:flex;
+  z-index:300;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(8px);
+  display:none;
   align-items:center;
   justify-content:center;
   padding:20px;
-  background:rgba(0,0,0,.82);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  opacity:0;
-  visibility:hidden;
-  transition:.3s ease;
 }
 
 .wechat-modal.open{
-  opacity:1;
-  visibility:visible;
+  display:flex;
 }
 
 .wechat-box{
-  position:relative;
-  width:min(390px,100%);
-  background:#090909;
+  width:min(440px,94vw);
+  background:#080808;
   border:1px solid var(--gold);
-  padding:38px 30px 30px;
+  padding:45px 35px;
   text-align:center;
-  transform:translateY(15px) scale(.97);
-  transition:.3s ease;
-}
-
-.wechat-modal.open .wechat-box{
-  transform:translateY(0) scale(1);
-}
-
-.wechat-box h3{
-  color:var(--gold-light);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:32px;
-}
-
-.wechat-box p{
-  color:#aaa;
-  margin:10px auto 22px;
-  font-size:14px;
-}
-
-.wechat-qr{
-  width:250px;
-  height:250px;
-  margin:auto;
-  object-fit:contain;
-  background:#fff;
-  padding:8px;
+  position:relative;
+  box-shadow:0 25px 90px rgba(0,0,0,.75);
 }
 
 .wechat-close{
   position:absolute;
-  top:10px;
-  right:12px;
-  width:34px;
-  height:34px;
-  border:1px solid var(--line);
-  background:transparent;
-  color:var(--gold-light);
-  font-size:20px;
+  top:12px;
+  right:17px;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
 }
 
-[dir="rtl"] .wechat-close{
+body.rtl .wechat-close{
   right:auto;
-  left:12px;
+  left:17px;
 }
 
-/* =========================
-   FLOATING CONTACT
-========================= */
+.wechat-box h3{
+  font-size:25px;
+  margin:15px 0;
+}
 
-.floating-contact{
+.wechat-box p{
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+.qr-wrap{
+  width:230px;
+  height:230px;
+  background:#fff;
+  margin:0 auto 20px;
+  padding:10px;
+}
+
+.qr-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.wechat-note{
+  color:var(--gold);
+  font-size:10px!important;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+/* FLOATING BUTTONS */
+
+.floating{
   position:fixed;
+  z-index:120;
   right:22px;
   bottom:22px;
-  z-index:2000;
   display:flex;
   flex-direction:column;
   gap:10px;
 }
 
-[dir="rtl"] .floating-contact{
+body.rtl .floating{
   right:auto;
   left:22px;
 }
 
 .float-btn{
-  width:48px;
-  height:48px;
-  border:1px solid var(--gold);
-  background:rgba(5,5,5,.92);
-  color:var(--gold-light);
+  width:52px;
+  height:52px;
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:18px;
-  transition:.3s;
-  box-shadow:0 8px 30px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  cursor:pointer;
+  transition:.25s;
+  font-size:12px;
+  font-weight:700;
 }
 
 .float-btn:hover{
-  background:var(--gold);
-  color:#000;
   transform:translateY(-3px);
 }
 
-.float-btn svg{
-  width:22px;
-  height:22px;
-  fill:currentColor;
+.whatsapp{
+  background:#25d366;
+  color:#fff;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.wechat-float{
+  background:#d5ad58;
+  color:#050505;
+}
+
+/* FOOTER */
 
 footer{
-  padding:55px 0;
-  border-top:1px solid var(--line);
-  background:#030303;
+  padding:55px 0 28px;
+  border-top:1px solid #252525;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:40px;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:35px;
 }
 
-.footer-title{
-  color:var(--gold-light);
-  font-size:11px;
-  letter-spacing:2px;
+footer h4{
+  font-size:10px;
+  color:var(--gold);
+  letter-spacing:.15em;
   text-transform:uppercase;
+  margin-bottom:14px;
 }
 
+footer a,
 footer p{
-  color:#888;
-  margin-top:12px;
-  font-size:14px;
-}
-
-.footer-contact{
-  display:block;
-  color:#888;
-  margin-top:8px;
-  transition:.2s;
-}
-
-.footer-contact:hover{
-  color:var(--gold-light);
-}
-
-.copyright{
-  margin-top:50px;
-  padding-top:25px;
-  border-top:1px solid #222;
-  color:#666;
   font-size:12px;
+  color:#999;
+  display:block;
+  margin:7px 0;
 }
 
-/* =========================
-   ANIMATION
-========================= */
-
-.reveal{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .8s ease,transform .8s ease;
+.copy{
+  border-top:1px solid #252525;
+  margin-top:38px;
+  padding-top:18px;
+  color:#666;
+  font-size:10px;
 }
 
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0);
-}
+/* MOBILE */
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:1050px){
 
-@media(max-width:1100px){
-
-  nav{
-    gap:16px;
+  nav > a{
+    display:none;
   }
 
-  nav a{
-    font-size:10px;
+  nav .language-wrap{
+    display:block;
   }
 
-  .client-grid{
-    grid-template-columns:repeat(2,1fr);
+  .menu{
+    display:block;
   }
 
 }
 
 @media(max-width:900px){
 
-  header{
-    padding:15px 0;
-  }
-
-  .brand-name{
-    font-size:17px;
-    letter-spacing:2px;
-  }
-
-  .brand-mark{
-    width:45px;
-  }
-
-  .brand-mark svg{
-    width:45px;
-  }
-
-  header .nav > nav{
-    display:none;
-  }
-
-  header .nav{
+  .nav{
     gap:12px;
   }
 
-  .menu-toggle{
-    display:flex;
+  nav{
+    gap:10px;
   }
 
-  .header-actions{
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-
-  section{
-    padding:80px 0;
-  }
-
-  .section-head,
-  .intro-grid,
-  .custom-grid{
+  .intro,
+  .process-head,
+  .factory-content,
+  .custom{
     grid-template-columns:1fr;
-    gap:35px;
+  }
+
+  .clients{
+    grid-template-columns:1fr 1fr;
   }
 
   .scope-grid{
     grid-template-columns:1fr;
   }
 
-  .process-grid{
-    grid-template-columns:1fr;
-  }
-
-  .process-item{
+  .scope-item{
     border-right:0;
-    border-bottom:1px solid var(--line);
   }
 
-  [dir="rtl"] .process-item{
+  body.rtl .scope-item{
     border-left:0;
-    border-bottom:1px solid var(--line);
   }
 
-  .process-item:last-child{
-    border-bottom:0;
+  .stats{
+    grid-template-columns:1fr 1fr;
   }
 
-  .project-grid{
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  body.rtl .stat:nth-child(2){
+    border-left:0;
+  }
+
+  .gallery{
     grid-template-columns:1fr;
+    grid-template-rows:300px 250px 250px;
+  }
+
+  .gallery-item.big{
+    grid-row:auto;
   }
 
   .custom-image{
-    height:400px;
+    min-height:420px;
+  }
+
+  .custom-content{
+    padding:60px 7vw;
   }
 
   .footer-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr;
   }
 
-  .contact-grid{
+  .contact-details{
     grid-template-columns:1fr;
   }
 
@@ -1344,60 +1193,56 @@ footer p{
 
 @media(max-width:600px){
 
-  .container{
-    width:90%;
+  section{
+    padding:90px 0;
   }
 
-  .brand-name{
-    font-size:14px;
-    letter-spacing:1.5px;
+  header{
+    padding:17px 0;
   }
 
-  .brand-mark{
-    width:39px;
-    height:45px;
+  .logo{
+    font-size:15px;
   }
 
-  .brand-mark svg{
-    width:40px;
-    height:45px;
-  }
-
-  .language-btn{
-    min-width:47px;
-    padding:8px 9px;
-  }
-
-  .hero{
-    min-height:650px;
+  .hero-content{
+    padding-bottom:70px;
   }
 
   .hero h1{
-    font-size:54px;
-    letter-spacing:-2px;
+    font-size:56px;
   }
 
-  .hero p{
-    font-size:16px;
+  .hero-copy{
+    font-size:14px;
   }
 
-  .client-grid{
+  .clients{
     grid-template-columns:1fr;
   }
 
-  .client-card{
-    height:430px;
+  .client{
+    height:235px;
   }
 
-  .custom-list{
+  .step{
+    grid-template-columns:50px 1fr;
+    gap:12px;
+  }
+
+  .step p{
+    grid-column:2;
+  }
+
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
-  .image-break{
-    height:450px;
+  .cta{
+    min-height:620px;
   }
 
-  .form-grid{
+  .contact-form{
     grid-template-columns:1fr;
   }
 
@@ -1405,174 +1250,139 @@ footer p{
     grid-column:auto;
   }
 
-  .contact-form,
-  .contact-info{
-    padding:25px 20px;
+  .form-submit{
+    grid-column:auto;
   }
 
-  .floating-contact{
-    right:14px;
-    bottom:14px;
+  .form-submit .btn{
+    width:100%;
   }
 
-  [dir="rtl"] .floating-contact{
+  .floating{
+    right:15px;
+    bottom:15px;
+  }
+
+  body.rtl .floating{
     right:auto;
-    left:14px;
+    left:15px;
   }
 
-  .float-btn{
-    width:45px;
-    height:45px;
-  }
-
-  .mobile-menu a{
-    font-size:26px;
-  }
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
+/* RTL */
 
-@media(prefers-reduced-motion:reduce){
-
-  *,
-  *::before,
-  *::after{
-    scroll-behavior:auto!important;
-    transition:none!important;
-    animation:none!important;
-  }
+body.rtl .intro,
+body.rtl .scope-head,
+body.rtl .process-head,
+body.rtl .factory-content,
+body.rtl .custom-content,
+body.rtl .cta-content,
+body.rtl .contact-form,
+body.rtl .contact-details,
+body.rtl footer{
+  text-align:right;
 }
+
+body.rtl .actions{
+  justify-content:flex-start;
+}
+
+body.rtl .scope-item ul{
+  padding-right:0;
+}
+
+body.rtl .step{
+  direction:rtl;
+}
+
+body.rtl .contact-form{
+  direction:rtl;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header id="header">
 
 <div class="container nav">
 
-<a href="#top" class="brand">
-
-<div class="brand-mark">
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-<linearGradient id="goldR"
-x1="0%" y1="0%"
-x2="100%" y2="100%">
-<stop offset="0%" stop-color="#f1d58c"/>
-<stop offset="45%" stop-color="#c9a65d"/>
-<stop offset="100%" stop-color="#8d6b2d"/>
-</linearGradient>
-</defs>
-
-<text
-x="50"
-y="78"
-text-anchor="middle"
-font-family="Georgia, Times New Roman, serif"
-font-size="82"
-font-weight="bold"
-fill="url(#goldR)">
-R
-</text>
-
-</svg>
-</div>
-
-<div class="brand-name">
-CHINA <span>RENOWN</span><sup>®</sup>
-</div>
-
+<a class="logo" href="#top">
+CHINA <span>RENOWN</span>
 </a>
-
-<div class="header-actions">
 
 <nav>
 
-<a href="#about" data-i18n="navAbout">About</a>
-<a href="#scope" data-i18n="navScope">Scope</a>
+<a href="#solutions" data-i18n="navSolutions">Solutions</a>
+<a href="#manufacturing" data-i18n="navManufacturing">Manufacturing</a>
 <a href="#process" data-i18n="navProcess">Process</a>
 <a href="#projects" data-i18n="navProjects">Projects</a>
+<a href="#about" data-i18n="navAbout">About</a>
 <a href="#contact" data-i18n="navContact">Contact</a>
 
-<div class="language-wrap" id="languageWrap">
+<div class="language-wrap">
 
-<button class="language-btn" id="languageBtn" type="button">
+<button class="language-button" id="languageButton">
 <span id="currentLanguage">EN</span>
-<span class="language-arrow">▼</span>
+<span>⌄</span>
 </button>
 
 <div class="language-menu" id="languageMenu">
 
-<button class="language-option active" data-lang="en">
-English
-</button>
-
-<button class="language-option" data-lang="zh">
-中文
-</button>
-
-<button class="language-option" data-lang="ar">
-العربية
-</button>
-
-<button class="language-option" data-lang="tr">
-Türkçe
-</button>
-
-<button class="language-option" data-lang="ru">
-Русский
-</button>
+<button data-lang="en">English</button>
+<button data-lang="zh">中文</button>
+<button data-lang="ar">العربية</button>
+<button data-lang="tr">Türkçe</button>
+<button data-lang="ru">Русский</button>
 
 </div>
 </div>
 
-<a href="#contact" class="nav-cta" data-i18n="navQuote">
-Get a Quote
+<a class="btn" href="#contact" data-i18n="navQuote">
+Start Your Project
 </a>
 
 </nav>
 
-<button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu">
-<span></span>
-<span></span>
+<button class="menu" id="menuButton" aria-label="Menu">
+☰
 </button>
 
 </div>
-
-</div>
-
 </header>
 
-<!-- =========================
-     MOBILE MENU
-========================= -->
+<!-- MOBILE MENU -->
 
 <div class="mobile-menu" id="mobileMenu">
 
-<div class="mobile-menu-inner">
+<button class="mobile-close" id="mobileClose">×</button>
 
-<a href="#about" data-mobile-link data-i18n="navAbout">About</a>
-<a href="#scope" data-mobile-link data-i18n="navScope">Scope</a>
+<div class="mobile-links">
+
+<a href="#solutions" data-mobile-link data-i18n="navSolutions">Solutions</a>
+<a href="#manufacturing" data-mobile-link data-i18n="navManufacturing">Manufacturing</a>
 <a href="#process" data-mobile-link data-i18n="navProcess">Process</a>
 <a href="#projects" data-mobile-link data-i18n="navProjects">Projects</a>
+<a href="#about" data-mobile-link data-i18n="navAbout">About</a>
 <a href="#contact" data-mobile-link data-i18n="navContact">Contact</a>
-<a href="#contact" data-mobile-link data-i18n="navQuote">Get a Quote</a>
+
+</div>
 
 <div class="mobile-language">
 
-<button data-mobile-lang="en" class="active">EN</button>
-<button data-mobile-lang="zh">中文</button>
-<button data-mobile-lang="ar">العربية</button>
-<button data-mobile-lang="tr">TR</button>
-<button data-mobile-lang="ru">RU</button>
+<div class="mobile-language-title" data-i18n="chooseLanguage">
+Choose Language
+</div>
+
+<div class="mobile-language-buttons">
+
+<button data-lang="en">English</button>
+<button data-lang="zh">中文</button>
+<button data-lang="ar">العربية</button>
+<button data-lang="tr">Türkçe</button>
+<button data-lang="ru">Русский</button>
 
 </div>
 
@@ -1580,11 +1390,11 @@ Get a Quote
 
 </div>
 
-<!-- =========================
-     HERO
-========================= -->
+<main id="top">
 
-<section class="hero" id="top">
+<!-- HERO -->
+
+<section class="hero">
 
 <video
 class="hero-video"
@@ -1600,686 +1410,730 @@ preload="auto">
 
 <div class="hero-overlay"></div>
 
-<div class="hero-content">
-
-<div class="container">
-
-<div class="hero-inner reveal">
+<div class="container hero-content">
 
 <div class="eyebrow" data-i18n="heroEyebrow">
 Hospitality Procurement · China
 </div>
 
-<h1>
-<span data-i18n="heroTitle1">Building</span>
-<span data-i18n="heroTitle2">Hospitality</span>
-<span data-i18n="heroTitle3">Projects.</span>
+<h1 data-i18n-html="heroTitle">
+Complete Hospitality<br>
+<span class="gold">Project Supply.</span>
 </h1>
 
-<p data-i18n="heroDescription">
-One partner for sourcing, manufacturing,
-quality control, logistics and complete
-project supply from China.
+<p
+class="hero-copy"
+data-i18n="heroCopy">
+We source, manufacture and supply complete hospitality projects from China — for hotels, resorts, restaurants and cafés.
 </p>
 
-<a href="#contact" class="btn" data-i18n="heroButton">
+<div class="actions">
+
+<a
+class="btn"
+href="#contact"
+data-i18n="heroButton">
 Start Your Project →
+</a>
+
+<a
+class="btn dark"
+href="#solutions"
+data-i18n="heroExplore">
+Explore Solutions
 </a>
 
 </div>
 
 </div>
 
-</div>
-
+<div
+class="scroll"
+data-i18n="scrollText">
+Scroll to explore
 </div>
 
 </section>
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
-<section class="intro" id="about">
+<section id="about">
 
-<div class="container">
-
-<div class="section-head reveal">
+<div class="container intro">
 
 <div>
 
-<div class="section-number">
-01 / <span data-i18n="aboutNumber">ABOUT</span>
+<div
+class="eyebrow"
+data-i18n="aboutEyebrow">
+China Renown
 </div>
 
 <h2 data-i18n-html="aboutTitle">
 One partner.<br>
-Every supply.
+<span class="gold">Every supply.</span>
 </h2>
 
 </div>
 
-<p data-i18n="aboutDescription">
-CHINA RENOWN connects hospitality projects
-with reliable Chinese manufacturers,
-specialized suppliers and project-ready
-production capabilities.
+<p data-i18n="aboutText">
+From project specifications and factory sourcing to manufacturing, quality control, consolidation and delivery, China Renown coordinates the supply chain behind ambitious hospitality projects.
 </p>
 
 </div>
 
-<div class="intro-grid reveal">
+<div class="container clients">
 
-<div class="intro-text" data-i18n-html="aboutStatement">
-From the first specification to the final
-container, we coordinate the complete supply
-chain for
-<span class="gold">hospitality projects.</span>
-</div>
+<article class="client">
 
-<div>
-<p style="color:#888;" data-i18n="aboutSectors">
-Hotels · Resorts · Restaurants · Cafés
+<img
+src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85">
+
+<div class="client-info">
+
+<h3 data-i18n="hotels">
+Hotels
+</h3>
+
+<p data-i18n="hotelsDesc">
+FF&E · OS&E · Lighting · Technology
 </p>
-</div>
 
 </div>
+
+</article>
+
+<article class="client">
+
+<img
+src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=85">
+
+<div class="client-info">
+
+<h3 data-i18n="resorts">
+Resorts
+</h3>
+
+<p data-i18n="resortsDesc">
+Interiors · Outdoor · Custom Supply
+</p>
+
+</div>
+
+</article>
+
+<article class="client">
+
+<img
+src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85">
+
+<div class="client-info">
+
+<h3 data-i18n="restaurants">
+Restaurants
+</h3>
+
+<p data-i18n="restaurantsDesc">
+Furniture · Kitchen · F&B
+</p>
+
+</div>
+
+</article>
+
+<article class="client">
+
+<img
+src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=85">
+
+<div class="client-info">
+
+<h3 data-i18n="cafes">
+Cafés
+</h3>
+
+<p data-i18n="cafesDesc">
+Furniture · Lighting · Tableware
+</p>
+
+</div>
+
+</article>
 
 </div>
 
 </section>
 
-<!-- =========================
-     PROJECT TYPES
-========================= -->
+<!-- COMPLETE SCOPE -->
 
-<section>
+<section class="scope" id="solutions">
 
 <div class="container">
 
-<div class="section-head reveal">
+<div class="scope-head">
 
 <div>
 
-<div class="section-number">
-02 / <span data-i18n="projectTypesNumber">PROJECT TYPES</span>
-</div>
-
-<h2 data-i18n-html="projectTypesTitle">
-Built for<br>
-hospitality.
-</h2>
-
-</div>
-
-<p data-i18n="projectTypesDescription">
-Our sourcing and manufacturing network
-supports different hospitality environments,
-from luxury resorts to high-volume restaurants.
-</p>
-
-</div>
-
-<div class="client-grid">
-
-<div class="client-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"
-alt="Luxury hotel">
-
-<div class="client-content">
-
-<span data-i18n="hotelLabel">Hospitality</span>
-
-<h3 data-i18n="hotel">Hotels</h3>
-
-</div>
-
-</div>
-
-<div class="client-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=85"
-alt="Luxury resort">
-
-<div class="client-content">
-
-<span data-i18n="resortLabel">Destination</span>
-
-<h3 data-i18n="resort">Resorts</h3>
-
-</div>
-
-</div>
-
-<div class="client-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
-alt="Fine dining restaurant">
-
-<div class="client-content">
-
-<span data-i18n="restaurantLabel">F&B</span>
-
-<h3 data-i18n="restaurant">Restaurants</h3>
-
-</div>
-
-</div>
-
-<div class="client-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85"
-alt="Modern cafe">
-
-<div class="client-content">
-
-<span data-i18n="cafeLabel">F&B</span>
-
-<h3 data-i18n="cafe">Cafés</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     COMPLETE SCOPE
-========================= -->
-
-<section class="scope" id="scope">
-
-<div class="container">
-
-<div class="section-head reveal">
-
-<div>
-
-<div class="section-number">
-03 / <span data-i18n="scopeNumber">COMPLETE SCOPE</span>
+<div
+class="eyebrow"
+data-i18n="scopeEyebrow">
+Complete Scope
 </div>
 
 <h2 data-i18n-html="scopeTitle">
-A → Z<br>
-Project Supply.
+Everything your<br>
+<span class="gold">project needs.</span>
 </h2>
 
 </div>
 
-<p data-i18n="scopeDescription">
-A complete procurement scope covering
-architecture, FF&E, F&B, technology,
-manufacturing and logistics.
+<p data-i18n="scopeText">
+From finishes and furniture to kitchens, lighting, technology and logistics — coordinated through one professional supply process.
 </p>
 
 </div>
 
 <div class="scope-grid">
 
-<div class="scope-item reveal">
-<div class="num">01</div>
-<h3 data-i18n="scope1Title">Architecture & Finishes</h3>
-<p data-i18n="scope1Desc">Materials and finishes that define the architectural identity of the project.</p>
+<article class="scope-item">
+
+<span class="num">01</span>
+
+<h3 data-i18n="scope1Title">
+Architecture & Finishes
+</h3>
+
+<p data-i18n="scope1Text">
+Materials and finishes selected around your design and specification.
+</p>
+
 <ul>
-<li data-i18n="scope1a">Flooring</li>
-<li data-i18n="scope1b">Wall Finishes</li>
-<li data-i18n="scope1c">Stone & Tiles</li>
-<li data-i18n="scope1d">Doors & Glass</li>
-<li data-i18n="scope1e">Decorative Materials</li>
+<li data-i18n="flooring">Flooring</li>
+<li data-i18n="wallFinishes">Wall finishes</li>
+<li data-i18n="stone">Stone</li>
+<li data-i18n="tiles">Tiles</li>
+<li data-i18n="doors">Doors</li>
+<li data-i18n="glass">Glass</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">02</div>
-<h3 data-i18n="scope2Title">Furniture & FF&E</h3>
-<p data-i18n="scope2Desc">Furniture packages for guestrooms, public areas and F&B environments.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">02</span>
+
+<h3 data-i18n="scope2Title">
+Furniture & FF&E
+</h3>
+
+<p data-i18n="scope2Text">
+Complete guestroom, public-area and outdoor furniture supply.
+</p>
+
 <ul>
-<li data-i18n="scope2a">Guestroom Furniture</li>
-<li data-i18n="scope2b">Lobby Furniture</li>
-<li data-i18n="scope2c">Restaurant Furniture</li>
-<li data-i18n="scope2d">Outdoor Furniture</li>
-<li data-i18n="scope2e">Custom Joinery</li>
+<li data-i18n="guestrooms">Guestrooms</li>
+<li data-i18n="lobby">Lobby</li>
+<li data-i18n="restaurant">Restaurant</li>
+<li data-i18n="cafe">Café</li>
+<li data-i18n="outdoor">Outdoor</li>
+<li data-i18n="joinery">Joinery</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">03</div>
-<h3 data-i18n="scope3Title">Lighting</h3>
-<p data-i18n="scope3Desc">Decorative and architectural lighting selected for hospitality environments.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">03</span>
+
+<h3 data-i18n="scope3Title">
+Lighting
+</h3>
+
+<p data-i18n="scope3Text">
+Decorative and architectural lighting for hospitality environments.
+</p>
+
 <ul>
-<li data-i18n="scope3a">Decorative Lighting</li>
-<li data-i18n="scope3b">Architectural Lighting</li>
-<li data-i18n="scope3c">Guestroom Lighting</li>
-<li data-i18n="scope3d">Restaurant Lighting</li>
-<li data-i18n="scope3e">Outdoor Lighting</li>
+<li data-i18n="decorative">Decorative</li>
+<li data-i18n="architectural">Architectural</li>
+<li data-i18n="guestroom">Guestroom</li>
+<li data-i18n="restaurant">Restaurant</li>
+<li data-i18n="outdoor">Outdoor</li>
+<li data-i18n="custom">Custom</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">04</div>
-<h3 data-i18n="scope4Title">Commercial Kitchens & F&B</h3>
-<p data-i18n="scope4Desc">Professional equipment for hotel, restaurant and café operations.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">04</span>
+
+<h3 data-i18n="scope4Title">
+Commercial Kitchens & F&B
+</h3>
+
+<p data-i18n="scope4Text">
+Professional equipment packages for hotel and restaurant operations.
+</p>
+
 <ul>
-<li data-i18n="scope4a">Cooking Equipment</li>
-<li data-i18n="scope4b">Refrigeration</li>
-<li data-i18n="scope4c">Bakery Equipment</li>
-<li data-i18n="scope4d">Dishwashing</li>
-<li data-i18n="scope4e">Stainless Steel</li>
-<li data-i18n="scope4f">Bar Equipment</li>
+<li data-i18n="cooking">Cooking</li>
+<li data-i18n="refrigeration">Refrigeration</li>
+<li data-i18n="bakery">Bakery</li>
+<li data-i18n="dishwashing">Dishwashing</li>
+<li data-i18n="stainless">Stainless Steel</li>
+<li data-i18n="bar">Bar</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">05</div>
-<h3 data-i18n="scope5Title">Tableware & OS&E</h3>
-<p data-i18n="scope5Desc">Operating supplies and guest-facing products for hospitality operations.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">05</span>
+
+<h3 data-i18n="scope5Title">
+Tableware & OS&E
+</h3>
+
+<p data-i18n="scope5Text">
+Operating supplies and guest-facing products sourced to project requirements.
+</p>
+
 <ul>
-<li data-i18n="scope5a">Porcelain</li>
-<li data-i18n="scope5b">Cutlery</li>
-<li data-i18n="scope5c">Glassware</li>
-<li data-i18n="scope5d">Serving Equipment</li>
-<li data-i18n="scope5e">Hotel Amenities</li>
-<li data-i18n="scope5f">Textiles</li>
+<li data-i18n="porcelain">Porcelain</li>
+<li data-i18n="cutlery">Cutlery</li>
+<li data-i18n="glassware">Glassware</li>
+<li data-i18n="serving">Serving</li>
+<li data-i18n="amenities">Amenities</li>
+<li data-i18n="textiles">Textiles</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">06</div>
-<h3 data-i18n="scope6Title">Technology & Safety</h3>
-<p data-i18n="scope6Desc">Technology and safety systems for modern hospitality properties.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">06</span>
+
+<h3 data-i18n="scope6Title">
+Technology & Safety
+</h3>
+
+<p data-i18n="scope6Text">
+Integrated systems and safety equipment for modern hospitality operations.
+</p>
+
 <ul>
-<li data-i18n="scope6a">Smart Room Systems</li>
-<li data-i18n="scope6b">Electronic Locks</li>
-<li data-i18n="scope6c">CCTV</li>
-<li data-i18n="scope6d">Wi-Fi</li>
-<li data-i18n="scope6e">IPTV</li>
-<li data-i18n="scope6f">Fire & Emergency Systems</li>
+<li data-i18n="smartRoom">Smart Room</li>
+<li data-i18n="locks">Locks</li>
+<li data-i18n="cctv">CCTV</li>
+<li data-i18n="wifi">Wi-Fi</li>
+<li data-i18n="iptv">IPTV</li>
+<li data-i18n="fireSystems">Fire Systems</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">07</div>
-<h3 data-i18n="scope7Title">Custom Manufacturing</h3>
-<p data-i18n="scope7Desc">Made-to-specification production for unique project requirements.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">07</span>
+
+<h3 data-i18n="scope7Title">
+Custom Manufacturing
+</h3>
+
+<p data-i18n="scope7Text">
+Private-label and specification-driven manufacturing through qualified factories.
+</p>
+
 <ul>
-<li data-i18n="scope7a">Furniture</li>
-<li data-i18n="scope7b">Joinery</li>
-<li data-i18n="scope7c">Metal</li>
-<li data-i18n="scope7d">Glass</li>
-<li data-i18n="scope7e">Stone</li>
-<li data-i18n="scope7f">Lighting</li>
-<li data-i18n="scope7g">Private Label</li>
+<li data-i18n="furniture">Furniture</li>
+<li data-i18n="joinery">Joinery</li>
+<li data-i18n="metal">Metal</li>
+<li data-i18n="glass">Glass</li>
+<li data-i18n="stone">Stone</li>
+<li data-i18n="lighting">Lighting</li>
 </ul>
-</div>
 
-<div class="scope-item reveal">
-<div class="num">08</div>
-<h3 data-i18n="scope8Title">Logistics & Project Supply</h3>
-<p data-i18n="scope8Desc">Consolidation, packing and international shipment coordination.</p>
+</article>
+
+<article class="scope-item">
+
+<span class="num">08</span>
+
+<h3 data-i18n="scope8Title">
+Logistics & Project Supply
+</h3>
+
+<p data-i18n="scope8Text">
+Consolidation, packing, container loading and shipping coordination.
+</p>
+
 <ul>
-<li data-i18n="scope8a">Factory Consolidation</li>
-<li data-i18n="scope8b">Quality Inspection</li>
-<li data-i18n="scope8c">Packing</li>
-<li data-i18n="scope8d">Container Loading</li>
-<li data-i18n="scope8e">Shipping Documentation</li>
-<li data-i18n="scope8f">Delivery Coordination</li>
+<li data-i18n="consolidation">Consolidation</li>
+<li data-i18n="packing">Packing</li>
+<li data-i18n="loading">Loading</li>
+<li data-i18n="documentation">Documentation</li>
+<li data-i18n="shipping">Shipping</li>
+<li data-i18n="delivery">Delivery</li>
 </ul>
-</div>
+
+</article>
 
 </div>
-
 </div>
 
 </section>
 
-<!-- =========================
-     MANUFACTURING
-========================= -->
+<!-- MANUFACTURING -->
 
-<section class="image-break">
+<section class="factory" id="manufacturing">
 
-<div class="container">
+<div class="container factory-content">
 
-<div class="image-break-content reveal">
+<div>
 
-<div class="eyebrow" data-i18n="manufacturingEyebrow">
-Manufacturing in China
+<div
+class="eyebrow"
+data-i18n="manufacturingEyebrow">
+Manufacturing Network
 </div>
 
 <h2 data-i18n-html="manufacturingTitle">
-From specification<br>
-to production.
+Direct access to China's
+<span class="gold">factories.</span>
 </h2>
 
 </div>
 
-</div>
+<div class="factory-copy">
 
-</section>
-
-<!-- =========================
-     PROCESS
-========================= -->
-
-<section class="process" id="process">
-
-<div class="container">
-
-<div class="section-head reveal">
-
-<div>
-
-<div class="section-number">
-04 / <span data-i18n="processNumber">OUR PROCESS</span>
-</div>
-
-<h2 data-i18n-html="processTitle">
-One clear<br>
-process.
-</h2>
-
-</div>
-
-<p data-i18n="processDescription">
-Structured project coordination from the
-initial brief through manufacturing,
-inspection and delivery.
+<p data-i18n="manufacturingText">
+We connect hospitality projects with qualified Chinese manufacturers and coordinate sourcing, pricing, production, quality control and logistics through one professional supply process.
 </p>
 
-</div>
-
-<div class="process-grid">
-
-<div class="process-item reveal">
-<strong>01</strong>
-<h3 data-i18n="process1Title">Project Brief</h3>
-<p data-i18n="process1Desc">Understand project scope, quantities and specifications.</p>
-</div>
-
-<div class="process-item reveal">
-<strong>02</strong>
-<h3 data-i18n="process2Title">Sourcing</h3>
-<p data-i18n="process2Desc">Identify suitable manufacturers and compare solutions.</p>
-</div>
-
-<div class="process-item reveal">
-<strong>03</strong>
-<h3 data-i18n="process3Title">Samples</h3>
-<p data-i18n="process3Desc">Review samples, prototypes and production standards.</p>
-</div>
-
-<div class="process-item reveal">
-<strong>04</strong>
-<h3 data-i18n="process4Title">Production</h3>
-<p data-i18n="process4Desc">Coordinate manufacturing and monitor project progress.</p>
-</div>
-
-<div class="process-item reveal">
-<strong>05</strong>
-<h3 data-i18n="process5Title">Delivery</h3>
-<p data-i18n="process5Desc">QC, consolidation, loading, shipping and delivery.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     PROJECTS
-========================= -->
-
-<section class="projects" id="projects">
-
-<div class="container">
-
-<div class="section-head reveal">
-
-<div>
-
-<div class="section-number">
-05 / <span data-i18n="projectsNumber">PROJECTS</span>
-</div>
-
-<h2 data-i18n-html="projectsTitle">
-Designed for<br>
-real projects.
-</h2>
-
-</div>
-
-<p data-i18n="projectsDescription">
-Hospitality environments require coordination
-across multiple categories. We bring them
-together through one supply structure.
-</p>
-
-</div>
-
-<div class="project-grid">
-
-<div class="project reveal">
-
-<img
-src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85"
-alt="Luxury hotel interior">
-
-<div class="project-label">
-
-<span data-i18n="projectHotelLabel">
-Hospitality Project
-</span>
-
-<h3 data-i18n="projectHotel">
-Hotel Interiors
-</h3>
-
-</div>
-
-</div>
-
-<div class="project-column">
-
-<div class="project small reveal">
-
-<img
-src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=85"
-alt="Luxury resort">
-
-<div class="project-label">
-
-<span data-i18n="projectResortLabel">
-Destination
-</span>
-
-<h3 data-i18n="projectResort">
-Resort Supply
-</h3>
-
-</div>
-
-</div>
-
-<div class="project small reveal">
-
-<img
-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
-alt="Restaurant interior">
-
-<div class="project-label">
-
-<span data-i18n="projectRestaurantLabel">
-F&B
-</span>
-
-<h3 data-i18n="projectRestaurant">
-Restaurant Projects
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     CUSTOM MANUFACTURING
-========================= -->
-
-<section class="custom">
-
-<div class="container">
-
-<div class="custom-grid">
-
-<div class="custom-image reveal">
-
-<img
-src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1600&q=85"
-alt="Custom manufacturing">
-
-</div>
-
-<div class="custom-copy reveal">
-
-<div class="section-number">
-06 / <span data-i18n="customNumber">CUSTOM MANUFACTURING</span>
-</div>
-
-<h2 data-i18n="customTitle">
-Made to your specification.
-</h2>
-
-<p data-i18n="customDescription">
-When standard products are not enough,
-we work with specialized manufacturers
-to develop custom solutions around your
-drawings, dimensions, materials and finish.
-</p>
-
-<div class="custom-list">
-
-<div data-i18n="custom1">Custom Furniture</div>
-<div data-i18n="custom2">Joinery</div>
-<div data-i18n="custom3">Metalwork</div>
-<div data-i18n="custom4">Glass</div>
-<div data-i18n="custom5">Stone</div>
-<div data-i18n="custom6">Lighting</div>
-<div data-i18n="custom7">Private Label</div>
-<div data-i18n="custom8">Prototypes</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     GLOBAL SUPPLY
-========================= -->
-
-<section class="global">
-
-<div class="global-bg"></div>
-
-<div class="container">
-
-<div class="global-content reveal">
-
-<div class="eyebrow" data-i18n="globalEyebrow">
-Global Supply From China
-</div>
-
-<h2 data-i18n-html="globalTitle">
-From Chinese factories
-to your project.
-</h2>
-
-<p data-i18n="globalDescription">
-We coordinate supplier communication,
-production, inspection, consolidation,
-documentation and international logistics.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     CTA + CONTACT
-========================= -->
-
-<section class="cta" id="contact">
-
-<div class="cta-bg"></div>
-
-<div class="container">
-
-<div class="cta-content">
-
-<div class="eyebrow" data-i18n="ctaEyebrow">
-Start Your Project
-</div>
-
-<h2 data-i18n="ctaTitle">
-Tell us what you are building.
-</h2>
-
-<p data-i18n="ctaDescription">
-Share your project requirements,
-BOQ or specifications and let us
-build the right sourcing strategy.
-</p>
-
-<div class="contact-grid">
-
-<!-- CONTACT INFORMATION -->
-
-<div class="contact-info reveal">
-
-<h3 data-i18n="contactTitle">
-Contact CHINA RENOWN
-</h3>
-
-<div class="contact-line">
-
-<span class="contact-label" data-i18n="emailLabel">
-Email
-</span>
-
-<a href="mailto:info@chinarenow.com">
-info@chinarenow.com
+<a
+class="btn"
+href="#contact"
+data-i18n="manufacturingButton">
+Discuss Manufacturing →
 </a>
 
 </div>
 
-<div class="contact-line">
+<div class="stats">
 
-<span class="contact-label" data-i18n="whatsappLabel">
-WhatsApp
+<div class="stat">
+<strong data-i18n="directSourcing">DIRECT SOURCING</strong>
+<span data-i18n="directSourcingDesc">Factory-level access</span>
+</div>
+
+<div class="stat">
+<strong data-i18n="projectPricing">PROJECT PRICING</strong>
+<span data-i18n="projectPricingDesc">Built around your BOQ</span>
+</div>
+
+<div class="stat">
+<strong data-i18n="qualityControl">QUALITY CONTROL</strong>
+<span data-i18n="qualityControlDesc">Production oversight</span>
+</div>
+
+<div class="stat">
+<strong data-i18n="globalLogistics">GLOBAL LOGISTICS</strong>
+<span data-i18n="globalLogisticsDesc">China to destination</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+
+<div class="container">
+
+<div class="process-head">
+
+<div>
+
+<div
+class="eyebrow"
+data-i18n="processEyebrow">
+Our Process
+</div>
+
+<h2 data-i18n-html="processTitle">
+From brief<br>
+to <span class="gold">delivery.</span>
+</h2>
+
+</div>
+
+<p data-i18n="processText">
+One coordinated workflow designed to reduce supplier complexity and keep project requirements, quality and logistics aligned.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<span class="no">01</span>
+<h3 data-i18n="step1Title">Project Brief</h3>
+<p data-i18n="step1Text">Understand the concept, scope, destination and commercial targets.</p>
+</div>
+
+<div class="step">
+<span class="no">02</span>
+<h3 data-i18n="step2Title">BOQ & Specifications</h3>
+<p data-i18n="step2Text">Review quantities, materials, drawings, finishes and technical requirements.</p>
+</div>
+
+<div class="step">
+<span class="no">03</span>
+<h3 data-i18n="step3Title">Factory Sourcing</h3>
+<p data-i18n="step3Text">Identify suitable manufacturers and build a qualified supplier shortlist.</p>
+</div>
+
+<div class="step">
+<span class="no">04</span>
+<h3 data-i18n="step4Title">Price & Quality Comparison</h3>
+<p data-i18n="step4Text">Compare offers, specifications, lead times and capabilities.</p>
+</div>
+
+<div class="step">
+<span class="no">05</span>
+<h3 data-i18n="step5Title">Samples & Prototypes</h3>
+<p data-i18n="step5Text">Approve materials, samples and custom prototypes before production.</p>
+</div>
+
+<div class="step">
+<span class="no">06</span>
+<h3 data-i18n="step6Title">Manufacturing</h3>
+<p data-i18n="step6Text">Coordinate production according to approved specifications.</p>
+</div>
+
+<div class="step">
+<span class="no">07</span>
+<h3 data-i18n="step7Title">Quality Control</h3>
+<p data-i18n="step7Text">Inspection and documentation before consolidation and shipment.</p>
+</div>
+
+<div class="step">
+<span class="no">08</span>
+<h3 data-i18n="step8Title">Consolidation</h3>
+<p data-i18n="step8Text">Coordinate packing, grouping, labeling and container loading.</p>
+</div>
+
+<div class="step">
+<span class="no">09</span>
+<h3 data-i18n="step9Title">Shipping</h3>
+<p data-i18n="step9Text">Coordinate export documentation and international freight.</p>
+</div>
+
+<div class="step">
+<span class="no">10</span>
+<h3 data-i18n="step10Title">Project Delivery</h3>
+<p data-i18n="step10Text">Complete the supply chain to the agreed destination.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="scope-head">
+
+<div>
+
+<div
+class="eyebrow"
+data-i18n="projectsEyebrow">
+Project Environments
+</div>
+
+<h2 data-i18n-html="projectsTitle">
+Built for <span class="gold">hospitality.</span>
+</h2>
+
+</div>
+
+<p data-i18n="projectsText">
+Visual solutions across guest spaces, public areas, dining environments and outdoor hospitality.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="gallery-item big">
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=88">
+
+<span class="tag" data-i18n="hotels">
+Hotels
 </span>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=88">
+
+<span class="tag" data-i18n="resorts">
+Resorts
+</span>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=88">
+
+<span class="tag" data-i18n="restaurants">
+Restaurants
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GLOBAL -->
+
+<section class="global">
+
+<div class="container">
+
+<div
+class="eyebrow"
+data-i18n="globalEyebrow">
+Global Supply
+</div>
+
+<h2 data-i18n-html="globalTitle">
+From China<br>
+<span class="gold">to the world.</span>
+</h2>
+
+<p
+style="max-width:620px;margin:25px auto 0"
+data-i18n="globalText">
+International hospitality projects supported through coordinated sourcing, manufacturing and logistics from China to destination.
+</p>
+
+<div class="regions">
+
+<span data-i18n="chinaRegion">CHINA</span>
+<span data-i18n="middleEast">MIDDLE EAST</span>
+<span data-i18n="europe">EUROPE</span>
+<span data-i18n="africa">AFRICA</span>
+<span data-i18n="asia">ASIA</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CUSTOM -->
+
+<section class="custom">
+
+<div class="custom-image"></div>
+
+<div class="custom-content">
+
+<div
+class="eyebrow"
+data-i18n="customEyebrow">
+Custom Manufacturing
+</div>
+
+<h2 data-i18n-html="customTitle">
+Your design.<br>
+<span class="gold">Our factories.</span>
+</h2>
+
+<p data-i18n="customText">
+From custom furniture and joinery to metal, glass, stone and lighting, we develop and manufacture products according to project specifications and brand requirements.
+</p>
+
+<a
+class="btn"
+href="#contact"
+data-i18n="customButton">
+Discuss a Custom Project →
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="scope-head">
+
+<div>
+
+<div
+class="eyebrow"
+data-i18n="contactEyebrow">
+Start a Conversation
+</div>
+
+<h2 data-i18n-html="contactTitle">
+Ready to build<br>
+<span class="gold">your project?</span>
+</h2>
+
+</div>
+
+<p data-i18n="contactIntro">
+Tell us what you need. We will source it, manufacture it and coordinate the supply from China.
+</p>
+
+</div>
+
+<div class="contact-details">
+
+<div class="contact-card">
+
+<div
+class="contact-card-title"
+data-i18n="emailLabel">
+EMAIL
+</div>
+
+<a href="mailto:info@chinarenown.com">
+info@chinarenown.com
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div
+class="contact-card-title"
+data-i18n="whatsappLabel">
+WHATSAPP
+</div>
 
 <a
 href="https://wa.me/8615805898484"
@@ -2290,92 +2144,77 @@ rel="noopener">
 
 </div>
 
-<div class="contact-line">
+<div class="contact-card">
 
-<span class="contact-label" data-i18n="wechatLabel">
-WeChat
-</span>
+<div
+class="contact-card-title"
+data-i18n="wechatLabel">
+WECHAT
+</div>
 
 <a href="#" id="wechatContact">
-<span data-i18n="wechatOpen">
+<span data-i18n="openWechat">
 Open WeChat QR
 </span>
 </a>
 
 </div>
 
-<a
-href="mailto:info@chinarenow.com"
-class="btn"
-data-i18n="emailButton">
-Email CHINA RENOWN →
-</a>
-
 </div>
 
-<!-- FORM -->
-
-<form class="contact-form reveal" id="contactForm">
-
-<div class="form-grid">
+<form class="contact-form" id="quoteForm">
 
 <div class="form-group">
 
-<label for="name" data-i18n="formName">
+<label data-i18n="formName">
 Name
 </label>
 
 <input
-id="name"
-name="name"
-type="text"
+id="formName"
 required
 data-i18n-placeholder="formNamePlaceholder"
-placeholder="Your name">
+placeholder="Your Name">
 
 </div>
 
 <div class="form-group">
 
-<label for="company" data-i18n="formCompany">
+<label data-i18n="formCompany">
 Company
 </label>
 
 <input
-id="company"
-name="company"
-type="text"
+id="formCompany"
 data-i18n-placeholder="formCompanyPlaceholder"
-placeholder="Company name">
+placeholder="Company">
 
 </div>
 
 <div class="form-group">
 
-<label for="email" data-i18n="formEmail">
+<label data-i18n="formEmail">
 Email
 </label>
 
 <input
-id="email"
-name="email"
+id="formEmail"
 type="email"
 required
 data-i18n-placeholder="formEmailPlaceholder"
-placeholder="Your email">
+placeholder="Email Address">
 
 </div>
 
 <div class="form-group">
 
-<label for="phone" data-i18n="formPhone">
+<label data-i18n="formPhone">
 Phone / WhatsApp
 </label>
 
 <input
-id="phone"
-name="phone"
-type="tel"
+id="formPhone"
+required
 data-i18n-placeholder="formPhonePlaceholder"
 placeholder="Phone / WhatsApp">
 
@@ -2383,14 +2222,12 @@ placeholder="Phone / WhatsApp">
 
 <div class="form-group">
 
-<label for="country" data-i18n="formCountry">
+<label data-i18n="formCountry">
 Country
 </label>
 
 <input
-id="country"
-name="country"
-type="text"
+id="formCountry"
 data-i18n-placeholder="formCountryPlaceholder"
 placeholder="Country">
 
@@ -2398,29 +2235,33 @@ placeholder="Country">
 
 <div class="form-group">
 
-<label for="projectType" data-i18n="formProjectType">
+<label data-i18n="formProjectType">
 Project Type
 </label>
 
-<select id="projectType" name="projectType">
+<select id="formProjectType">
 
-<option value="hotel" data-i18n="hotel">
-Hotels
+<option value="" data-i18n="selectProject">
+Select Project Type
 </option>
 
-<option value="resort" data-i18n="resort">
-Resorts
+<option value="Hotel" data-i18n="hotelOption">
+Hotel
 </option>
 
-<option value="restaurant" data-i18n="restaurant">
-Restaurants
+<option value="Resort" data-i18n="resortOption">
+Resort
 </option>
 
-<option value="cafe" data-i18n="cafe">
-Cafés
+<option value="Restaurant" data-i18n="restaurantOption">
+Restaurant
 </option>
 
-<option value="other" data-i18n="otherProject">
+<option value="Cafe" data-i18n="cafeOption">
+Café
+</option>
+
+<option value="Other" data-i18n="otherOption">
 Other
 </option>
 
@@ -2428,1384 +2269,1455 @@ Other
 
 </div>
 
-<div class="form-group full">
+<div class="form-group">
 
-<label for="requirements" data-i18n="formRequirements">
+<label data-i18n="formRequirements">
 Project Requirements
 </label>
 
-<textarea
-id="requirements"
-name="requirements"
+<input
+id="formRequirements"
 data-i18n-placeholder="formRequirementsPlaceholder"
-placeholder="Tell us about your project requirements"></textarea>
+placeholder="Products / Specifications">
 
 </div>
 
-<div class="form-group full">
+<div class="form-group">
 
-<label for="boq" data-i18n="formBOQ">
+<label data-i18n="formQuantity">
 BOQ / Quantity
 </label>
 
-<textarea
-id="boq"
-name="boq"
-data-i18n-placeholder="formBOQPlaceholder"
-placeholder="BOQ, quantities or specifications"></textarea>
+<input
+id="formQuantity"
+data-i18n-placeholder="formQuantityPlaceholder"
+placeholder="Quantity / BOQ">
 
 </div>
 
 <div class="form-group full">
 
-<label for="message" data-i18n="formMessage">
+<label data-i18n="formMessage">
 Message
 </label>
 
 <textarea
-id="message"
-name="message"
+id="formMessage"
+required
 data-i18n-placeholder="formMessagePlaceholder"
-placeholder="Additional message"></textarea>
+placeholder="Tell us about your project"></textarea>
 
 </div>
 
-</div>
+<div class="form-submit">
 
 <button
+class="btn"
 type="submit"
-class="btn form-submit"
-data-i18n="formButton">
+data-i18n="formSubmit">
 Send Project Inquiry →
 </button>
 
-<div class="form-status" id="formStatus"></div>
+<a
+class="btn dark"
+href="https://wa.me/8615805898484"
+target="_blank"
+rel="noopener"
+data-i18n="contactWhatsapp">
+Contact on WhatsApp
+</a>
+
+</div>
 
 </form>
 
 </div>
 
-</div>
-
-</div>
-
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+</main>
+
+<!-- FOOTER -->
 
 <footer>
 
-<div class="container">
-
-<div class="footer-grid">
+<div class="container footer-grid">
 
 <div>
 
-<a href="#top" class="brand">
-
-<div class="brand-mark">
-
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-
-<linearGradient
-id="goldFooter"
-x1="0%"
-y1="0%"
-x2="100%"
-y2="100%">
-
-<stop offset="0%" stop-color="#f1d58c"/>
-<stop offset="45%" stop-color="#c9a65d"/>
-<stop offset="100%" stop-color="#8d6b2d"/>
-
-</linearGradient>
-
-</defs>
-
-<text
-x="50"
-y="78"
-text-anchor="middle"
-font-family="Georgia, Times New Roman, serif"
-font-size="82"
-font-weight="bold"
-fill="url(#goldFooter)">
-R
-</text>
-
-</svg>
-
+<div class="logo">
+CHINA <span>RENOWN</span>
 </div>
-
-<div class="brand-name">
-CHINA <span>RENOWN</span><sup>®</sup>
-</div>
-
-</a>
 
 <p data-i18n="footerDescription">
-Hospitality Procurement,
-Manufacturing & Project Supply.
+Hospitality procurement, sourcing, manufacturing and project supply from China.
 </p>
 
 </div>
 
 <div>
 
-<div class="footer-title" data-i18n="footerSectors">
-Sectors
-</div>
+<h4 data-i18n="footerSolutions">
+Solutions
+</h4>
 
-<p data-i18n-html="footerSectorsText">
-Hotels · Resorts<br>
-Restaurants · Cafés
-</p>
+<a href="#solutions" data-i18n="footerArchitecture">
+Architecture & Finishes
+</a>
+
+<a href="#solutions" data-i18n="footerFurniture">
+Furniture & FF&E
+</a>
+
+<a href="#solutions" data-i18n="footerLighting">
+Lighting
+</a>
+
+<a href="#solutions" data-i18n="footerKitchen">
+Commercial Kitchens
+</a>
 
 </div>
 
 <div>
 
-<div class="footer-title" data-i18n="footerChina">
-China
+<h4 data-i18n="footerCompany">
+Company
+</h4>
+
+<a href="#projects" data-i18n="navProjects">
+Projects
+</a>
+
+<a href="#manufacturing" data-i18n="navManufacturing">
+Manufacturing
+</a>
+
+<a href="#process" data-i18n="navProcess">
+Process
+</a>
+
+<a href="#about" data-i18n="navAbout">
+About
+</a>
+
 </div>
 
-<p data-i18n-html="footerChinaText">
-Sourcing · Manufacturing<br>
-Quality Control · Logistics
-</p>
+<div>
 
-<a class="footer-contact" href="mailto:info@chinarenow.com">
-info@chinarenow.com
+<h4 data-i18n="footerContact">
+Contact
+</h4>
+
+<a href="mailto:info@chinarenown.com">
+info@chinarenown.com
 </a>
 
 <a
-class="footer-contact"
 href="https://wa.me/8615805898484"
 target="_blank"
 rel="noopener">
-+86 158 0589 8484
+WhatsApp
+</a>
+
+<a href="#" id="wechatFooter">
+WeChat
 </a>
 
 </div>
 
 </div>
 
-<div class="copyright" data-i18n="copyright">
-© 2026 CHINA RENOWN. All Rights Reserved.
-</div>
-
+<div class="container copy">
+© 2026 China Renown. All rights reserved.
 </div>
 
 </footer>
 
-<!-- =========================
-     WECHAT MODAL
-========================= -->
+<!-- FLOATING CONTACT BUTTONS -->
 
-<div class="wechat-modal" id="wechatModal">
-
-<div class="wechat-box">
-
-<button
-class="wechat-close"
-id="wechatClose"
-type="button"
-aria-label="Close">
-×
-</button>
-
-<h3 data-i18n="wechatTitle">
-WeChat
-</h3>
-
-<p data-i18n="wechatDescription">
-Scan the QR code to contact CHINA RENOWN.
-</p>
-
-<img
-src="wechat-qr.jpg"
-alt="CHINA RENOWN WeChat QR Code"
-class="wechat-qr">
-
-</div>
-
-</div>
-
-<!-- =========================
-     FLOATING CONTACT
-========================= -->
-
-<div class="floating-contact">
+<div class="floating">
 
 <a
-class="float-btn"
+class="float-btn whatsapp"
 href="https://wa.me/8615805898484"
 target="_blank"
 rel="noopener"
 aria-label="WhatsApp"
 title="WhatsApp">
-
-<svg viewBox="0 0 24 24">
-<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7c1.8 1 3.8 1.5 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.4-6.2-3.9-8.5ZM12.6 21.8h-.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 0 1-1.5-5.2C2.5 6.5 6.8 2.2 12.1 2.2c2.6 0 5 1 6.9 2.9 1.8 1.8 2.8 4.3 2.8 6.9-.1 5.4-4.4 9.8-9.2 9.8Zm5.4-7.3c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7 0 1.6 1.2 3.1 1.4 3.3.2.2 2.3 3.5 5.6 4.9.8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.4Z"/>
-</svg>
-
+WA
 </a>
 
 <button
-class="float-btn"
+class="float-btn wechat-float"
 id="wechatFloat"
-type="button"
 aria-label="WeChat"
 title="WeChat">
-
-<svg viewBox="0 0 24 24">
-<path d="M9.7 4.2C4.9 4.2 1 7.4 1 11.3c0 2.2 1.4 4.2 3.7 5.4l-.8 2.9 3.1-1.7c.9.3 1.8.4 2.7.4h.4c-.1-.5-.2-1-.2-1.5 0-3.9 3.9-7 8.7-7 .3 0 .7 0 1 .1C19 6.7 14.8 4.2 9.7 4.2Zm-2.9 5.3c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1Zm5.8 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1Zm3.7 1.4c-3.9 0-7 2.4-7 5.4s3.1 5.4 7 5.4c.8 0 1.6-.1 2.3-.4l2.6 1.4-.7-2.4c1.7-1 2.8-2.4 2.8-4 0-3-3.1-5.4-7-5.4Zm-2.2 5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9Zm4.4 0c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9Z"/>
-</svg>
-
+WC
 </button>
+
+</div>
+
+<!-- WECHAT MODAL -->
+
+<div
+class="wechat-modal"
+id="wechatModal">
+
+<div class="wechat-box">
+
+<button
+class="wechat-close"
+id="wechatClose">
+×
+</button>
+
+<div
+class="eyebrow"
+data-i18n="wechatEyebrow">
+WECHAT
+</div>
+
+<h3 data-i18n="wechatTitle">
+Connect With Us on WeChat
+</h3>
+
+<p data-i18n="wechatText">
+Scan the QR code below to contact CHINA RENOWN directly on WeChat.
+</p>
+
+<div class="qr-wrap">
+
+<img
+src="wechat-qr.jpg"
+alt="CHINA RENOWN WeChat QR Code">
+
+</div>
+
+<p
+class="wechat-note"
+data-i18n="wechatNote">
+SCAN TO CONTACT US ON WECHAT
+</p>
+
+</div>
 
 </div>
 
 <script>
 
 /* =========================================================
-   TRANSLATIONS
+   CHINA RENOWN
+   MULTILINGUAL SYSTEM
 ========================================================= */
 
 const translations = {
 
 en: {
 
-navAbout:"About",
-navScope:"Scope",
+navSolutions:"Solutions",
+navManufacturing:"Manufacturing",
 navProcess:"Process",
 navProjects:"Projects",
+navAbout:"About",
 navContact:"Contact",
-navQuote:"Get a Quote",
+navQuote:"Start Your Project",
+chooseLanguage:"Choose Language",
 
 heroEyebrow:"Hospitality Procurement · China",
-heroTitle1:"Building",
-heroTitle2:"Hospitality",
-heroTitle3:"Projects.",
-heroDescription:"One partner for sourcing, manufacturing, quality control, logistics and complete project supply from China.",
+heroTitle:"Complete Hospitality<br><span class='gold'>Project Supply.</span>",
+heroCopy:"We source, manufacture and supply complete hospitality projects from China — for hotels, resorts, restaurants and cafés.",
 heroButton:"Start Your Project →",
+heroExplore:"Explore Solutions",
+scrollText:"Scroll to explore",
 
-aboutNumber:"ABOUT",
-aboutTitle:"One partner.<br>Every supply.",
-aboutDescription:"CHINA RENOWN connects hospitality projects with reliable Chinese manufacturers, specialized suppliers and project-ready production capabilities.",
-aboutStatement:"From the first specification to the final container, we coordinate the complete supply chain for <span class='gold'>hospitality projects.</span>",
-aboutSectors:"Hotels · Resorts · Restaurants · Cafés",
+aboutEyebrow:"China Renown",
+aboutTitle:"One partner.<br><span class='gold'>Every supply.</span>",
+aboutText:"From project specifications and factory sourcing to manufacturing, quality control, consolidation and delivery, China Renown coordinates the supply chain behind ambitious hospitality projects.",
 
-projectTypesNumber:"PROJECT TYPES",
-projectTypesTitle:"Built for<br>hospitality.",
-projectTypesDescription:"Our sourcing and manufacturing network supports different hospitality environments, from luxury resorts to high-volume restaurants.",
+hotels:"Hotels",
+hotelsDesc:"FF&E · OS&E · Lighting · Technology",
+resorts:"Resorts",
+resortsDesc:"Interiors · Outdoor · Custom Supply",
+restaurants:"Restaurants",
+restaurantsDesc:"Furniture · Kitchen · F&B",
+cafes:"Cafés",
+cafesDesc:"Furniture · Lighting · Tableware",
 
-hotelLabel:"Hospitality",
-hotel:"Hotels",
-resortLabel:"Destination",
-resort:"Resorts",
-restaurantLabel:"F&B",
-restaurant:"Restaurants",
-cafeLabel:"F&B",
-cafe:"Cafés",
-
-scopeNumber:"COMPLETE SCOPE",
-scopeTitle:"A → Z<br>Project Supply.",
-scopeDescription:"A complete procurement scope covering architecture, FF&E, F&B, technology, manufacturing and logistics.",
+scopeEyebrow:"Complete Scope",
+scopeTitle:"Everything your<br><span class='gold'>project needs.</span>",
+scopeText:"From finishes and furniture to kitchens, lighting, technology and logistics — coordinated through one professional supply process.",
 
 scope1Title:"Architecture & Finishes",
-scope1Desc:"Materials and finishes that define the architectural identity of the project.",
-scope1a:"Flooring",
-scope1b:"Wall Finishes",
-scope1c:"Stone & Tiles",
-scope1d:"Doors & Glass",
-scope1e:"Decorative Materials",
-
+scope1Text:"Materials and finishes selected around your design and specification.",
 scope2Title:"Furniture & FF&E",
-scope2Desc:"Furniture packages for guestrooms, public areas and F&B environments.",
-scope2a:"Guestroom Furniture",
-scope2b:"Lobby Furniture",
-scope2c:"Restaurant Furniture",
-scope2d:"Outdoor Furniture",
-scope2e:"Custom Joinery",
-
+scope2Text:"Complete guestroom, public-area and outdoor furniture supply.",
 scope3Title:"Lighting",
-scope3Desc:"Decorative and architectural lighting selected for hospitality environments.",
-scope3a:"Decorative Lighting",
-scope3b:"Architectural Lighting",
-scope3c:"Guestroom Lighting",
-scope3d:"Restaurant Lighting",
-scope3e:"Outdoor Lighting",
-
+scope3Text:"Decorative and architectural lighting for hospitality environments.",
 scope4Title:"Commercial Kitchens & F&B",
-scope4Desc:"Professional equipment for hotel, restaurant and café operations.",
-scope4a:"Cooking Equipment",
-scope4b:"Refrigeration",
-scope4c:"Bakery Equipment",
-scope4d:"Dishwashing",
-scope4e:"Stainless Steel",
-scope4f:"Bar Equipment",
-
+scope4Text:"Professional equipment packages for hotel and restaurant operations.",
 scope5Title:"Tableware & OS&E",
-scope5Desc:"Operating supplies and guest-facing products for hospitality operations.",
-scope5a:"Porcelain",
-scope5b:"Cutlery",
-scope5c:"Glassware",
-scope5d:"Serving Equipment",
-scope5e:"Hotel Amenities",
-scope5f:"Textiles",
-
+scope5Text:"Operating supplies and guest-facing products sourced to project requirements.",
 scope6Title:"Technology & Safety",
-scope6Desc:"Technology and safety systems for modern hospitality properties.",
-scope6a:"Smart Room Systems",
-scope6b:"Electronic Locks",
-scope6c:"CCTV",
-scope6d:"Wi-Fi",
-scope6e:"IPTV",
-scope6f:"Fire & Emergency Systems",
-
+scope6Text:"Integrated systems and safety equipment for modern hospitality operations.",
 scope7Title:"Custom Manufacturing",
-scope7Desc:"Made-to-specification production for unique project requirements.",
-scope7a:"Furniture",
-scope7b:"Joinery",
-scope7c:"Metal",
-scope7d:"Glass",
-scope7e:"Stone",
-scope7f:"Lighting",
-scope7g:"Private Label",
-
+scope7Text:"Private-label and specification-driven manufacturing through qualified factories.",
 scope8Title:"Logistics & Project Supply",
-scope8Desc:"Consolidation, packing and international shipment coordination.",
-scope8a:"Factory Consolidation",
-scope8b:"Quality Inspection",
-scope8c:"Packing",
-scope8d:"Container Loading",
-scope8e:"Shipping Documentation",
-scope8f:"Delivery Coordination",
+scope8Text:"Consolidation, packing, container loading and shipping coordination.",
 
-manufacturingEyebrow:"Manufacturing in China",
-manufacturingTitle:"From specification<br>to production.",
+flooring:"Flooring",
+wallFinishes:"Wall finishes",
+stone:"Stone",
+tiles:"Tiles",
+doors:"Doors",
+glass:"Glass",
+guestrooms:"Guestrooms",
+lobby:"Lobby",
+restaurant:"Restaurant",
+cafe:"Café",
+outdoor:"Outdoor",
+joinery:"Joinery",
+decorative:"Decorative",
+architectural:"Architectural",
+guestroom:"Guestroom",
+custom:"Custom",
+cooking:"Cooking",
+refrigeration:"Refrigeration",
+bakery:"Bakery",
+dishwashing:"Dishwashing",
+stainless:"Stainless Steel",
+bar:"Bar",
+porcelain:"Porcelain",
+cutlery:"Cutlery",
+glassware:"Glassware",
+serving:"Serving",
+amenities:"Amenities",
+textiles:"Textiles",
+smartRoom:"Smart Room",
+locks:"Locks",
+cctv:"CCTV",
+wifi:"Wi-Fi",
+iptv:"IPTV",
+fireSystems:"Fire Systems",
+furniture:"Furniture",
+metal:"Metal",
+lighting:"Lighting",
+consolidation:"Consolidation",
+packing:"Packing",
+loading:"Loading",
+documentation:"Documentation",
+shipping:"Shipping",
+delivery:"Delivery",
 
-processNumber:"OUR PROCESS",
-processTitle:"One clear<br>process.",
-processDescription:"Structured project coordination from the initial brief through manufacturing, inspection and delivery.",
-process1Title:"Project Brief",
-process1Desc:"Understand project scope, quantities and specifications.",
-process2Title:"Sourcing",
-process2Desc:"Identify suitable manufacturers and compare solutions.",
-process3Title:"Samples",
-process3Desc:"Review samples, prototypes and production standards.",
-process4Title:"Production",
-process4Desc:"Coordinate manufacturing and monitor project progress.",
-process5Title:"Delivery",
-process5Desc:"QC, consolidation, loading, shipping and delivery.",
+manufacturingEyebrow:"Manufacturing Network",
+manufacturingTitle:"Direct access to China's <span class='gold'>factories.</span>",
+manufacturingText:"We connect hospitality projects with qualified Chinese manufacturers and coordinate sourcing, pricing, production, quality control and logistics through one professional supply process.",
+manufacturingButton:"Discuss Manufacturing →",
 
-projectsNumber:"PROJECTS",
-projectsTitle:"Designed for<br>real projects.",
-projectsDescription:"Hospitality environments require coordination across multiple categories. We bring them together through one supply structure.",
-projectHotelLabel:"Hospitality Project",
-projectHotel:"Hotel Interiors",
-projectResortLabel:"Destination",
-projectResort:"Resort Supply",
-projectRestaurantLabel:"F&B",
-projectRestaurant:"Restaurant Projects",
+directSourcing:"DIRECT SOURCING",
+directSourcingDesc:"Factory-level access",
+projectPricing:"PROJECT PRICING",
+projectPricingDesc:"Built around your BOQ",
+qualityControl:"QUALITY CONTROL",
+qualityControlDesc:"Production oversight",
+globalLogistics:"GLOBAL LOGISTICS",
+globalLogisticsDesc:"China to destination",
 
-customNumber:"CUSTOM MANUFACTURING",
-customTitle:"Made to your specification.",
-customDescription:"When standard products are not enough, we work with specialized manufacturers to develop custom solutions around your drawings, dimensions, materials and finish.",
-custom1:"Custom Furniture",
-custom2:"Joinery",
-custom3:"Metalwork",
-custom4:"Glass",
-custom5:"Stone",
-custom6:"Lighting",
-custom7:"Private Label",
-custom8:"Prototypes",
+processEyebrow:"Our Process",
+processTitle:"From brief<br>to <span class='gold'>delivery.</span>",
+processText:"One coordinated workflow designed to reduce supplier complexity and keep project requirements, quality and logistics aligned.",
 
-globalEyebrow:"Global Supply From China",
-globalTitle:"From Chinese factories<br>to your project.",
-globalDescription:"We coordinate supplier communication, production, inspection, consolidation, documentation and international logistics.",
+step1Title:"Project Brief",
+step1Text:"Understand the concept, scope, destination and commercial targets.",
+step2Title:"BOQ & Specifications",
+step2Text:"Review quantities, materials, drawings, finishes and technical requirements.",
+step3Title:"Factory Sourcing",
+step3Text:"Identify suitable manufacturers and build a qualified supplier shortlist.",
+step4Title:"Price & Quality Comparison",
+step4Text:"Compare offers, specifications, lead times and capabilities.",
+step5Title:"Samples & Prototypes",
+step5Text:"Approve materials, samples and custom prototypes before production.",
+step6Title:"Manufacturing",
+step6Text:"Coordinate production according to approved specifications.",
+step7Title:"Quality Control",
+step7Text:"Inspection and documentation before consolidation and shipment.",
+step8Title:"Consolidation",
+step8Text:"Coordinate packing, grouping, labeling and container loading.",
+step9Title:"Shipping",
+step9Text:"Coordinate export documentation and international freight.",
+step10Title:"Project Delivery",
+step10Text:"Complete the supply chain to the agreed destination.",
 
-ctaEyebrow:"Start Your Project",
-ctaTitle:"Tell us what you are building.",
-ctaDescription:"Share your project requirements, BOQ or specifications and let us build the right sourcing strategy.",
+projectsEyebrow:"Project Environments",
+projectsTitle:"Built for <span class='gold'>hospitality.</span>",
+projectsText:"Visual solutions across guest spaces, public areas, dining environments and outdoor hospitality.",
 
-contactTitle:"Contact CHINA RENOWN",
-emailLabel:"Email",
-whatsappLabel:"WhatsApp",
-wechatLabel:"WeChat",
-wechatOpen:"Open WeChat QR",
-emailButton:"Email CHINA RENOWN →",
+globalEyebrow:"Global Supply",
+globalTitle:"From China<br><span class='gold'>to the world.</span>",
+globalText:"International hospitality projects supported through coordinated sourcing, manufacturing and logistics from China to destination.",
+chinaRegion:"CHINA",
+middleEast:"MIDDLE EAST",
+europe:"EUROPE",
+africa:"AFRICA",
+asia:"ASIA",
+
+customEyebrow:"Custom Manufacturing",
+customTitle:"Your design.<br><span class='gold'>Our factories.</span>",
+customText:"From custom furniture and joinery to metal, glass, stone and lighting, we develop and manufacture products according to project specifications and brand requirements.",
+customButton:"Discuss a Custom Project →",
+
+contactEyebrow:"Start a Conversation",
+contactTitle:"Ready to build<br><span class='gold'>your project?</span>",
+contactIntro:"Tell us what you need. We will source it, manufacture it and coordinate the supply from China.",
+
+emailLabel:"EMAIL",
+whatsappLabel:"WHATSAPP",
+wechatLabel:"WECHAT",
+openWechat:"Open WeChat QR",
 
 formName:"Name",
-formNamePlaceholder:"Your name",
 formCompany:"Company",
-formCompanyPlaceholder:"Company name",
 formEmail:"Email",
-formEmailPlaceholder:"Your email",
 formPhone:"Phone / WhatsApp",
-formPhonePlaceholder:"Phone / WhatsApp",
 formCountry:"Country",
-formCountryPlaceholder:"Country",
 formProjectType:"Project Type",
-otherProject:"Other",
 formRequirements:"Project Requirements",
-formRequirementsPlaceholder:"Tell us about your project requirements",
-formBOQ:"BOQ / Quantity",
-formBOQPlaceholder:"BOQ, quantities or specifications",
+formQuantity:"BOQ / Quantity",
 formMessage:"Message",
-formMessagePlaceholder:"Additional message",
-formButton:"Send Project Inquiry →",
 
-footerDescription:"Hospitality Procurement, Manufacturing & Project Supply.",
-footerSectors:"Sectors",
-footerSectorsText:"Hotels · Resorts<br>Restaurants · Cafés",
-footerChina:"China",
-footerChinaText:"Sourcing · Manufacturing<br>Quality Control · Logistics",
-copyright:"© 2026 CHINA RENOWN. All Rights Reserved.",
+formNamePlaceholder:"Your Name",
+formCompanyPlaceholder:"Company",
+formEmailPlaceholder:"Email Address",
+formPhonePlaceholder:"Phone / WhatsApp",
+formCountryPlaceholder:"Country",
+formRequirementsPlaceholder:"Products / Specifications",
+formQuantityPlaceholder:"Quantity / BOQ",
+formMessagePlaceholder:"Tell us about your project",
 
-wechatTitle:"WeChat",
-wechatDescription:"Scan the QR code to contact CHINA RENOWN.",
+selectProject:"Select Project Type",
+hotelOption:"Hotel",
+resortOption:"Resort",
+restaurantOption:"Restaurant",
+cafeOption:"Café",
+otherOption:"Other",
 
-formSuccess:"Thank you. Your inquiry is ready to send.",
-formError:"Please complete the required fields."
+formSubmit:"Send Project Inquiry →",
+contactWhatsapp:"Contact on WhatsApp",
+
+wechatEyebrow:"WECHAT",
+wechatTitle:"Connect With Us on WeChat",
+wechatText:"Scan the QR code below to contact CHINA RENOWN directly on WeChat.",
+wechatNote:"SCAN TO CONTACT US ON WECHAT",
+
+footerDescription:"Hospitality procurement, sourcing, manufacturing and project supply from China.",
+footerSolutions:"Solutions",
+footerArchitecture:"Architecture & Finishes",
+footerFurniture:"Furniture & FF&E",
+footerLighting:"Lighting",
+footerKitchen:"Commercial Kitchens",
+footerCompany:"Company",
+footerContact:"Contact"
 
 },
 
 zh: {
 
-navAbout:"关于我们",
-navScope:"供应范围",
+navSolutions:"解决方案",
+navManufacturing:"制造",
 navProcess:"项目流程",
 navProjects:"项目",
+navAbout:"关于我们",
 navContact:"联系我们",
-navQuote:"获取报价",
+navQuote:"开始您的项目",
+chooseLanguage:"选择语言",
 
 heroEyebrow:"酒店及餐饮采购 · 中国",
-heroTitle1:"打造",
-heroTitle2:"酒店及餐饮",
-heroTitle3:"项目。",
-heroDescription:"从中国提供采购、制造、质量控制、物流及完整项目供应的一站式合作伙伴。",
+heroTitle:"完整的酒店及餐饮<br><span class='gold'>项目供应。</span>",
+heroCopy:"我们从中国采购、制造并供应完整的酒店及餐饮项目，服务于酒店、度假村、餐厅和咖啡馆。",
 heroButton:"开始您的项目 →",
+heroExplore:"探索解决方案",
+scrollText:"向下探索",
 
-aboutNumber:"关于我们",
-aboutTitle:"一个合作伙伴。<br>全方位供应。",
-aboutDescription:"CHINA RENOWN 为酒店及餐饮项目连接可靠的中国制造商、专业供应商和具备项目生产能力的工厂。",
-aboutStatement:"从最初的规格确认到最终集装箱出运，我们协调完整供应链，为<span class='gold'>酒店及餐饮项目</span>提供服务。",
-aboutSectors:"酒店 · 度假村 · 餐厅 · 咖啡馆",
+aboutEyebrow:"China Renown",
+aboutTitle:"一个合作伙伴。<br><span class='gold'>完整供应。</span>",
+aboutText:"从项目规格、工厂采购到生产、质量控制、整合和交付，China Renown 为国际酒店及餐饮项目协调完整供应链。",
 
-projectTypesNumber:"项目类型",
-projectTypesTitle:"专为<br>酒店及餐饮而生。",
-projectTypesDescription:"我们的采购和制造网络服务于不同类型的酒店及餐饮环境，从豪华度假村到大型餐饮项目。",
+hotels:"酒店",
+hotelsDesc:"FF&E · OS&E · 灯具 · 技术",
+resorts:"度假村",
+resortsDesc:"室内 · 户外 · 定制供应",
+restaurants:"餐厅",
+restaurantsDesc:"家具 · 厨房 · 餐饮设备",
+cafes:"咖啡馆",
+cafesDesc:"家具 · 灯具 · 餐具",
 
-hotelLabel:"酒店",
-hotel:"酒店",
-resortLabel:"目的地",
-resort:"度假村",
-restaurantLabel:"餐饮",
-restaurant:"餐厅",
-cafeLabel:"餐饮",
-cafe:"咖啡馆",
+scopeEyebrow:"完整供应范围",
+scopeTitle:"您的项目所需的<br><span class='gold'>一切。</span>",
+scopeText:"从装饰材料和家具，到厨房、灯具、技术和物流，通过一个专业供应流程进行协调。",
 
-scopeNumber:"完整供应范围",
-scopeTitle:"从 A 到 Z<br>项目供应。",
-scopeDescription:"涵盖建筑、FF&E、餐饮设备、科技、制造及物流的完整采购服务。",
-
-scope1Title:"建筑材料与饰面",
-scope1Desc:"定义项目建筑风格的材料和饰面。",
-scope1a:"地板",
-scope1b:"墙面饰材",
-scope1c:"石材与瓷砖",
-scope1d:"门与玻璃",
-scope1e:"装饰材料",
-
+scope1Title:"建筑材料与装饰",
+scope1Text:"根据您的设计和规格选择材料及饰面。",
 scope2Title:"家具与 FF&E",
-scope2Desc:"客房、公共区域及餐饮空间的家具方案。",
-scope2a:"客房家具",
-scope2b:"大堂家具",
-scope2c:"餐厅家具",
-scope2d:"户外家具",
-scope2e:"定制木作",
-
+scope2Text:"提供客房、公共区域和户外家具。",
 scope3Title:"照明",
-scope3Desc:"为酒店及餐饮环境精选的装饰及建筑照明。",
-scope3a:"装饰照明",
-scope3b:"建筑照明",
-scope3c:"客房照明",
-scope3d:"餐厅照明",
-scope3e:"户外照明",
-
-scope4Title:"商用厨房与餐饮设备",
-scope4Desc:"酒店、餐厅和咖啡馆的专业设备。",
-scope4a:"烹饪设备",
-scope4b:"制冷设备",
-scope4c:"烘焙设备",
-scope4d:"洗碗设备",
-scope4e:"不锈钢设备",
-scope4f:"酒吧设备",
-
+scope3Text:"适用于酒店及餐饮环境的装饰和建筑照明。",
+scope4Title:"商用厨房与餐饮",
+scope4Text:"酒店及餐厅专业厨房设备整体方案。",
 scope5Title:"餐具与 OS&E",
-scope5Desc:"酒店运营用品及客户使用产品。",
-scope5a:"瓷器",
-scope5b:"餐具",
-scope5c:"玻璃器皿",
-scope5d:"服务设备",
-scope5e:"酒店用品",
-scope5f:"纺织品",
-
-scope6Title:"科技与安全",
-scope6Desc:"现代酒店物业所需的科技及安全系统。",
-scope6a:"智能客房系统",
-scope6b:"电子门锁",
-scope6c:"监控系统",
-scope6d:"Wi-Fi",
-scope6e:"IPTV",
-scope6f:"消防及应急系统",
-
-scope7Title:"定制制造",
-scope7Desc:"根据项目特殊需求进行定制生产。",
-scope7a:"家具",
-scope7b:"木作",
-scope7c:"金属",
-scope7d:"玻璃",
-scope7e:"石材",
-scope7f:"照明",
-scope7g:"私人品牌",
-
+scope5Text:"根据项目需求采购运营用品和宾客用品。",
+scope6Title:"技术与安全",
+scope6Text:"现代酒店运营所需的集成系统和安全设备。",
+scope7Title:"定制生产",
+scope7Text:"通过合格工厂进行定制品牌及规格化生产。",
 scope8Title:"物流与项目供应",
-scope8Desc:"整合、包装及国际运输协调。",
-scope8a:"工厂整合",
-scope8b:"质量检验",
-scope8c:"包装",
-scope8d:"集装箱装柜",
-scope8e:"运输文件",
-scope8f:"交付协调",
+scope8Text:"整合、包装、装柜和国际运输协调。",
 
-manufacturingEyebrow:"中国制造",
-manufacturingTitle:"从规格确认<br>到生产制造。",
+flooring:"地板",
+wallFinishes:"墙面饰材",
+stone:"石材",
+tiles:"瓷砖",
+doors:"门",
+glass:"玻璃",
+guestrooms:"客房",
+lobby:"大堂",
+restaurant:"餐厅",
+cafe:"咖啡馆",
+outdoor:"户外",
+joinery:"木作",
+decorative:"装饰照明",
+architectural:"建筑照明",
+guestroom:"客房",
+custom:"定制",
+cooking:"烹饪设备",
+refrigeration:"制冷设备",
+bakery:"烘焙设备",
+dishwashing:"洗碗设备",
+stainless:"不锈钢",
+bar:"酒吧设备",
+porcelain:"陶瓷",
+cutlery:"餐具",
+glassware:"玻璃器皿",
+serving:"餐饮服务用品",
+amenities:"客用品",
+textiles:"纺织品",
+smartRoom:"智能客房",
+locks:"门锁",
+cctv:"监控",
+wifi:"Wi-Fi",
+iptv:"IPTV",
+fireSystems:"消防系统",
+furniture:"家具",
+metal:"金属",
+lighting:"灯具",
+consolidation:"货物整合",
+packing:"包装",
+loading:"装柜",
+documentation:"文件",
+shipping:"运输",
+delivery:"交付",
 
-processNumber:"我们的流程",
-processTitle:"清晰的<br>项目流程。",
-processDescription:"从项目需求、采购到生产、检验及交付的完整项目协调。",
-process1Title:"项目需求",
-process1Desc:"了解项目范围、数量和技术规格。",
-process2Title:"采购",
-process2Desc:"寻找合适的制造商并比较解决方案。",
-process3Title:"样品",
-process3Desc:"确认样品、原型及生产标准。",
-process4Title:"生产",
-process4Desc:"协调制造并跟进项目进度。",
-process5Title:"交付",
-process5Desc:"质量检验、整合、装柜、运输及交付。",
+manufacturingEyebrow:"制造网络",
+manufacturingTitle:"直接连接中国的<span class='gold'>工厂。</span>",
+manufacturingText:"我们将酒店及餐饮项目与合格的中国制造商连接，并协调采购、价格、生产、质量控制和物流。",
+manufacturingButton:"洽谈制造项目 →",
 
-projectsNumber:"项目",
-projectsTitle:"为真实<br>项目而设计。",
-projectsDescription:"酒店及餐饮项目涉及多个产品类别，我们通过统一供应体系将其整合。",
-projectHotelLabel:"酒店项目",
-projectHotel:"酒店室内",
-projectResortLabel:"度假目的地",
-projectResort:"度假村供应",
-projectRestaurantLabel:"餐饮",
-projectRestaurant:"餐厅项目",
+directSourcing:"直接采购",
+directSourcingDesc:"工厂级采购",
+projectPricing:"项目价格",
+projectPricingDesc:"根据您的 BOQ",
+qualityControl:"质量控制",
+qualityControlDesc:"生产监督",
+globalLogistics:"全球物流",
+globalLogisticsDesc:"从中国到目的地",
 
-customNumber:"定制制造",
-customTitle:"按照您的规格制造。",
-customDescription:"当标准产品无法满足需求时，我们与专业制造商合作，根据您的图纸、尺寸、材料和表面处理开发定制解决方案。",
-custom1:"定制家具",
-custom2:"木作",
-custom3:"金属制品",
-custom4:"玻璃",
-custom5:"石材",
-custom6:"照明",
-custom7:"私人品牌",
-custom8:"样品及原型",
+processEyebrow:"我们的流程",
+processTitle:"从项目需求<br>到<span class='gold'>交付。</span>",
+processText:"通过统一的工作流程降低供应商复杂度，并确保项目要求、质量和物流保持一致。",
 
-globalEyebrow:"来自中国的全球供应",
-globalTitle:"从中国工厂<br>到您的项目。",
-globalDescription:"我们协调供应商沟通、生产、检验、整合、文件和国际物流。",
+step1Title:"项目需求",
+step1Text:"了解项目概念、范围、目的地和商业目标。",
+step2Title:"BOQ 与规格",
+step2Text:"审核数量、材料、图纸、饰面和技术要求。",
+step3Title:"工厂采购",
+step3Text:"寻找合适制造商并建立合格供应商名单。",
+step4Title:"价格与质量比较",
+step4Text:"比较报价、规格、交期和生产能力。",
+step5Title:"样品与原型",
+step5Text:"生产前确认材料、样品和定制原型。",
+step6Title:"生产制造",
+step6Text:"按照批准的规格协调生产。",
+step7Title:"质量控制",
+step7Text:"装柜和运输前进行检查并提供相关文件。",
+step8Title:"货物整合",
+step8Text:"协调包装、分类、标签和装柜。",
+step9Title:"运输",
+step9Text:"协调出口文件和国际货运。",
+step10Title:"项目交付",
+step10Text:"完成整个供应链并交付至约定目的地。",
 
-ctaEyebrow:"开始您的项目",
-ctaTitle:"告诉我们您正在建设什么。",
-ctaDescription:"发送您的项目需求、BOQ 或技术规格，让我们为您制定合适的采购方案。",
+projectsEyebrow:"项目环境",
+projectsTitle:"专为<span class='gold'>酒店及餐饮而生。</span>",
+projectsText:"覆盖客房、公共区域、餐饮空间和户外酒店环境的综合解决方案。",
 
-contactTitle:"联系 CHINA RENOWN",
+globalEyebrow:"全球供应",
+globalTitle:"从中国<br><span class='gold'>走向世界。</span>",
+globalText:"通过采购、制造和物流协调，为国际酒店及餐饮项目提供从中国到目的地的供应支持。",
+chinaRegion:"中国",
+middleEast:"中东",
+europe:"欧洲",
+africa:"非洲",
+asia:"亚洲",
+
+customEyebrow:"定制制造",
+customTitle:"您的设计。<br><span class='gold'>我们的工厂。</span>",
+customText:"从定制家具和木作，到金属、玻璃、石材和灯具，我们根据项目规格和品牌要求开发并制造产品。",
+customButton:"洽谈定制项目 →",
+
+contactEyebrow:"开始沟通",
+contactTitle:"准备建设<br><span class='gold'>您的项目了吗？</span>",
+contactIntro:"告诉我们您的需求，我们将从中国负责采购、制造和供应协调。",
+
 emailLabel:"电子邮箱",
 whatsappLabel:"WhatsApp",
 wechatLabel:"微信",
-wechatOpen:"打开微信二维码",
-emailButton:"发送邮件 →",
+openWechat:"打开微信二维码",
 
 formName:"姓名",
-formNamePlaceholder:"您的姓名",
 formCompany:"公司",
-formCompanyPlaceholder:"公司名称",
-formEmail:"电子邮箱",
-formEmailPlaceholder:"您的邮箱",
+formEmail:"邮箱",
 formPhone:"电话 / WhatsApp",
-formPhonePlaceholder:"电话 / WhatsApp",
 formCountry:"国家",
-formCountryPlaceholder:"国家",
 formProjectType:"项目类型",
-otherProject:"其他",
 formRequirements:"项目需求",
-formRequirementsPlaceholder:"请介绍您的项目需求",
-formBOQ:"BOQ / 数量",
-formBOQPlaceholder:"BOQ、数量或技术规格",
+formQuantity:"BOQ / 数量",
 formMessage:"留言",
-formMessagePlaceholder:"其他信息",
-formButton:"发送项目咨询 →",
 
-footerDescription:"酒店及餐饮采购、制造与项目供应。",
-footerSectors:"服务领域",
-footerSectorsText:"酒店 · 度假村<br>餐厅 · 咖啡馆",
-footerChina:"中国",
-footerChinaText:"采购 · 制造<br>质量控制 · 物流",
-copyright:"© 2026 CHINA RENOWN. 版权所有。",
+formNamePlaceholder:"您的姓名",
+formCompanyPlaceholder:"公司名称",
+formEmailPlaceholder:"电子邮箱",
+formPhonePlaceholder:"电话 / WhatsApp",
+formCountryPlaceholder:"国家",
+formRequirementsPlaceholder:"产品 / 规格",
+formQuantityPlaceholder:"数量 / BOQ",
+formMessagePlaceholder:"请介绍您的项目",
 
-wechatTitle:"微信",
-wechatDescription:"扫描二维码联系 CHINA RENOWN。",
+selectProject:"选择项目类型",
+hotelOption:"酒店",
+resortOption:"度假村",
+restaurantOption:"餐厅",
+cafeOption:"咖啡馆",
+otherOption:"其他",
 
-formSuccess:"感谢您。您的咨询信息已经准备发送。",
-formError:"请填写必填信息。"
+formSubmit:"发送项目询价 →",
+contactWhatsapp:"通过 WhatsApp 联系",
+
+wechatEyebrow:"微信",
+wechatTitle:"通过微信联系我们",
+wechatText:"扫描下面的二维码，直接通过微信联系 CHINA RENOWN。",
+wechatNote:"扫描二维码联系我们",
+
+footerDescription:"来自中国的酒店及餐饮采购、采购协调、制造和项目供应。",
+footerSolutions:"解决方案",
+footerArchitecture:"建筑与装饰",
+footerFurniture:"家具与 FF&E",
+footerLighting:"照明",
+footerKitchen:"商用厨房",
+footerCompany:"公司",
+footerContact:"联系我们"
 
 },
 
 ar: {
 
-navAbout:"من نحن",
-navScope:"نطاق التوريد",
+navSolutions:"الحلول",
+navManufacturing:"التصنيع",
 navProcess:"مراحل العمل",
 navProjects:"المشاريع",
+navAbout:"من نحن",
 navContact:"اتصل بنا",
-navQuote:"احصل على عرض سعر",
+navQuote:"ابدأ مشروعك",
+chooseLanguage:"اختر اللغة",
 
-heroEyebrow:"توريد وتجهيز قطاع الضيافة · الصين",
-heroTitle1:"نبني",
-heroTitle2:"مشاريع",
-heroTitle3:"الضيافة.",
-heroDescription:"شريك واحد للتوريد والتصنيع ومراقبة الجودة والخدمات اللوجستية والتجهيز الكامل للمشاريع من الصين.",
+heroEyebrow:"تجهيز مشاريع الضيافة · الصين",
+heroTitle:"تجهيز متكامل لمشاريع<br><span class='gold'>الضيافة.</span>",
+heroCopy:"نقوم بالتوريد والتصنيع وتجهيز مشاريع الضيافة بالكامل من الصين للفنادق والمنتجعات والمطاعم والكافيهات.",
 heroButton:"ابدأ مشروعك ←",
+heroExplore:"استكشف الحلول",
+scrollText:"اسحب للاستكشاف",
 
-aboutNumber:"من نحن",
-aboutTitle:"شريك واحد.<br>كل احتياجات التوريد.",
-aboutDescription:"تربط CHINA RENOWN مشاريع الضيافة بالمصنعين الصينيين الموثوقين والموردين المتخصصين وقدرات الإنتاج المناسبة للمشاريع.",
-aboutStatement:"من أول مواصفة وحتى الحاوية النهائية، نقوم بتنسيق سلسلة التوريد الكاملة لـ <span class='gold'>مشاريع الضيافة.</span>",
-aboutSectors:"فنادق · منتجعات · مطاعم · مقاهي",
+aboutEyebrow:"China Renown",
+aboutTitle:"شريك واحد.<br><span class='gold'>كل احتياجات التوريد.</span>",
+aboutText:"من دراسة المواصفات والبحث عن المصانع إلى التصنيع ومراقبة الجودة والتجميع والشحن، تقوم China Renown بتنسيق سلسلة التوريد الكاملة لمشاريع الضيافة.",
 
-projectTypesNumber:"أنواع المشاريع",
-projectTypesTitle:"مصمم خصيصًا<br>لقطاع الضيافة.",
-projectTypesDescription:"تدعم شبكة التوريد والتصنيع لدينا مختلف بيئات الضيافة، من المنتجعات الفاخرة إلى مشاريع المطاعم الكبيرة.",
+hotels:"الفنادق",
+hotelsDesc:"FF&E · OS&E · إضاءة · تكنولوجيا",
+resorts:"المنتجعات",
+resortsDesc:"تصميم داخلي · خارجي · تصنيع خاص",
+restaurants:"المطاعم",
+restaurantsDesc:"أثاث · مطابخ · تجهيزات مطاعم",
+cafes:"الكافيهات",
+cafesDesc:"أثاث · إضاءة · أدوات مائدة",
 
-hotelLabel:"ضيافة",
-hotel:"فنادق",
-resortLabel:"وجهات",
-resort:"منتجعات",
-restaurantLabel:"أغذية ومشروبات",
-restaurant:"مطاعم",
-cafeLabel:"أغذية ومشروبات",
-cafe:"مقاهي",
+scopeEyebrow:"نطاق التوريد الكامل",
+scopeTitle:"كل ما يحتاجه<br><span class='gold'>مشروعك.</span>",
+scopeText:"من التشطيبات والأثاث إلى المطابخ والإضاءة والتكنولوجيا واللوجستيات، يتم التنسيق من خلال عملية توريد احترافية واحدة.",
 
-scopeNumber:"نطاق التوريد الكامل",
-scopeTitle:"من A إلى Z<br>لتجهيز المشروع.",
-scopeDescription:"نطاق متكامل للتوريد يشمل التشطيبات المعمارية، الأثاث والتجهيزات، معدات الأغذية والمشروبات، التكنولوجيا، التصنيع والخدمات اللوجستية.",
-
-scope1Title:"الأعمال المعمارية والتشطيبات",
-scope1Desc:"مواد وتشطيبات تحدد الهوية المعمارية للمشروع.",
-scope1a:"الأرضيات",
-scope1b:"تشطيبات الجدران",
-scope1c:"الحجر والبلاط",
-scope1d:"الأبواب والزجاج",
-scope1e:"مواد الديكور",
-
-scope2Title:"الأثاث والتجهيزات FF&E",
-scope2Desc:"حلول أثاث لغرف النزلاء والمناطق العامة ومطاعم ومقاهي المشروع.",
-scope2a:"أثاث غرف النزلاء",
-scope2b:"أثاث اللوبي",
-scope2c:"أثاث المطاعم",
-scope2d:"الأثاث الخارجي",
-scope2e:"أعمال النجارة المخصصة",
-
+scope1Title:"المعماري والتشطيبات",
+scope1Text:"مواد وتشطيبات يتم اختيارها وفق التصميم والمواصفات.",
+scope2Title:"الأثاث و FF&E",
+scope2Text:"تجهيز كامل لأثاث الغرف والمناطق العامة والمناطق الخارجية.",
 scope3Title:"الإضاءة",
-scope3Desc:"إضاءة ديكورية ومعمارية مختارة لبيئات الضيافة.",
-scope3a:"الإضاءة الديكورية",
-scope3b:"الإضاءة المعمارية",
-scope3c:"إضاءة غرف النزلاء",
-scope3d:"إضاءة المطاعم",
-scope3e:"الإضاءة الخارجية",
-
-scope4Title:"المطابخ التجارية ومعدات الأغذية والمشروبات",
-scope4Desc:"معدات احترافية للفنادق والمطاعم والمقاهي.",
-scope4a:"معدات الطبخ",
-scope4b:"معدات التبريد",
-scope4c:"معدات المخابز",
-scope4d:"غسيل الأطباق",
-scope4e:"معدات الستانلس ستيل",
-scope4f:"معدات البار",
-
+scope3Text:"إضاءة ديكورية ومعمارية مناسبة لمشاريع الضيافة.",
+scope4Title:"المطابخ التجارية وتجهيزات المطاعم",
+scope4Text:"حلول متكاملة للمعدات المهنية للفنادق والمطاعم.",
 scope5Title:"أدوات المائدة و OS&E",
-scope5Desc:"مستلزمات التشغيل والمنتجات المستخدمة من قبل الضيوف.",
-scope5a:"البورسلين",
-scope5b:"أدوات المائدة",
-scope5c:"الأواني الزجاجية",
-scope5d:"معدات التقديم",
-scope5e:"مستلزمات الفنادق",
-scope5f:"المنسوجات",
-
+scope5Text:"تجهيزات التشغيل والمنتجات الخاصة بالضيوف حسب متطلبات المشروع.",
 scope6Title:"التكنولوجيا والسلامة",
-scope6Desc:"أنظمة التكنولوجيا والسلامة للمنشآت الفندقية الحديثة.",
-scope6a:"أنظمة الغرف الذكية",
-scope6b:"الأقفال الإلكترونية",
-scope6c:"كاميرات المراقبة",
-scope6d:"Wi-Fi",
-scope6e:"IPTV",
-scope6f:"أنظمة الحريق والطوارئ",
+scope6Text:"أنظمة متكاملة ومعدات سلامة لمشاريع الضيافة الحديثة.",
+scope7Title:"التصنيع الخاص",
+scope7Text:"تصنيع خاص وعلامات تجارية حسب المواصفات من خلال مصانع مؤهلة.",
+scope8Title:"اللوجستيات وتوريد المشروع",
+scope8Text:"تجميع وتعبئة وتحميل الحاويات وتنسيق الشحن.",
 
-scope7Title:"التصنيع حسب الطلب",
-scope7Desc:"إنتاج مخصص وفقًا لمتطلبات المشروع.",
-scope7a:"الأثاث",
-scope7b:"أعمال النجارة",
-scope7c:"المعادن",
-scope7d:"الزجاج",
-scope7e:"الحجر",
-scope7f:"الإضاءة",
-scope7g:"العلامة التجارية الخاصة",
+flooring:"أرضيات",
+wallFinishes:"تشطيبات حوائط",
+stone:"رخام وحجر",
+tiles:"بلاط",
+doors:"أبواب",
+glass:"زجاج",
+guestrooms:"غرف",
+lobby:"لوبي",
+restaurant:"مطعم",
+cafe:"كافيه",
+outdoor:"خارجي",
+joinery:"أعمال خشبية",
+decorative:"إضاءة ديكورية",
+architectural:"إضاءة معمارية",
+guestroom:"غرف",
+custom:"تصنيع خاص",
+cooking:"معدات طبخ",
+refrigeration:"تبريد",
+bakery:"معدات مخابز",
+dishwashing:"غسيل أطباق",
+stainless:"ستانلس ستيل",
+bar:"معدات بار",
+porcelain:"بورسلين",
+cutlery:"أدوات مائدة",
+glassware:"أدوات زجاجية",
+serving:"تقديم",
+amenities:"مستلزمات ضيوف",
+textiles:"منسوجات",
+smartRoom:"غرفة ذكية",
+locks:"أقفال",
+cctv:"كاميرات مراقبة",
+wifi:"Wi-Fi",
+iptv:"IPTV",
+fireSystems:"أنظمة إطفاء",
+furniture:"أثاث",
+metal:"معادن",
+lighting:"إضاءة",
+consolidation:"تجميع",
+packing:"تعبئة",
+loading:"تحميل",
+documentation:"مستندات",
+shipping:"شحن",
+delivery:"تسليم",
 
-scope8Title:"الخدمات اللوجستية وتوريد المشروع",
-scope8Desc:"تجميع وتغليف وتنسيق الشحنات الدولية.",
-scope8a:"تجميع من المصانع",
-scope8b:"فحص الجودة",
-scope8c:"التغليف",
-scope8d:"تحميل الحاويات",
-scope8e:"مستندات الشحن",
-scope8f:"تنسيق التسليم",
+manufacturingEyebrow:"شبكة التصنيع",
+manufacturingTitle:"وصول مباشر إلى <span class='gold'>مصانع الصين.</span>",
+manufacturingText:"نربط مشاريع الضيافة بالمصانع الصينية المؤهلة وننسق التوريد والأسعار والإنتاج ومراقبة الجودة واللوجستيات من خلال عملية واحدة.",
+manufacturingButton:"ناقش التصنيع →",
 
-manufacturingEyebrow:"التصنيع في الصين",
-manufacturingTitle:"من المواصفات<br>إلى الإنتاج.",
+directSourcing:"توريد مباشر",
+directSourcingDesc:"تواصل مباشر مع المصنع",
+projectPricing:"أسعار المشاريع",
+projectPricingDesc:"حسب BOQ الخاص بك",
+qualityControl:"مراقبة الجودة",
+qualityControlDesc:"متابعة الإنتاج",
+globalLogistics:"لوجستيات عالمية",
+globalLogisticsDesc:"من الصين إلى الوجهة",
 
-processNumber:"مراحل العمل",
-processTitle:"عملية واضحة<br>ومتكاملة.",
-processDescription:"تنسيق منظم للمشروع بدءًا من المتطلبات الأولية وحتى التصنيع والفحص والتسليم.",
-process1Title:"متطلبات المشروع",
-process1Desc:"فهم نطاق المشروع والكميات والمواصفات.",
-process2Title:"التوريد",
-process2Desc:"تحديد المصنعين المناسبين ومقارنة الحلول.",
-process3Title:"العينات",
-process3Desc:"مراجعة العينات والنماذج ومعايير الإنتاج.",
-process4Title:"الإنتاج",
-process4Desc:"تنسيق التصنيع ومتابعة تقدم المشروع.",
-process5Title:"التسليم",
-process5Desc:"فحص الجودة والتجميع والتحميل والشحن والتسليم.",
+processEyebrow:"مراحل العمل",
+processTitle:"من الطلب<br>إلى <span class='gold'>التسليم.</span>",
+processText:"عملية متكاملة تقلل تعقيد التعامل مع الموردين وتحافظ على توافق المتطلبات والجودة واللوجستيات.",
 
-projectsNumber:"المشاريع",
-projectsTitle:"مصمم للمشاريع<br>الحقيقية.",
-projectsDescription:"تحتاج مشاريع الضيافة إلى تنسيق عدة فئات في الوقت نفسه. نقوم بتجميعها ضمن نظام توريد واحد.",
-projectHotelLabel:"مشروع ضيافة",
-projectHotel:"تصميم وتجهيز الفنادق",
-projectResortLabel:"وجهة سياحية",
-projectResort:"توريد المنتجعات",
-projectRestaurantLabel:"أغذية ومشروبات",
-projectRestaurant:"مشاريع المطاعم",
+step1Title:"دراسة المشروع",
+step1Text:"فهم الفكرة والنطاق والوجهة والأهداف التجارية.",
+step2Title:"BOQ والمواصفات",
+step2Text:"مراجعة الكميات والمواد والرسومات والتشطيبات والمتطلبات الفنية.",
+step3Title:"البحث عن المصانع",
+step3Text:"تحديد المصانع المناسبة وإعداد قائمة موردين مؤهلين.",
+step4Title:"مقارنة الأسعار والجودة",
+step4Text:"مقارنة الأسعار والمواصفات ومدة الإنتاج والقدرات.",
+step5Title:"العينات والنماذج",
+step5Text:"اعتماد المواد والعينات والنماذج الخاصة قبل الإنتاج.",
+step6Title:"التصنيع",
+step6Text:"تنسيق الإنتاج وفق المواصفات المعتمدة.",
+step7Title:"مراقبة الجودة",
+step7Text:"الفحص والتوثيق قبل التجميع والشحن.",
+step8Title:"التجميع",
+step8Text:"تنسيق التعبئة والتجميع ووضع العلامات وتحميل الحاويات.",
+step9Title:"الشحن",
+step9Text:"تنسيق مستندات التصدير والشحن الدولي.",
+step10Title:"تسليم المشروع",
+step10Text:"استكمال سلسلة التوريد حتى الوجهة المتفق عليها.",
 
-customNumber:"التصنيع حسب الطلب",
-customTitle:"تصنيع وفقًا لمواصفاتك.",
-customDescription:"عندما لا تكون المنتجات القياسية كافية، نعمل مع مصانع متخصصة لتطوير حلول مخصصة وفق الرسومات والأبعاد والخامات والتشطيبات المطلوبة.",
-custom1:"أثاث مخصص",
-custom2:"أعمال نجارة",
-custom3:"أعمال معدنية",
-custom4:"زجاج",
-custom5:"حجر",
-custom6:"إضاءة",
-custom7:"علامة تجارية خاصة",
-custom8:"نماذج أولية",
+projectsEyebrow:"بيئات المشاريع",
+projectsTitle:"مصمم خصيصًا لـ<span class='gold'>قطاع الضيافة.</span>",
+projectsText:"حلول متكاملة لغرف الضيوف والمناطق العامة والمطاعم والمساحات الخارجية.",
 
-globalEyebrow:"توريد عالمي من الصين",
-globalTitle:"من المصانع الصينية<br>إلى مشروعك.",
-globalDescription:"ننسق التواصل مع الموردين والإنتاج والفحص والتجميع والمستندات والخدمات اللوجستية الدولية.",
+globalEyebrow:"توريد عالمي",
+globalTitle:"من الصين<br><span class='gold'>إلى العالم.</span>",
+globalText:"دعم مشاريع الضيافة الدولية من خلال تنسيق التوريد والتصنيع واللوجستيات من الصين إلى الوجهة النهائية.",
+chinaRegion:"الصين",
+middleEast:"الشرق الأوسط",
+europe:"أوروبا",
+africa:"أفريقيا",
+asia:"آسيا",
 
-ctaEyebrow:"ابدأ مشروعك",
-ctaTitle:"أخبرنا ماذا تقوم ببنائه.",
-ctaDescription:"شارك متطلبات مشروعك أو جدول الكميات BOQ أو المواصفات، ودعنا نضع استراتيجية التوريد المناسبة.",
+customEyebrow:"تصنيع خاص",
+customTitle:"تصميمك.<br><span class='gold'>مصانعنا.</span>",
+customText:"من الأثاث والأعمال الخشبية الخاصة إلى المعادن والزجاج والحجر والإضاءة، نقوم بتطوير وتصنيع المنتجات وفق مواصفات المشروع ومتطلبات العلامة التجارية.",
+customButton:"ناقش مشروع تصنيع خاص →",
 
-contactTitle:"تواصل مع CHINA RENOWN",
+contactEyebrow:"ابدأ التواصل",
+contactTitle:"هل أنت مستعد لبناء<br><span class='gold'>مشروعك؟</span>",
+contactIntro:"أخبرنا بما تحتاجه، وسنقوم بالتوريد والتصنيع وتنسيق الشحن من الصين.",
+
 emailLabel:"البريد الإلكتروني",
 whatsappLabel:"واتساب",
-wechatLabel:"وي تشات",
-wechatOpen:"فتح رمز WeChat",
-emailButton:"إرسال بريد إلكتروني ←",
+wechatLabel:"ويتشات",
+openWechat:"فتح QR الخاص بويتشات",
 
 formName:"الاسم",
-formNamePlaceholder:"اسمك",
 formCompany:"الشركة",
-formCompanyPlaceholder:"اسم الشركة",
 formEmail:"البريد الإلكتروني",
-formEmailPlaceholder:"بريدك الإلكتروني",
 formPhone:"الهاتف / واتساب",
-formPhonePlaceholder:"الهاتف / واتساب",
 formCountry:"الدولة",
-formCountryPlaceholder:"الدولة",
 formProjectType:"نوع المشروع",
-otherProject:"أخرى",
 formRequirements:"متطلبات المشروع",
-formRequirementsPlaceholder:"اكتب متطلبات مشروعك",
-formBOQ:"جدول الكميات / الكمية",
-formBOQPlaceholder:"BOQ أو الكميات أو المواصفات",
+formQuantity:"BOQ / الكمية",
 formMessage:"الرسالة",
-formMessagePlaceholder:"رسالة إضافية",
-formButton:"إرسال طلب المشروع ←",
 
-footerDescription:"توريد وتصنيع وتجهيز مشاريع الضيافة.",
-footerSectors:"القطاعات",
-footerSectorsText:"فنادق · منتجعات<br>مطاعم · مقاهي",
-footerChina:"الصين",
-footerChinaText:"توريد · تصنيع<br>مراقبة الجودة · لوجستيات",
-copyright:"© 2026 CHINA RENOWN. جميع الحقوق محفوظة.",
+formNamePlaceholder:"اسمك",
+formCompanyPlaceholder:"اسم الشركة",
+formEmailPlaceholder:"البريد الإلكتروني",
+formPhonePlaceholder:"الهاتف / واتساب",
+formCountryPlaceholder:"الدولة",
+formRequirementsPlaceholder:"المنتجات / المواصفات",
+formQuantityPlaceholder:"الكمية / BOQ",
+formMessagePlaceholder:"اكتب تفاصيل مشروعك",
 
-wechatTitle:"WeChat",
-wechatDescription:"امسح رمز QR للتواصل مع CHINA RENOWN.",
+selectProject:"اختر نوع المشروع",
+hotelOption:"فندق",
+resortOption:"منتجع",
+restaurantOption:"مطعم",
+cafeOption:"كافيه",
+otherOption:"أخرى",
 
-formSuccess:"شكرًا لك. تم تجهيز طلبك للإرسال.",
-formError:"يرجى إكمال البيانات المطلوبة."
+formSubmit:"إرسال طلب المشروع ←",
+contactWhatsapp:"تواصل عبر واتساب",
+
+wechatEyebrow:"ويتشات",
+wechatTitle:"تواصل معنا عبر ويتشات",
+wechatText:"امسح رمز QR أدناه للتواصل مباشرة مع CHINA RENOWN عبر ويتشات.",
+wechatNote:"امسح الرمز للتواصل معنا",
+
+footerDescription:"توريد وتصنيع وتجهيز مشاريع الضيافة من الصين.",
+footerSolutions:"الحلول",
+footerArchitecture:"المعماري والتشطيبات",
+footerFurniture:"الأثاث و FF&E",
+footerLighting:"الإضاءة",
+footerKitchen:"المطابخ التجارية",
+footerCompany:"الشركة",
+footerContact:"اتصل بنا"
 
 },
 
 tr: {
 
-navAbout:"Hakkımızda",
-navScope:"Tedarik Kapsamı",
+navSolutions:"Çözümler",
+navManufacturing:"Üretim",
 navProcess:"Süreç",
 navProjects:"Projeler",
+navAbout:"Hakkımızda",
 navContact:"İletişim",
-navQuote:"Teklif Al",
+navQuote:"Projenizi Başlatın",
+chooseLanguage:"Dil Seçin",
 
-heroEyebrow:"Otelcilik Tedariki · Çin",
-heroTitle1:"Konaklama",
-heroTitle2:"Projeleri",
-heroTitle3:"İnşa Ediyoruz.",
-heroDescription:"Çin'den tedarik, üretim, kalite kontrol, lojistik ve komple proje tedariği için tek çözüm ortağınız.",
+heroEyebrow:"Konaklama Tedariki · Çin",
+heroTitle:"Eksiksiz Konaklama<br><span class='gold'>Proje Tedariki.</span>",
+heroCopy:"Çin'den oteller, tatil köyleri, restoranlar ve kafeler için komple konaklama projeleri tedarik ediyor, üretiyor ve sevk ediyoruz.",
 heroButton:"Projenizi Başlatın →",
+heroExplore:"Çözümleri Keşfedin",
+scrollText:"Keşfetmek için kaydırın",
 
-aboutNumber:"HAKKIMIZDA",
-aboutTitle:"Tek ortak.<br>Tüm tedarik.",
-aboutDescription:"CHINA RENOWN, konaklama projelerini güvenilir Çinli üreticiler, uzman tedarikçiler ve proje odaklı üretim kapasitesiyle buluşturur.",
-aboutStatement:"İlk teknik şartnameden son konteynere kadar tüm tedarik zincirini <span class='gold'>konaklama projeleri</span> için yönetiyoruz.",
-aboutSectors:"Oteller · Resortlar · Restoranlar · Kafeler",
+aboutEyebrow:"China Renown",
+aboutTitle:"Tek ortak.<br><span class='gold'>Eksiksiz tedarik.</span>",
+aboutText:"Proje spesifikasyonlarından fabrika tedarikine, üretimden kalite kontrolüne, konsolidasyondan teslimata kadar China Renown konaklama projelerinin tedarik zincirini koordine eder.",
 
-projectTypesNumber:"PROJE TÜRLERİ",
-projectTypesTitle:"Konaklama<br>için tasarlandı.",
-projectTypesDescription:"Tedarik ve üretim ağımız, lüks resortlardan yüksek hacimli restoran projelerine kadar farklı konaklama ortamlarını destekler.",
+hotels:"Oteller",
+hotelsDesc:"FF&E · OS&E · Aydınlatma · Teknoloji",
+resorts:"Tatil Köyleri",
+resortsDesc:"İç Mekan · Dış Mekan · Özel Tedarik",
+restaurants:"Restoranlar",
+restaurantsDesc:"Mobilya · Mutfak · F&B",
+cafes:"Kafeler",
+cafesDesc:"Mobilya · Aydınlatma · Sofra Ürünleri",
 
-hotelLabel:"Konaklama",
-hotel:"Oteller",
-resortLabel:"Destinasyon",
-resort:"Resortlar",
-restaurantLabel:"F&B",
-restaurant:"Restoranlar",
-cafeLabel:"F&B",
-cafe:"Kafeler",
+scopeEyebrow:"Eksiksiz Kapsam",
+scopeTitle:"Projenizin ihtiyaç duyduğu<br><span class='gold'>her şey.</span>",
+scopeText:"Kaplamalardan mobilyaya, mutfaklardan aydınlatma, teknoloji ve lojistiğe kadar tüm süreç tek profesyonel tedarik sistemiyle koordine edilir.",
 
-scopeNumber:"TAM TEDARİK KAPSAMI",
-scopeTitle:"A → Z<br>Proje Tedariği.",
-scopeDescription:"Mimari, FF&E, F&B, teknoloji, üretim ve lojistiği kapsayan eksiksiz satın alma ve tedarik kapsamı.",
-
-scope1Title:"Mimari ve Finisajlar",
-scope1Desc:"Projenin mimari kimliğini oluşturan malzeme ve yüzeyler.",
-scope1a:"Zemin Kaplamaları",
-scope1b:"Duvar Kaplamaları",
-scope1c:"Taş ve Fayans",
-scope1d:"Kapılar ve Cam",
-scope1e:"Dekoratif Malzemeler",
-
+scope1Title:"Mimari ve Kaplamalar",
+scope1Text:"Tasarımınıza ve teknik özelliklerinize göre seçilen malzeme ve kaplamalar.",
 scope2Title:"Mobilya ve FF&E",
-scope2Desc:"Odalar, ortak alanlar ve F&B alanları için mobilya çözümleri.",
-scope2a:"Oda Mobilyaları",
-scope2b:"Lobi Mobilyaları",
-scope2c:"Restoran Mobilyaları",
-scope2d:"Dış Mekan Mobilyaları",
-scope2e:"Özel Marangozluk",
-
+scope2Text:"Misafir odaları, ortak alanlar ve dış mekanlar için komple mobilya tedariki.",
 scope3Title:"Aydınlatma",
-scope3Desc:"Konaklama ortamları için dekoratif ve mimari aydınlatma.",
-scope3a:"Dekoratif Aydınlatma",
-scope3b:"Mimari Aydınlatma",
-scope3c:"Oda Aydınlatması",
-scope3d:"Restoran Aydınlatması",
-scope3e:"Dış Mekan Aydınlatması",
-
-scope4Title:"Profesyonel Mutfaklar ve F&B",
-scope4Desc:"Otel, restoran ve kafeler için profesyonel ekipmanlar.",
-scope4a:"Pişirme Ekipmanları",
-scope4b:"Soğutma",
-scope4c:"Fırın ve Pastane Ekipmanları",
-scope4d:"Bulaşıkhane",
-scope4e:"Paslanmaz Çelik",
-scope4f:"Bar Ekipmanları",
-
-scope5Title:"Masaüstü ve OS&E",
-scope5Desc:"Konaklama operasyonları için işletme malzemeleri ve misafir ürünleri.",
-scope5a:"Porselen",
-scope5b:"Çatal Bıçak",
-scope5c:"Cam Ürünler",
-scope5d:"Servis Ekipmanları",
-scope5e:"Otel Malzemeleri",
-scope5f:"Tekstil",
-
+scope3Text:"Konaklama alanları için dekoratif ve mimari aydınlatma.",
+scope4Title:"Ticari Mutfaklar ve F&B",
+scope4Text:"Otel ve restoran operasyonları için profesyonel ekipman paketleri.",
+scope5Title:"Sofra Ürünleri ve OS&E",
+scope5Text:"Proje gereksinimlerine göre işletme ve misafir ürünleri.",
 scope6Title:"Teknoloji ve Güvenlik",
-scope6Desc:"Modern konaklama tesisleri için teknoloji ve güvenlik sistemleri.",
-scope6a:"Akıllı Oda Sistemleri",
-scope6b:"Elektronik Kilitler",
-scope6c:"CCTV",
-scope6d:"Wi-Fi",
-scope6e:"IPTV",
-scope6f:"Yangın ve Acil Durum Sistemleri",
-
+scope6Text:"Modern konaklama operasyonları için entegre sistemler ve güvenlik ekipmanları.",
 scope7Title:"Özel Üretim",
-scope7Desc:"Özel proje gereksinimlerine göre üretim.",
-scope7a:"Mobilya",
-scope7b:"Marangozluk",
-scope7c:"Metal",
-scope7d:"Cam",
-scope7e:"Taş",
-scope7f:"Aydınlatma",
-scope7g:"Özel Marka",
+scope7Text:"Yetkin fabrikalarla özel marka ve teknik şartnameye dayalı üretim.",
+scope8Title:"Lojistik ve Proje Tedariki",
+scope8Text:"Konsolidasyon, paketleme, konteyner yükleme ve nakliye koordinasyonu.",
 
-scope8Title:"Lojistik ve Proje Tedariği",
-scope8Desc:"Konsolidasyon, paketleme ve uluslararası sevkiyat koordinasyonu.",
-scope8a:"Fabrika Konsolidasyonu",
-scope8b:"Kalite Kontrol",
-scope8c:"Paketleme",
-scope8d:"Konteyner Yükleme",
-scope8e:"Sevkiyat Belgeleri",
-scope8f:"Teslimat Koordinasyonu",
+flooring:"Zemin",
+wallFinishes:"Duvar Kaplamaları",
+stone:"Taş",
+tiles:"Seramik",
+doors:"Kapılar",
+glass:"Cam",
+guestrooms:"Misafir Odaları",
+lobby:"Lobi",
+restaurant:"Restoran",
+cafe:"Kafe",
+outdoor:"Dış Mekan",
+joinery:"Marangozluk",
+decorative:"Dekoratif",
+architectural:"Mimari",
+guestroom:"Misafir Odası",
+custom:"Özel",
+cooking:"Pişirme",
+refrigeration:"Soğutma",
+bakery:"Fırın",
+dishwashing:"Bulaşık",
+stainless:"Paslanmaz Çelik",
+bar:"Bar",
+porcelain:"Porselen",
+cutlery:"Çatal Bıçak",
+glassware:"Cam Ürünleri",
+serving:"Servis",
+amenities:"Otel Ürünleri",
+textiles:"Tekstil",
+smartRoom:"Akıllı Oda",
+locks:"Kilitler",
+cctv:"CCTV",
+wifi:"Wi-Fi",
+iptv:"IPTV",
+fireSystems:"Yangın Sistemleri",
+furniture:"Mobilya",
+metal:"Metal",
+lighting:"Aydınlatma",
+consolidation:"Konsolidasyon",
+packing:"Paketleme",
+loading:"Yükleme",
+documentation:"Dokümantasyon",
+shipping:"Nakliye",
+delivery:"Teslimat",
 
-manufacturingEyebrow:"Çin'de Üretim",
-manufacturingTitle:"Teknik şartnameden<br>üretime.",
+manufacturingEyebrow:"Üretim Ağı",
+manufacturingTitle:"Çin fabrikalarına <span class='gold'>doğrudan erişim.</span>",
+manufacturingText:"Konaklama projelerini nitelikli Çinli üreticilerle buluşturuyor ve tedarik, fiyatlandırma, üretim, kalite kontrol ve lojistiği tek bir profesyonel süreçte koordine ediyoruz.",
+manufacturingButton:"Üretim Projesini Görüşün →",
 
-processNumber:"SÜRECİMİZ",
-processTitle:"Tek ve net<br>bir süreç.",
-processDescription:"İlk proje talebinden üretim, kalite kontrol ve teslimata kadar yapılandırılmış proje koordinasyonu.",
-process1Title:"Proje Talebi",
-process1Desc:"Proje kapsamını, miktarları ve teknik özellikleri anlayın.",
-process2Title:"Tedarik",
-process2Desc:"Uygun üreticileri belirleyin ve çözümleri karşılaştırın.",
-process3Title:"Numuneler",
-process3Desc:"Numuneleri, prototipleri ve üretim standartlarını inceleyin.",
-process4Title:"Üretim",
-process4Desc:"Üretimi koordine edin ve proje ilerlemesini takip edin.",
-process5Title:"Teslimat",
-process5Desc:"Kalite kontrol, konsolidasyon, yükleme, sevkiyat ve teslimat.",
+directSourcing:"DOĞRUDAN TEDARİK",
+directSourcingDesc:"Fabrika seviyesinde erişim",
+projectPricing:"PROJE FİYATLANDIRMASI",
+projectPricingDesc:"BOQ'nuz üzerinden",
+qualityControl:"KALİTE KONTROL",
+qualityControlDesc:"Üretim takibi",
+globalLogistics:"GLOBAL LOJİSTİK",
+globalLogisticsDesc:"Çin'den hedefe",
 
-projectsNumber:"PROJELER",
-projectsTitle:"Gerçek projeler<br>için tasarlandı.",
-projectsDescription:"Konaklama projeleri birden fazla kategorinin koordinasyonunu gerektirir. Bunları tek bir tedarik yapısında birleştiriyoruz.",
-projectHotelLabel:"Konaklama Projesi",
-projectHotel:"Otel İç Mekanları",
-projectResortLabel:"Destinasyon",
-projectResort:"Resort Tedariği",
-projectRestaurantLabel:"F&B",
-projectRestaurant:"Restoran Projeleri",
+processEyebrow:"Sürecimiz",
+processTitle:"Talepden<br><span class='gold'>teslimata.</span>",
+processText:"Tedarikçi karmaşıklığını azaltmak ve proje gereksinimleri, kalite ve lojistiği uyumlu tutmak için tek bir koordineli iş akışı.",
 
-customNumber:"ÖZEL ÜRETİM",
-customTitle:"Spesifikasyonunuza göre üretim.",
-customDescription:"Standart ürünler yeterli olmadığında, çizimleriniz, ölçüleriniz, malzemeleriniz ve yüzey işlemlerinize göre özel çözümler geliştirmek için uzman üreticilerle çalışıyoruz.",
-custom1:"Özel Mobilya",
-custom2:"Marangozluk",
-custom3:"Metal İşleri",
-custom4:"Cam",
-custom5:"Taş",
-custom6:"Aydınlatma",
-custom7:"Özel Marka",
-custom8:"Prototipler",
+step1Title:"Proje Özeti",
+step1Text:"Konsept, kapsam, hedef ülke ve ticari hedefleri anlayın.",
+step2Title:"BOQ ve Teknik Şartname",
+step2Text:"Miktarlar, malzemeler, çizimler, kaplamalar ve teknik gereksinimleri inceleyin.",
+step3Title:"Fabrika Tedariki",
+step3Text:"Uygun üreticileri belirleyin ve nitelikli tedarikçi listesi oluşturun.",
+step4Title:"Fiyat ve Kalite Karşılaştırması",
+step4Text:"Teklifleri, şartnameleri, teslim sürelerini ve kapasiteleri karşılaştırın.",
+step5Title:"Numuneler ve Prototipler",
+step5Text:"Üretim öncesinde malzeme, numune ve özel prototipleri onaylayın.",
+step6Title:"Üretim",
+step6Text:"Onaylanan şartnamelere göre üretimi koordine edin.",
+step7Title:"Kalite Kontrol",
+step7Text:"Konsolidasyon ve sevkiyattan önce kontrol ve dokümantasyon.",
+step8Title:"Konsolidasyon",
+step8Text:"Paketleme, gruplama, etiketleme ve konteyner yüklemesini koordine edin.",
+step9Title:"Nakliye",
+step9Text:"İhracat belgeleri ve uluslararası taşımayı koordine edin.",
+step10Title:"Proje Teslimatı",
+step10Text:"Tedarik zincirini kararlaştırılan varış noktasına kadar tamamlayın.",
 
-globalEyebrow:"Çin'den Global Tedarik",
-globalTitle:"Çin fabrikalarından<br>projenize.",
-globalDescription:"Tedarikçi iletişimi, üretim, kalite kontrol, konsolidasyon, belgeler ve uluslararası lojistiği koordine ediyoruz.",
+projectsEyebrow:"Proje Alanları",
+projectsTitle:"Konaklama için <span class='gold'>tasarlandı.</span>",
+projectsText:"Misafir alanları, ortak alanlar, yemek alanları ve dış mekan konaklama alanları için çözümler.",
 
-ctaEyebrow:"PROJENİZİ BAŞLATIN",
-ctaTitle:"Ne inşa ettiğinizi bize anlatın.",
-ctaDescription:"Proje gereksinimlerinizi, BOQ'nuzu veya teknik şartnamelerinizi paylaşın; doğru tedarik stratejisini oluşturalım.",
+globalEyebrow:"Global Tedarik",
+globalTitle:"Çin'den<br><span class='gold'>dünyaya.</span>",
+globalText:"Çin'den varış noktasına kadar koordineli tedarik, üretim ve lojistik desteğiyle uluslararası konaklama projeleri.",
+chinaRegion:"ÇİN",
+middleEast:"ORTA DOĞU",
+europe:"AVRUPA",
+africa:"AFRİKA",
+asia:"ASYA",
 
-contactTitle:"CHINA RENOWN ile İletişim",
-emailLabel:"E-posta",
-whatsappLabel:"WhatsApp",
-wechatLabel:"WeChat",
-wechatOpen:"WeChat QR Aç",
-emailButton:"E-posta Gönder →",
+customEyebrow:"Özel Üretim",
+customTitle:"Sizin tasarımınız.<br><span class='gold'>Bizim fabrikalarımız.</span>",
+customText:"Özel mobilya ve marangozluktan metal, cam, taş ve aydınlatmaya kadar ürünleri proje spesifikasyonlarına ve marka gereksinimlerine göre geliştiriyor ve üretiyoruz.",
+customButton:"Özel Projeyi Görüşün →",
 
-formName:"Ad",
-formNamePlaceholder:"Adınız",
+contactEyebrow:"İletişime Geçin",
+contactTitle:"Projenizi<br><span class='gold'>oluşturmaya hazır mısınız?</span>",
+contactIntro:"İhtiyacınızı bize bildirin. Çin'den tedarik, üretim ve lojistiği koordine edelim.",
+
+emailLabel:"E-POSTA",
+whatsappLabel:"WHATSAPP",
+wechatLabel:"WECHAT",
+openWechat:"WeChat QR'ı Aç",
+
+formName:"İsim",
 formCompany:"Şirket",
-formCompanyPlaceholder:"Şirket adı",
 formEmail:"E-posta",
-formEmailPlaceholder:"E-posta adresiniz",
 formPhone:"Telefon / WhatsApp",
-formPhonePlaceholder:"Telefon / WhatsApp",
 formCountry:"Ülke",
-formCountryPlaceholder:"Ülke",
 formProjectType:"Proje Türü",
-otherProject:"Diğer",
 formRequirements:"Proje Gereksinimleri",
-formRequirementsPlaceholder:"Proje gereksinimlerinizi yazın",
-formBOQ:"BOQ / Miktar",
-formBOQPlaceholder:"BOQ, miktarlar veya teknik özellikler",
+formQuantity:"BOQ / Miktar",
 formMessage:"Mesaj",
-formMessagePlaceholder:"Ek mesaj",
-formButton:"Proje Talebi Gönder →",
 
-footerDescription:"Konaklama Tedariki, Üretim ve Proje Tedariği.",
-footerSectors:"Sektörler",
-footerSectorsText:"Oteller · Resortlar<br>Restoranlar · Kafeler",
-footerChina:"Çin",
-footerChinaText:"Tedarik · Üretim<br>Kalite Kontrol · Lojistik",
-copyright:"© 2026 CHINA RENOWN. Tüm hakları saklıdır.",
+formNamePlaceholder:"Adınız",
+formCompanyPlaceholder:"Şirket",
+formEmailPlaceholder:"E-posta Adresi",
+formPhonePlaceholder:"Telefon / WhatsApp",
+formCountryPlaceholder:"Ülke",
+formRequirementsPlaceholder:"Ürünler / Teknik Özellikler",
+formQuantityPlaceholder:"Miktar / BOQ",
+formMessagePlaceholder:"Projeniz hakkında bilgi verin",
 
-wechatTitle:"WeChat",
-wechatDescription:"CHINA RENOWN ile iletişim kurmak için QR kodu tarayın.",
+selectProject:"Proje Türünü Seçin",
+hotelOption:"Otel",
+resortOption:"Tatil Köyü",
+restaurantOption:"Restoran",
+cafeOption:"Kafe",
+otherOption:"Diğer",
 
-formSuccess:"Teşekkürler. Talebiniz gönderilmeye hazır.",
-formError:"Lütfen gerekli alanları doldurun."
+formSubmit:"Proje Talebi Gönder →",
+contactWhatsapp:"WhatsApp ile İletişim",
+
+wechatEyebrow:"WECHAT",
+wechatTitle:"WeChat Üzerinden Bize Ulaşın",
+wechatText:"CHINA RENOWN ile doğrudan WeChat üzerinden iletişim kurmak için aşağıdaki QR kodu tarayın.",
+wechatNote:"BİZE ULAŞMAK İÇİN TARAMA YAPIN",
+
+footerDescription:"Çin'den konaklama tedariki, üretimi ve proje lojistiği.",
+footerSolutions:"Çözümler",
+footerArchitecture:"Mimari ve Kaplamalar",
+footerFurniture:"Mobilya ve FF&E",
+footerLighting:"Aydınlatma",
+footerKitchen:"Ticari Mutfaklar",
+footerCompany:"Şirket",
+footerContact:"İletişim"
 
 },
 
 ru: {
 
-navAbout:"О нас",
-navScope:"Область поставок",
+navSolutions:"Решения",
+navManufacturing:"Производство",
 navProcess:"Процесс",
 navProjects:"Проекты",
+navAbout:"О компании",
 navContact:"Контакты",
-navQuote:"Получить предложение",
+navQuote:"Начать проект",
+chooseLanguage:"Выберите язык",
 
-heroEyebrow:"Снабжение гостиничного бизнеса · Китай",
-heroTitle1:"Создаём",
-heroTitle2:"гостиничные",
-heroTitle3:"проекты.",
-heroDescription:"Единый партнёр по закупкам, производству, контролю качества, логистике и комплексному снабжению проектов из Китая.",
+heroEyebrow:"Снабжение гостиничных проектов · Китай",
+heroTitle:"Полное снабжение проектов<br><span class='gold'>гостеприимства.</span>",
+heroCopy:"Мы осуществляем поиск, производство и поставку комплексных проектов гостеприимства из Китая для отелей, курортов, ресторанов и кафе.",
 heroButton:"Начать проект →",
+heroExplore:"Наши решения",
+scrollText:"Прокрутите для просмотра",
 
-aboutNumber:"О НАС",
-aboutTitle:"Один партнёр.<br>Полное снабжение.",
-aboutDescription:"CHINA RENOWN связывает проекты в сфере гостеприимства с надёжными китайскими производителями, специализированными поставщиками и производственными мощностями для проектов.",
-aboutStatement:"От первой спецификации до финального контейнера мы координируем всю цепочку поставок для <span class='gold'>гостиничных проектов.</span>",
-aboutSectors:"Отели · Курорты · Рестораны · Кафе",
+aboutEyebrow:"China Renown",
+aboutTitle:"Один партнер.<br><span class='gold'>Полное снабжение.</span>",
+aboutText:"От анализа спецификаций и поиска фабрик до производства, контроля качества, консолидации и доставки — China Renown координирует всю цепочку поставок для проектов гостеприимства.",
 
-projectTypesNumber:"ТИПЫ ПРОЕКТОВ",
-projectTypesTitle:"Создано для<br>гостеприимства.",
-projectTypesDescription:"Наша сеть поставщиков и производителей поддерживает различные форматы гостеприимства — от роскошных курортов до крупных ресторанных проектов.",
+hotels:"Отели",
+hotelsDesc:"FF&E · OS&E · Освещение · Технологии",
+resorts:"Курорты",
+resortsDesc:"Интерьеры · Экстерьеры · Индивидуальные решения",
+restaurants:"Рестораны",
+restaurantsDesc:"Мебель · Кухни · F&B",
+cafes:"Кафе",
+cafesDesc:"Мебель · Освещение · Посуда",
 
-hotelLabel:"Гостиничный сектор",
-hotel:"Отели",
-resortLabel:"Направление",
-resort:"Курорты",
-restaurantLabel:"F&B",
-restaurant:"Рестораны",
-cafeLabel:"F&B",
-cafe:"Кафе",
-
-scopeNumber:"ПОЛНЫЙ СПЕКТР",
-scopeTitle:"От A до Z<br>Снабжение проекта.",
-scopeDescription:"Полный спектр закупок, включающий архитектуру, FF&E, F&B, технологии, производство и логистику.",
+scopeEyebrow:"Полный объем поставки",
+scopeTitle:"Все необходимое<br><span class='gold'>для вашего проекта.</span>",
+scopeText:"От отделочных материалов и мебели до кухонь, освещения, технологий и логистики — все координируется через единый профессиональный процесс.",
 
 scope1Title:"Архитектура и отделка",
-scope1Desc:"Материалы и отделочные решения, формирующие архитектурный стиль проекта.",
-scope1a:"Напольные покрытия",
-scope1b:"Отделка стен",
-scope1c:"Камень и плитка",
-scope1d:"Двери и стекло",
-scope1e:"Декоративные материалы",
-
+scope1Text:"Материалы и отделка в соответствии с вашим дизайном и спецификациями.",
 scope2Title:"Мебель и FF&E",
-scope2Desc:"Мебельные решения для номеров, общественных зон и F&B.",
-scope2a:"Мебель для номеров",
-scope2b:"Мебель для лобби",
-scope2c:"Мебель для ресторанов",
-scope2d:"Уличная мебель",
-scope2e:"Индивидуальная столярная продукция",
-
+scope2Text:"Полная поставка мебели для номеров, общественных зон и открытых пространств.",
 scope3Title:"Освещение",
-scope3Desc:"Декоративное и архитектурное освещение для гостиничных пространств.",
-scope3a:"Декоративное освещение",
-scope3b:"Архитектурное освещение",
-scope3c:"Освещение номеров",
-scope3d:"Освещение ресторанов",
-scope3e:"Наружное освещение",
-
+scope3Text:"Декоративное и архитектурное освещение для гостиничных пространств.",
 scope4Title:"Профессиональные кухни и F&B",
-scope4Desc:"Профессиональное оборудование для отелей, ресторанов и кафе.",
-scope4a:"Кухонное оборудование",
-scope4b:"Холодильное оборудование",
-scope4c:"Оборудование для выпечки",
-scope4d:"Посудомоечное оборудование",
-scope4e:"Нержавеющая сталь",
-scope4f:"Барное оборудование",
-
+scope4Text:"Профессиональное оборудование для отелей и ресторанов.",
 scope5Title:"Посуда и OS&E",
-scope5Desc:"Операционные принадлежности и продукция для гостей.",
-scope5a:"Фарфор",
-scope5b:"Столовые приборы",
-scope5c:"Стекло",
-scope5d:"Сервировочное оборудование",
-scope5e:"Гостиничные принадлежности",
-scope5f:"Текстиль",
-
+scope5Text:"Операционные и гостевые товары согласно требованиям проекта.",
 scope6Title:"Технологии и безопасность",
-scope6Desc:"Технологические и системы безопасности для современных гостиничных объектов.",
-scope6a:"Системы умного номера",
-scope6b:"Электронные замки",
-scope6c:"CCTV",
-scope6d:"Wi-Fi",
-scope6e:"IPTV",
-scope6f:"Пожарные и аварийные системы",
-
+scope6Text:"Интегрированные системы и оборудование безопасности.",
 scope7Title:"Индивидуальное производство",
-scope7Desc:"Производство по индивидуальным требованиям проекта.",
-scope7a:"Мебель",
-scope7b:"Столярные изделия",
-scope7c:"Металл",
-scope7d:"Стекло",
-scope7e:"Камень",
-scope7f:"Освещение",
-scope7g:"Private Label",
+scope7Text:"Производство под частной маркой и по техническим спецификациям.",
+scope8Title:"Логистика и поставка проекта",
+scope8Text:"Консолидация, упаковка, загрузка контейнеров и координация перевозки.",
 
-scope8Title:"Логистика и снабжение проекта",
-scope8Desc:"Консолидация, упаковка и координация международных поставок.",
-scope8a:"Консолидация с фабрик",
-scope8b:"Контроль качества",
-scope8c:"Упаковка",
-scope8d:"Загрузка контейнера",
-scope8e:"Отгрузочные документы",
-scope8f:"Координация доставки",
+flooring:"Напольные покрытия",
+wallFinishes:"Отделка стен",
+stone:"Камень",
+tiles:"Плитка",
+doors:"Двери",
+glass:"Стекло",
+guestrooms:"Номера",
+lobby:"Лобби",
+restaurant:"Ресторан",
+cafe:"Кафе",
+outdoor:"Открытые зоны",
+joinery:"Столярные изделия",
+decorative:"Декоративное",
+architectural:"Архитектурное",
+guestroom:"Номер",
+custom:"Индивидуальное",
+cooking:"Кухонное оборудование",
+refrigeration:"Холодильное оборудование",
+bakery:"Пекарское оборудование",
+dishwashing:"Моечное оборудование",
+stainless:"Нержавеющая сталь",
+bar:"Барное оборудование",
+porcelain:"Фарфор",
+cutlery:"Столовые приборы",
+glassware:"Стеклянная посуда",
+serving:"Сервировка",
+amenities:"Гостевые принадлежности",
+textiles:"Текстиль",
+smartRoom:"Умный номер",
+locks:"Замки",
+cctv:"Видеонаблюдение",
+wifi:"Wi-Fi",
+iptv:"IPTV",
+fireSystems:"Пожарные системы",
+furniture:"Мебель",
+metal:"Металл",
+lighting:"Освещение",
+consolidation:"Консолидация",
+packing:"Упаковка",
+loading:"Загрузка",
+documentation:"Документация",
+shipping:"Доставка",
+delivery:"Передача",
 
-manufacturingEyebrow:"Производство в Китае",
-manufacturingTitle:"От спецификации<br>до производства.",
+manufacturingEyebrow:"Производственная сеть",
+manufacturingTitle:"Прямой доступ к <span class='gold'>фабрикам Китая.</span>",
+manufacturingText:"Мы соединяем проекты гостеприимства с квалифицированными китайскими производителями и координируем закупки, цены, производство, контроль качества и логистику.",
+manufacturingButton:"Обсудить производство →",
 
-processNumber:"НАШ ПРОЦЕСС",
-processTitle:"Один понятный<br>процесс.",
-processDescription:"Структурированная координация проекта от первоначального запроса до производства, инспекции и доставки.",
-process1Title:"Запрос проекта",
-process1Desc:"Изучаем объём проекта, количество и технические требования.",
-process2Title:"Поиск поставщиков",
-process2Desc:"Находим подходящих производителей и сравниваем решения.",
-process3Title:"Образцы",
-process3Desc:"Проверяем образцы, прототипы и производственные стандарты.",
-process4Title:"Производство",
-process4Desc:"Координируем производство и контролируем ход проекта.",
-process5Title:"Доставка",
-process5Desc:"Контроль качества, консолидация, погрузка, перевозка и доставка.",
+directSourcing:"ПРЯМЫЕ ЗАКУПКИ",
+directSourcingDesc:"Прямой доступ к фабрикам",
+projectPricing:"ЦЕНЫ ПРОЕКТА",
+projectPricingDesc:"На основе вашего BOQ",
+qualityControl:"КОНТРОЛЬ КАЧЕСТВА",
+qualityControlDesc:"Контроль производства",
+globalLogistics:"ГЛОБАЛЬНАЯ ЛОГИСТИКА",
+globalLogisticsDesc:"Из Китая до места назначения",
 
-projectsNumber:"ПРОЕКТЫ",
-projectsTitle:"Создано для<br>реальных проектов.",
-projectsDescription:"Гостиничные проекты требуют координации множества категорий. Мы объединяем их в единую систему снабжения.",
-projectHotelLabel:"Гостиничный проект",
-projectHotel:"Интерьеры отелей",
-projectResortLabel:"Курорт",
-projectResort:"Снабжение курортов",
-projectRestaurantLabel:"F&B",
-projectRestaurant:"Ресторанные проекты",
+processEyebrow:"Наш процесс",
+processTitle:"От задачи<br>до <span class='gold'>доставки.</span>",
+processText:"Единый рабочий процесс, который снижает сложность работы с поставщиками и обеспечивает контроль требований, качества и логистики.",
 
-customNumber:"ИНДИВИДУАЛЬНОЕ ПРОИЗВОДСТВО",
-customTitle:"Производство по вашим требованиям.",
-customDescription:"Когда стандартных продуктов недостаточно, мы работаем со специализированными производителями и создаём решения по вашим чертежам, размерам, материалам и отделке.",
-custom1:"Индивидуальная мебель",
-custom2:"Столярные изделия",
-custom3:"Металлообработка",
-custom4:"Стекло",
-custom5:"Камень",
-custom6:"Освещение",
-custom7:"Private Label",
-custom8:"Прототипы",
+step1Title:"Описание проекта",
+step1Text:"Изучение концепции, объема, места назначения и коммерческих целей.",
+step2Title:"BOQ и спецификации",
+step2Text:"Проверка количества, материалов, чертежей, отделки и технических требований.",
+step3Title:"Поиск фабрик",
+step3Text:"Выбор подходящих производителей и формирование списка поставщиков.",
+step4Title:"Сравнение цен и качества",
+step4Text:"Сравнение предложений, характеристик, сроков и возможностей.",
+step5Title:"Образцы и прототипы",
+step5Text:"Утверждение материалов, образцов и прототипов до производства.",
+step6Title:"Производство",
+step6Text:"Координация производства в соответствии с утвержденными спецификациями.",
+step7Title:"Контроль качества",
+step7Text:"Проверка и документация перед консолидацией и отправкой.",
+step8Title:"Консолидация",
+step8Text:"Координация упаковки, группировки, маркировки и загрузки контейнера.",
+step9Title:"Доставка",
+step9Text:"Координация экспортной документации и международных перевозок.",
+step10Title:"Доставка проекта",
+step10Text:"Завершение цепочки поставок до согласованного места назначения.",
 
-globalEyebrow:"Глобальные поставки из Китая",
-globalTitle:"От китайских фабрик<br>до вашего проекта.",
-globalDescription:"Мы координируем коммуникацию с поставщиками, производство, инспекцию, консолидацию, документацию и международную логистику.",
+projectsEyebrow:"Проектные пространства",
+projectsTitle:"Создано для <span class='gold'>гостеприимства.</span>",
+projectsText:"Решения для номеров, общественных зон, ресторанов и открытых пространств.",
 
-ctaEyebrow:"НАЧАТЬ ПРОЕКТ",
-ctaTitle:"Расскажите, что вы строите.",
-ctaDescription:"Отправьте требования проекта, BOQ или технические спецификации, и мы разработаем подходящую стратегию снабжения.",
+globalEyebrow:"Глобальные поставки",
+globalTitle:"Из Китая<br><span class='gold'>в весь мир.</span>",
+globalText:"Поддержка международных проектов гостеприимства через координацию закупок, производства и логистики из Китая до места назначения.",
+chinaRegion:"КИТАЙ",
+middleEast:"БЛИЖНИЙ ВОСТОК",
+europe:"ЕВРОПА",
+africa:"АФРИКА",
+asia:"АЗИЯ",
 
-contactTitle:"Связаться с CHINA RENOWN",
-emailLabel:"Электронная почта",
-whatsappLabel:"WhatsApp",
-wechatLabel:"WeChat",
-wechatOpen:"Открыть QR WeChat",
-emailButton:"Написать на Email →",
+customEyebrow:"Индивидуальное производство",
+customTitle:"Ваш дизайн.<br><span class='gold'>Наши фабрики.</span>",
+customText:"От индивидуальной мебели и столярных изделий до металла, стекла, камня и освещения — мы разрабатываем и производим продукцию по требованиям проекта и бренда.",
+customButton:"Обсудить индивидуальный проект →",
+
+contactEyebrow:"Начать разговор",
+contactTitle:"Готовы построить<br><span class='gold'>ваш проект?</span>",
+contactIntro:"Расскажите нам, что вам необходимо. Мы организуем закупку, производство и поставку из Китая.",
+
+emailLabel:"EMAIL",
+whatsappLabel:"WHATSAPP",
+wechatLabel:"WECHAT",
+openWechat:"Открыть QR WeChat",
 
 formName:"Имя",
-formNamePlaceholder:"Ваше имя",
 formCompany:"Компания",
-formCompanyPlaceholder:"Название компании",
 formEmail:"Email",
-formEmailPlaceholder:"Ваш Email",
 formPhone:"Телефон / WhatsApp",
-formPhonePlaceholder:"Телефон / WhatsApp",
 formCountry:"Страна",
-formCountryPlaceholder:"Страна",
 formProjectType:"Тип проекта",
-otherProject:"Другое",
 formRequirements:"Требования проекта",
-formRequirementsPlaceholder:"Опишите требования вашего проекта",
-formBOQ:"BOQ / Количество",
-formBOQPlaceholder:"BOQ, количество или технические характеристики",
+formQuantity:"BOQ / Количество",
 formMessage:"Сообщение",
-formMessagePlaceholder:"Дополнительное сообщение",
-formButton:"Отправить запрос →",
 
-footerDescription:"Снабжение, производство и комплектация проектов в сфере гостеприимства.",
-footerSectors:"Секторы",
-footerSectorsText:"Отели · Курорты<br>Рестораны · Кафе",
-footerChina:"Китай",
-footerChinaText:"Поиск поставщиков · Производство<br>Контроль качества · Логистика",
-copyright:"© 2026 CHINA RENOWN. Все права защищены.",
+formNamePlaceholder:"Ваше имя",
+formCompanyPlaceholder:"Компания",
+formEmailPlaceholder:"Email",
+formPhonePlaceholder:"Телефон / WhatsApp",
+formCountryPlaceholder:"Страна",
+formRequirementsPlaceholder:"Продукты / спецификации",
+formQuantityPlaceholder:"Количество / BOQ",
+formMessagePlaceholder:"Расскажите о вашем проекте",
 
-wechatTitle:"WeChat",
-wechatDescription:"Отсканируйте QR-код, чтобы связаться с CHINA RENOWN.",
+selectProject:"Выберите тип проекта",
+hotelOption:"Отель",
+resortOption:"Курорт",
+restaurantOption:"Ресторан",
+cafeOption:"Кафе",
+otherOption:"Другое",
 
-formSuccess:"Спасибо. Ваш запрос готов к отправке.",
-formError:"Пожалуйста, заполните обязательные поля."
+formSubmit:"Отправить запрос →",
+contactWhatsapp:"Связаться через WhatsApp",
+
+wechatEyebrow:"WECHAT",
+wechatTitle:"Свяжитесь с нами через WeChat",
+wechatText:"Отсканируйте QR-код ниже, чтобы напрямую связаться с CHINA RENOWN через WeChat.",
+wechatNote:"ОТСКАНИРУЙТЕ ДЛЯ СВЯЗИ",
+
+footerDescription:"Снабжение, поиск производителей, производство и поставка гостиничных проектов из Китая.",
+footerSolutions:"Решения",
+footerArchitecture:"Архитектура и отделка",
+footerFurniture:"Мебель и FF&E",
+footerLighting:"Освещение",
+footerKitchen:"Профессиональные кухни",
+footerCompany:"Компания",
+footerContact:"Контакты"
 
 }
 
 };
 
+
 /* =========================================================
-   LANGUAGE SYSTEM
+   TRANSLATE
 ========================================================= */
-
-const languageCodes = {
-  en:"EN",
-  zh:"中文",
-  ar:"العربية",
-  tr:"TR",
-  ru:"RU"
-};
-
-let currentLang =
-localStorage.getItem("chinaRenownLanguage") || "en";
 
 function translatePage(lang){
 
-  if(!translations[lang]){
-    lang="en";
-  }
+const t = translations[lang] || translations.en;
 
-  currentLang=lang;
+document.documentElement.lang = lang;
 
-  document.documentElement.lang=lang;
-  document.documentElement.dir=
-    lang==="ar" ? "rtl" : "ltr";
+if(lang === "ar"){
 
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
+document.documentElement.dir = "rtl";
+document.body.classList.add("rtl");
 
-    const key=el.getAttribute("data-i18n");
+}else{
 
-    if(translations[lang][key] !== undefined){
-      el.innerHTML=translations[lang][key];
-    }
-
-  });
-
-  document.querySelectorAll("[data-i18n-html]").forEach(el=>{
-
-    const key=el.getAttribute("data-i18n-html");
-
-    if(translations[lang][key] !== undefined){
-      el.innerHTML=translations[lang][key];
-    }
-
-  });
-
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
-
-    const key=el.getAttribute("data-i18n-placeholder");
-
-    if(translations[lang][key] !== undefined){
-      el.placeholder=translations[lang][key];
-    }
-
-  });
-
-  document.getElementById("currentLanguage").textContent =
-    languageCodes[lang];
-
-  document.querySelectorAll(".language-option").forEach(btn=>{
-    btn.classList.toggle(
-      "active",
-      btn.dataset.lang===lang
-    );
-  });
-
-  document.querySelectorAll("[data-mobile-lang]").forEach(btn=>{
-    btn.classList.toggle(
-      "active",
-      btn.dataset.mobileLang===lang
-    );
-  });
-
-  localStorage.setItem(
-    "chinaRenownLanguage",
-    lang
-  );
+document.documentElement.dir = "ltr";
+document.body.classList.remove("rtl");
 
 }
 
-translatePage(currentLang);
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+const key = el.getAttribute("data-i18n");
+
+if(t[key] !== undefined){
+el.textContent = t[key];
+}
+
+});
+
+document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+
+const key = el.getAttribute("data-i18n-html");
+
+if(t[key] !== undefined){
+el.innerHTML = t[key];
+}
+
+});
+
+document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+
+const key = el.getAttribute("data-i18n-placeholder");
+
+if(t[key] !== undefined){
+el.placeholder = t[key];
+}
+
+});
+
+const languageCodes = {
+en:"EN",
+zh:"中文",
+ar:"AR",
+tr:"TR",
+ru:"RU"
+};
+
+document.getElementById("currentLanguage").textContent =
+languageCodes[lang] || "EN";
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+
+btn.classList.toggle(
+"active",
+btn.getAttribute("data-lang") === lang
+);
+
+});
+
+localStorage.setItem(
+"chinaRenownLanguage",
+lang
+);
+
+document.title = {
+
+en:"CHINA RENOWN | Hospitality Project Supply",
+zh:"CHINA RENOWN | 酒店及餐饮项目供应",
+ar:"CHINA RENOWN | تجهيز مشاريع الضيافة",
+tr:"CHINA RENOWN | Konaklama Proje Tedariki",
+ru:"CHINA RENOWN | Снабжение проектов гостеприимства"
+
+}[lang];
+
+}
+
 
 /* =========================================================
-   LANGUAGE DROPDOWN
+   LANGUAGE MENU
 ========================================================= */
 
-const languageWrap =
-document.getElementById("languageWrap");
+const languageButton =
+document.getElementById("languageButton");
 
-const languageBtn =
-document.getElementById("languageBtn");
+const languageMenu =
+document.getElementById("languageMenu");
 
-languageBtn.addEventListener("click",function(e){
+languageButton.addEventListener("click",function(e){
 
-  e.stopPropagation();
+e.stopPropagation();
 
-  languageWrap.classList.toggle("open");
-
-});
-
-document.querySelectorAll(".language-option").forEach(btn=>{
-
-  btn.addEventListener("click",function(){
-
-    translatePage(this.dataset.lang);
-
-    languageWrap.classList.remove("open");
-
-  });
+languageMenu.classList.toggle("open");
 
 });
 
-document.addEventListener("click",function(e){
+document.addEventListener("click",function(){
 
-  if(!languageWrap.contains(e.target)){
-    languageWrap.classList.remove("open");
-  }
+languageMenu.classList.remove("open");
 
 });
+
+
+document.querySelectorAll("[data-lang]").forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+e.stopPropagation();
+
+const lang = this.getAttribute("data-lang");
+
+translatePage(lang);
+
+languageMenu.classList.remove("open");
+
+});
+
+});
+
 
 /* =========================================================
-   MOBILE LANGUAGE
+   MOBILE MENU
 ========================================================= */
 
-document.querySelectorAll("[data-mobile-lang]").forEach(btn=>{
+const menuButton =
+document.getElementById("menuButton");
 
-  btn.addEventListener("click",function(){
+const mobileMenu =
+document.getElementById("mobileMenu");
 
-    translatePage(
-      this.dataset.mobileLang
-    );
+const mobileClose =
+document.getElementById("mobileClose");
 
-  });
+menuButton.addEventListener("click",function(){
+
+mobileMenu.classList.add("open");
 
 });
+
+mobileClose.addEventListener("click",function(){
+
+mobileMenu.classList.remove("open");
+
+});
+
+document.querySelectorAll("[data-mobile-link]").forEach(link=>{
+
+link.addEventListener("click",function(){
+
+mobileMenu.classList.remove("open");
+
+});
+
+});
+
 
 /* =========================================================
    HEADER SCROLL
@@ -3814,49 +3726,19 @@ document.querySelectorAll("[data-mobile-lang]").forEach(btn=>{
 const header =
 document.getElementById("header");
 
-window.addEventListener("scroll",function(){
+window.addEventListener(
+"scroll",
+function(){
 
-  header.classList.toggle(
-    "scrolled",
-    window.scrollY>40
-  );
+header.classList.toggle(
+"scrolled",
+window.scrollY > 30
+);
 
-});
+},
+{passive:true}
+);
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const mobileMenu =
-document.getElementById("mobileMenu");
-
-menuToggle.addEventListener("click",function(){
-
-  menuToggle.classList.toggle("active");
-  mobileMenu.classList.toggle("open");
-
-  document.body.style.overflow =
-    mobileMenu.classList.contains("open")
-      ? "hidden"
-      : "";
-
-});
-
-document.querySelectorAll("[data-mobile-link]").forEach(link=>{
-
-  link.addEventListener("click",function(){
-
-    menuToggle.classList.remove("active");
-    mobileMenu.classList.remove("open");
-
-    document.body.style.overflow="";
-
-  });
-
-});
 
 /* =========================================================
    WECHAT MODAL
@@ -3868,292 +3750,208 @@ document.getElementById("wechatModal");
 const wechatFloat =
 document.getElementById("wechatFloat");
 
-const wechatContact =
-document.getElementById("wechatContact");
-
 const wechatClose =
 document.getElementById("wechatClose");
 
-function openWeChat(){
+const wechatContact =
+document.getElementById("wechatContact");
 
-  wechatModal.classList.add("open");
-  document.body.style.overflow="hidden";
+const wechatFooter =
+document.getElementById("wechatFooter");
+
+
+function openWechat(){
+
+wechatModal.classList.add("open");
+
+document.body.style.overflow="hidden";
 
 }
 
-function closeWeChat(){
+function closeWechat(){
 
-  wechatModal.classList.remove("open");
-  document.body.style.overflow="";
+wechatModal.classList.remove("open");
+
+document.body.style.overflow="";
 
 }
+
 
 wechatFloat.addEventListener(
 "click",
-openWeChat
+openWechat
 );
 
 wechatContact.addEventListener(
 "click",
 function(e){
+e.preventDefault();
+openWechat();
+}
+);
 
-  e.preventDefault();
-  openWeChat();
-
-});
+wechatFooter.addEventListener(
+"click",
+function(e){
+e.preventDefault();
+openWechat();
+}
+);
 
 wechatClose.addEventListener(
 "click",
-closeWeChat
+closeWechat
 );
 
 wechatModal.addEventListener(
 "click",
 function(e){
 
-  if(e.target===wechatModal){
-    closeWeChat();
-  }
+if(e.target === wechatModal){
+closeWechat();
+}
 
-});
+}
+);
 
 document.addEventListener(
 "keydown",
 function(e){
 
-  if(e.key==="Escape"){
-    closeWeChat();
-  }
+if(e.key === "Escape"){
+closeWechat();
+}
 
-});
+}
+);
+
 
 /* =========================================================
    CONTACT FORM
 ========================================================= */
 
-const contactForm =
-document.getElementById("contactForm");
+const quoteForm =
+document.getElementById("quoteForm");
 
-const formStatus =
-document.getElementById("formStatus");
-
-contactForm.addEventListener(
+quoteForm.addEventListener(
 "submit",
 function(e){
 
-  e.preventDefault();
+e.preventDefault();
 
-  const name =
-    document.getElementById("name").value.trim();
+const name =
+document.getElementById("formName").value.trim();
 
-  const company =
-    document.getElementById("company").value.trim();
+const company =
+document.getElementById("formCompany").value.trim();
 
-  const email =
-    document.getElementById("email").value.trim();
+const email =
+document.getElementById("formEmail").value.trim();
 
-  const phone =
-    document.getElementById("phone").value.trim();
+const phone =
+document.getElementById("formPhone").value.trim();
 
-  const country =
-    document.getElementById("country").value.trim();
+const country =
+document.getElementById("formCountry").value.trim();
 
-  const projectType =
-    document.getElementById("projectType").value;
+const projectType =
+document.getElementById("formProjectType").value.trim();
 
-  const requirements =
-    document.getElementById("requirements").value.trim();
+const requirements =
+document.getElementById("formRequirements").value.trim();
 
-  const boq =
-    document.getElementById("boq").value.trim();
+const quantity =
+document.getElementById("formQuantity").value.trim();
 
-  const message =
-    document.getElementById("message").value.trim();
+const message =
+document.getElementById("formMessage").value.trim();
 
-  if(!name || !email){
 
-    formStatus.textContent =
-      translations[currentLang].formError;
+const subject =
+"CHINA RENOWN Project Inquiry - " +
+(name || "New Client");
 
-    formStatus.classList.add("show");
 
-    return;
+const body =
+"CHINA RENOWN PROJECT INQUIRY\n\n" +
 
-  }
+"Name: " + name + "\n" +
+"Company: " + company + "\n" +
+"Email: " + email + "\n" +
+"Phone / WhatsApp: " + phone + "\n" +
+"Country: " + country + "\n" +
+"Project Type: " + projectType + "\n" +
+"Project Requirements: " + requirements + "\n" +
+"BOQ / Quantity: " + quantity + "\n\n" +
 
-  let projectName =
-    document.querySelector(
-      `#projectType option[value="${projectType}"]`
-    )?.textContent || projectType;
+"Message:\n" +
+message;
 
-  const t=translations[currentLang];
 
-  let subject =
-    currentLang==="zh"
-      ? "CHINA RENOWN 项目咨询"
-      : currentLang==="ar"
-      ? "طلب مشروع - CHINA RENOWN"
-      : currentLang==="tr"
-      ? "CHINA RENOWN Proje Talebi"
-      : currentLang==="ru"
-      ? "Запрос проекта - CHINA RENOWN"
-      : "CHINA RENOWN Project Inquiry";
+const whatsappMessage =
+"Hello CHINA RENOWN,\n\n" +
 
-  let body="";
+"I would like to discuss a hospitality project.\n\n" +
 
-  if(currentLang==="zh"){
+"Name: " + name + "\n" +
+"Company: " + company + "\n" +
+"Email: " + email + "\n" +
+"Phone: " + phone + "\n" +
+"Country: " + country + "\n" +
+"Project Type: " + projectType + "\n" +
+"Requirements: " + requirements + "\n" +
+"BOQ / Quantity: " + quantity + "\n\n" +
+"Message:\n" +
+message;
 
-    body=
-`姓名: ${name}
-公司: ${company}
-邮箱: ${email}
-电话 / WhatsApp: ${phone}
-国家: ${country}
-项目类型: ${projectName}
 
-项目需求:
-${requirements}
+const whatsappUrl =
+"https://wa.me/8615805898484?text=" +
+encodeURIComponent(whatsappMessage);
 
-BOQ / 数量:
-${boq}
 
-留言:
-${message}`;
+const mailUrl =
+"mailto:info@chinarenown.com" +
+"?subject=" +
+encodeURIComponent(subject) +
+"&body=" +
+encodeURIComponent(body);
 
-  }else if(currentLang==="ar"){
 
-    body=
-`الاسم: ${name}
-الشركة: ${company}
-البريد الإلكتروني: ${email}
-الهاتف / واتساب: ${phone}
-الدولة: ${country}
-نوع المشروع: ${projectName}
+/*
+Open WhatsApp first.
+The email link is also available as fallback.
+*/
 
-متطلبات المشروع:
-${requirements}
+window.open(
+whatsappUrl,
+"_blank",
+"noopener"
+);
 
-جدول الكميات / الكمية:
-${boq}
 
-الرسالة:
-${message}`;
+/*
+Small delay before email client.
+*/
 
-  }else if(currentLang==="tr"){
+setTimeout(function(){
 
-    body=
-`Ad: ${name}
-Şirket: ${company}
-E-posta: ${email}
-Telefon / WhatsApp: ${phone}
-Ülke: ${country}
-Proje Türü: ${projectName}
+window.location.href = mailUrl;
 
-Proje Gereksinimleri:
-${requirements}
+},700);
 
-BOQ / Miktar:
-${boq}
-
-Mesaj:
-${message}`;
-
-  }else if(currentLang==="ru"){
-
-    body=
-`Имя: ${name}
-Компания: ${company}
-Email: ${email}
-Телефон / WhatsApp: ${phone}
-Страна: ${country}
-Тип проекта: ${projectName}
-
-Требования проекта:
-${requirements}
-
-BOQ / Количество:
-${boq}
-
-Сообщение:
-${message}`;
-
-  }else{
-
-    body=
-`Name: ${name}
-Company: ${company}
-Email: ${email}
-Phone / WhatsApp: ${phone}
-Country: ${country}
-Project Type: ${projectName}
-
-Project Requirements:
-${requirements}
-
-BOQ / Quantity:
-${boq}
-
-Message:
-${message}`;
-
-  }
-
-  const whatsappUrl =
-    "https://wa.me/8615805898484?text=" +
-    encodeURIComponent(body);
-
-  const mailUrl =
-    "mailto:info@chinarenown.com" +
-    "?subject=" +
-    encodeURIComponent(subject) +
-    "&body=" +
-    encodeURIComponent(body);
-
-  formStatus.textContent =
-    t.formSuccess;
-
-  formStatus.classList.add("show");
-
-  window.open(
-    whatsappUrl,
-    "_blank",
-    "noopener"
-  );
-
-  setTimeout(function(){
-
-    window.location.href=mailUrl;
-
-  },700);
-
-});
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const observer =
-new IntersectionObserver(
-(entries)=>{
-  entries.forEach(entry=>{
-
-    if(entry.isIntersecting){
-
-      entry.target.classList.add("visible");
-
-      observer.unobserve(entry.target);
-
-    }
-
-  });
-},
-{
-  threshold:.12
 }
 );
 
-document.querySelectorAll(".reveal")
-.forEach(el=>observer.observe(el));
+
+/* =========================================================
+   LOAD SAVED LANGUAGE
+========================================================= */
+
+const savedLanguage =
+localStorage.getItem("chinaRenownLanguage") || "en";
+
+translatePage(savedLanguage);
 
 </script>
 
